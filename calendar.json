@@ -1,93 +1,93 @@
 {
   "metadata": {
-    "generated": "2025-12-14T19:06:25.863268",
+    "generated": "2025-12-21T18:04:06.878923",
     "source": "sentral_api",
     "total_days": 8,
     "date_range": {
-      "from": "2025-12-14",
-      "to": "2025-12-21"
+      "from": "2025-12-21",
+      "to": "2025-12-28"
     }
   },
   "calendar": [
     {
-      "date": "2025-12-14",
-      "day_name": "weekend",
-      "day_number": 0,
-      "day_type": "school",
-      "cycle": null,
-      "interval": "1",
-      "is_daily_timetable": true,
-      "is_school_day": false,
-      "source": "sentral_api"
-    },
-    {
-      "date": "2025-12-15",
-      "day_name": "MonB",
-      "day_number": 6,
-      "day_type": "school",
-      "cycle": "20",
-      "interval": "1",
-      "is_daily_timetable": true,
-      "is_school_day": true,
-      "source": "sentral_api"
-    },
-    {
-      "date": "2025-12-16",
-      "day_name": "TueB",
-      "day_number": 7,
-      "day_type": "school",
-      "cycle": "20",
-      "interval": "1",
-      "is_daily_timetable": true,
-      "is_school_day": true,
-      "source": "sentral_api"
-    },
-    {
-      "date": "2025-12-17",
-      "day_name": "WedB",
-      "day_number": 8,
-      "day_type": "school",
-      "cycle": "20",
-      "interval": "1",
-      "is_daily_timetable": true,
-      "is_school_day": true,
-      "source": "sentral_api"
-    },
-    {
-      "date": "2025-12-18",
-      "day_name": "ThuB",
-      "day_number": 9,
-      "day_type": "school",
-      "cycle": "20",
-      "interval": "1",
-      "is_daily_timetable": true,
-      "is_school_day": true,
-      "source": "sentral_api"
-    },
-    {
-      "date": "2025-12-19",
-      "day_name": "FriB",
-      "day_number": 10,
-      "day_type": "school",
-      "cycle": "20",
-      "interval": "1",
-      "is_daily_timetable": true,
-      "is_school_day": true,
-      "source": "sentral_api"
-    },
-    {
-      "date": "2025-12-20",
-      "day_name": "weekend",
-      "day_number": 0,
-      "day_type": "school",
-      "cycle": null,
-      "interval": "1",
-      "is_daily_timetable": true,
-      "is_school_day": false,
-      "source": "sentral_api"
-    },
-    {
       "date": "2025-12-21",
+      "day_name": "weekend",
+      "day_number": 0,
+      "day_type": "school",
+      "cycle": null,
+      "interval": "1",
+      "is_daily_timetable": true,
+      "is_school_day": false,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2025-12-22",
+      "day_name": "holiday",
+      "day_number": 0,
+      "day_type": "school",
+      "cycle": null,
+      "interval": "1",
+      "is_daily_timetable": true,
+      "is_school_day": false,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2025-12-23",
+      "day_name": "holiday",
+      "day_number": 0,
+      "day_type": "school",
+      "cycle": null,
+      "interval": "1",
+      "is_daily_timetable": true,
+      "is_school_day": false,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2025-12-24",
+      "day_name": "holiday",
+      "day_number": 0,
+      "day_type": "school",
+      "cycle": null,
+      "interval": "1",
+      "is_daily_timetable": true,
+      "is_school_day": false,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2025-12-25",
+      "day_name": "holiday",
+      "day_number": 0,
+      "day_type": "school",
+      "cycle": null,
+      "interval": "1",
+      "is_daily_timetable": true,
+      "is_school_day": false,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2025-12-26",
+      "day_name": "holiday",
+      "day_number": 0,
+      "day_type": "school",
+      "cycle": null,
+      "interval": "1",
+      "is_daily_timetable": true,
+      "is_school_day": false,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2025-12-27",
+      "day_name": "weekend",
+      "day_number": 0,
+      "day_type": "school",
+      "cycle": null,
+      "interval": "1",
+      "is_daily_timetable": true,
+      "is_school_day": false,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2025-12-28",
       "day_name": "weekend",
       "day_number": 0,
       "day_type": "school",
