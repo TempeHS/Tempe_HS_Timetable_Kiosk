@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "generated": "2025-12-28T19:06:20.698758",
+    "generated": "2026-01-18T18:03:45.026445",
     "source": "sentral_api",
-    "total_days": 4,
+    "total_days": 8,
     "date_range": {
-      "from": "2025-12-28",
-      "to": "2025-12-31"
+      "from": "2026-01-18",
+      "to": "2026-01-25"
     }
   },
   "calendar": [
     {
-      "date": "2025-12-28",
-      "day_name": "weekend",
+      "date": "2026-01-18",
+      "day_name": "special",
       "day_number": 0,
       "day_type": "school",
       "cycle": null,
@@ -21,8 +21,8 @@
       "source": "sentral_api"
     },
     {
-      "date": "2025-12-29",
-      "day_name": "holiday",
+      "date": "2026-01-19",
+      "day_name": "special",
       "day_number": 0,
       "day_type": "school",
       "cycle": null,
@@ -32,8 +32,8 @@
       "source": "sentral_api"
     },
     {
-      "date": "2025-12-30",
-      "day_name": "holiday",
+      "date": "2026-01-20",
+      "day_name": "special",
       "day_number": 0,
       "day_type": "school",
       "cycle": null,
@@ -43,8 +43,52 @@
       "source": "sentral_api"
     },
     {
-      "date": "2025-12-31",
-      "day_name": "holiday",
+      "date": "2026-01-21",
+      "day_name": "special",
+      "day_number": 0,
+      "day_type": "school",
+      "cycle": null,
+      "interval": "1",
+      "is_daily_timetable": true,
+      "is_school_day": false,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2026-01-22",
+      "day_name": "special",
+      "day_number": 0,
+      "day_type": "school",
+      "cycle": null,
+      "interval": "1",
+      "is_daily_timetable": true,
+      "is_school_day": false,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2026-01-23",
+      "day_name": "special",
+      "day_number": 0,
+      "day_type": "school",
+      "cycle": null,
+      "interval": "1",
+      "is_daily_timetable": true,
+      "is_school_day": false,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2026-01-24",
+      "day_name": "special",
+      "day_number": 0,
+      "day_type": "school",
+      "cycle": null,
+      "interval": "1",
+      "is_daily_timetable": true,
+      "is_school_day": false,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2026-01-25",
+      "day_name": "special",
       "day_number": 0,
       "day_type": "school",
       "cycle": null,
