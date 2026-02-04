@@ -156,19 +156,19 @@ jobs:
               
               # Additional JSON structure validation
               echo "🔍 Validating LISS info JSON structure..."
-              if python3 -c "
+              if python3 -c '
 import json
 import sys
 try:
-    with open('liss_info.json', 'r') as f:
+    with open("liss_info.json", "r") as f:
         data = json.load(f)
-    print(f'✅ Valid JSON with {len(data.get(\"timetable_data\", []))} timetable entries')
-    print(f'✅ Metadata keys: {list(data.get(\"metadata\", {}).keys())}')
+    print(f"✅ Valid JSON with {len(data.get(\"timetable_data\", []))} timetable entries")
+    print(f"✅ Metadata keys: {list(data.get(\"metadata\", {}).keys())}")
     sys.exit(0)
 except Exception as e:
-    print(f'❌ JSON validation failed: {e}')
+    print(f"❌ JSON validation failed: {e}")
     sys.exit(1)
-              " 2>&1; then
+              ' 2>&1; then
                 echo "✅ LISS info JSON structure validation passed"
               else
                 echo "❌ LISS info JSON structure validation failed"
