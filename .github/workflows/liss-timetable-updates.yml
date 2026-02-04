@@ -48,7 +48,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
           cache: "pip"
@@ -156,21 +156,7 @@ jobs:
               
               # Additional JSON structure validation
               echo "🔍 Validating LISS info JSON structure..."
-              if python3 << 'PYEOF'
-import json
-import sys
-try:
-    with open("liss_info.json", "r") as f:
-        data = json.load(f)
-    entries = len(data.get("timetable_data", []))
-    keys = list(data.get("metadata", {}).keys())
-    print(f"✅ Valid JSON with {entries} timetable entries")
-    print(f"✅ Metadata keys: {keys}")
-    sys.exit(0)
-except Exception as e:
-    print(f"❌ JSON validation failed: {e}")
-    sys.exit(1)
-PYEOF
+              if python3 -c 'import json,sys; data=json.load(open("liss_info.json")); entries=len(data.get("timetable_data",[])); keys=list(data.get("metadata",{}).keys()); print(f"Valid JSON with {entries} timetable entries"); print(f"Metadata keys: {keys}")'
               then
                 echo "✅ LISS info JSON structure validation passed"
               else
