@@ -1,0 +1,91 @@
+name: Validate Workflows
+
+on:
+  push:
+    paths:
+      - ".github/workflows/**"
+  pull_request:
+    paths:
+      - ".github/workflows/**"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    name: Validate GitHub Actions Workflows
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install actionlint
+        run: |
+          bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
+          echo "✅ actionlint installed"
+
+      - name: Validate workflow files
+        run: |
+          echo "🔍 Validating all workflow files..."
+          echo ""
+          
+          # Find all workflow files
+          workflow_files=$(find .github/workflows -name "*.yml" -o -name "*.yaml")
+          
+          if [ -z "$workflow_files" ]; then
+            echo "⚠️ No workflow files found"
+            exit 0
+          fi
+          
+          echo "Found workflow files:"
+          echo "$workflow_files"
+          echo ""
+          
+          # Run actionlint on all workflow files
+          ./actionlint -color
+          
+          echo ""
+          echo "✅ All workflow files are valid!"
+
+      - name: Validate YAML syntax
+        run: |
+          echo "🔍 Validating YAML syntax..."
+          
+          # Install yq for YAML validation
+          sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+          sudo chmod +x /usr/local/bin/yq
+          
+          errors=0
+          for file in .github/workflows/*.yml .github/workflows/*.yaml; do
+            [ -f "$file" ] || continue
+            echo "Checking: $file"
+            if ! yq eval '.' "$file" > /dev/null 2>&1; then
+              echo "❌ Invalid YAML syntax: $file"
+              yq eval '.' "$file" 2>&1 || true
+              errors=$((errors + 1))
+            else
+              echo "✅ Valid: $file"
+            fi
+          done
+          
+          echo ""
+          if [ $errors -gt 0 ]; then
+            echo "❌ Found $errors file(s) with invalid YAML syntax"
+            exit 1
+          fi
+          
+          echo "✅ All YAML files have valid syntax!"
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## 🔍 Workflow Validation Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Validated Files:**" >> $GITHUB_STEP_SUMMARY
+          for file in .github/workflows/*.yml .github/workflows/*.yaml; do
+            [ -f "$file" ] || continue
+            echo "- \`$file\`" >> $GITHUB_STEP_SUMMARY
+          done
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Tools Used:**" >> $GITHUB_STEP_SUMMARY
+          echo "- [actionlint](https://github.com/rhysd/actionlint) - GitHub Actions workflow linter" >> $GITHUB_STEP_SUMMARY
+          echo "- [yq](https://github.com/mikefarah/yq) - YAML parser" >> $GITHUB_STEP_SUMMARY
