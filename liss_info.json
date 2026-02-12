@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-02-12T00:31:22.509337",
+    "generated_at": "2026-02-12T20:43:46.654617",
     "source": "sentral_api",
     "total_lessons": 1394,
     "date_range": "2026-02-12 to 2026-02-19",
@@ -8140,7 +8140,7 @@
       "EdvalClassCode": "9MAT 5",
       "TeacherId": "1125",
       "TeacherCode": "KIM",
-      "RoomCode": "F3"
+      "RoomCode": "F9"
     },
     {
       "DayNumber": 8,
@@ -10525,7 +10525,7 @@
       "EdvalClassCode": "12MAS 2",
       "TeacherId": "1125",
       "TeacherCode": "KIM",
-      "RoomCode": "D6"
+      "RoomCode": "F10"
     },
     {
       "DayNumber": 10,
@@ -10777,7 +10777,7 @@
       "EdvalClassCode": "12MAS 2",
       "TeacherId": "1125",
       "TeacherCode": "KIM",
-      "RoomCode": "D6"
+      "RoomCode": "F10"
     },
     {
       "DayNumber": 10,
