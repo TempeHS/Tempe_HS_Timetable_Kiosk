@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-02-16T00:32:14.739052",
+    "generated_at": "2026-02-16T20:42:29.356114",
     "source": "sentral_api",
     "total_lessons": 1411,
     "date_range": "2026-02-16 to 2026-02-23",
@@ -12665,8 +12665,8 @@
       "Period": "P1",
       "ClassCode": "10OHS1",
       "EdvalClassCode": "10OHS 1",
-      "TeacherId": "289",
-      "TeacherCode": "SALISBURY",
+      "TeacherId": "145",
+      "TeacherCode": "WHITE",
       "RoomCode": "LIB_OHS"
     },
     {
