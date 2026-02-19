@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-02-19T00:32:58.578764",
+    "generated_at": "2026-02-19T23:00:53.183933",
     "source": "sentral_api",
     "total_lessons": 1411,
     "date_range": "2026-02-19 to 2026-02-26",
@@ -6527,8 +6527,8 @@
       "Period": "P2",
       "ClassCode": "11ASSE6",
       "EdvalClassCode": "11ASSE 6",
-      "TeacherId": "277",
-      "TeacherCode": "FAWCETT",
+      "TeacherId": "866",
+      "TeacherCode": "ZHAO",
       "RoomCode": "F10"
     },
     {
