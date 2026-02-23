@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-02-23T00:32:04.551018",
+    "generated_at": "2026-02-23T20:45:13.618145",
     "source": "sentral_api",
     "total_lessons": 1406,
     "date_range": "2026-02-23 to 2026-03-02",
@@ -3530,8 +3530,8 @@
       "Period": "P3",
       "ClassCode": "11BST1",
       "EdvalClassCode": "11BST 1",
-      "TeacherId": "1338",
-      "TeacherCode": "KAPPAS",
+      "TeacherId": "1327",
+      "TeacherCode": "LITTLE",
       "RoomCode": "TP21"
     },
     {
@@ -5348,8 +5348,8 @@
       "Period": "P1",
       "ClassCode": "7GEOG",
       "EdvalClassCode": "7GEO G",
-      "TeacherId": "1340",
-      "TeacherCode": "MEMIS",
+      "TeacherId": "1327",
+      "TeacherCode": "LITTLE",
       "RoomCode": "D7"
     },
     {
@@ -6563,8 +6563,8 @@
       "Period": "P6",
       "ClassCode": "7MUS2",
       "EdvalClassCode": "7MUS 2",
-      "TeacherId": "616",
-      "TeacherCode": "BYRNES",
+      "TeacherId": "972",
+      "TeacherCode": "BOMBARDIER",
       "RoomCode": "P4"
     },
     {
