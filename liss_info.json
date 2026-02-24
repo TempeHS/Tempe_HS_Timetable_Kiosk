@@ -1,9 +1,9 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-02-24T00:30:00.014420",
+    "generated_at": "2026-02-24T22:45:26.607835",
     "source": "sentral_api",
-    "total_lessons": 1406,
+    "total_lessons": 1405,
     "date_range": "2026-02-24 to 2026-03-03",
     "days_covered": [
       6,
@@ -11765,15 +11765,6 @@
       "Period": "P6",
       "ClassCode": "SnrExecMeeting",
       "EdvalClassCode": "SnrExec Meeting",
-      "TeacherId": "142",
-      "TeacherCode": "TAOUBE",
-      "RoomCode": ""
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P1",
-      "ClassCode": "ComplexCaseMeeting",
-      "EdvalClassCode": "ComplexCase Meeting",
       "TeacherId": "142",
       "TeacherCode": "TAOUBE",
       "RoomCode": ""
