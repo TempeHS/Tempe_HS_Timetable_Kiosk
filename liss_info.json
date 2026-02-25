@@ -1,9 +1,9 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-02-25T00:33:12.609139",
+    "generated_at": "2026-02-25T20:43:33.496317",
     "source": "sentral_api",
-    "total_lessons": 1405,
+    "total_lessons": 1402,
     "date_range": "2026-02-25 to 2026-03-04",
     "days_covered": [
       6,
@@ -4021,15 +4021,6 @@
       "RoomCode": ""
     },
     {
-      "DayNumber": 9,
-      "Period": "P3",
-      "ClassCode": "11MAS4",
-      "EdvalClassCode": "11MAS 4",
-      "TeacherId": "680",
-      "TeacherCode": "BARZOVSKI",
-      "RoomCode": "F12"
-    },
-    {
       "DayNumber": 8,
       "Period": "P4",
       "ClassCode": "11ITM1",
@@ -4685,15 +4676,6 @@
       "TeacherId": "653",
       "TeacherCode": "TILLETT",
       "RoomCode": "P5"
-    },
-    {
-      "DayNumber": 10,
-      "Period": "P5",
-      "ClassCode": "11MAS4",
-      "EdvalClassCode": "11MAS 4",
-      "TeacherId": "680",
-      "TeacherCode": "BARZOVSKI",
-      "RoomCode": "F12"
     },
     {
       "DayNumber": 8,
@@ -6008,15 +5990,6 @@
       "TeacherId": "808",
       "TeacherCode": "BANSAL",
       "RoomCode": "GP"
-    },
-    {
-      "DayNumber": 6,
-      "Period": "P3",
-      "ClassCode": "11MAS4",
-      "EdvalClassCode": "11MAS 4",
-      "TeacherId": "680",
-      "TeacherCode": "BARZOVSKI",
-      "RoomCode": "F12"
     },
     {
       "DayNumber": 6,
@@ -7844,15 +7817,6 @@
       "TeacherId": "808",
       "TeacherCode": "BANSAL",
       "RoomCode": "CTC"
-    },
-    {
-      "DayNumber": 8,
-      "Period": "P2",
-      "ClassCode": "11MAS4",
-      "EdvalClassCode": "11MAS 4",
-      "TeacherId": "680",
-      "TeacherCode": "BARZOVSKI",
-      "RoomCode": "F12"
     },
     {
       "DayNumber": 8,
@@ -12659,6 +12623,15 @@
       "TeacherId": "680",
       "TeacherCode": "BARZOVSKI",
       "RoomCode": "TP21"
+    },
+    {
+      "DayNumber": 7,
+      "Period": "P1",
+      "ClassCode": "ComplexCaseBMeeting",
+      "EdvalClassCode": "ComplexCaseB Meeting",
+      "TeacherId": "142",
+      "TeacherCode": "TAOUBE",
+      "RoomCode": ""
     }
   ]
 }
