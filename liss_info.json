@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-02-26T00:29:06.937224",
+    "generated_at": "2026-02-26T20:44:00.118195",
     "source": "sentral_api",
     "total_lessons": 1402,
     "date_range": "2026-02-26 to 2026-03-05",
@@ -4232,8 +4232,8 @@
       "Period": "P1",
       "ClassCode": "8VA1",
       "EdvalClassCode": "8VA 1",
-      "TeacherId": "1221",
-      "TeacherCode": "ESPEJEL",
+      "TeacherId": "1088",
+      "TeacherCode": "BASSETT",
       "RoomCode": "C9"
     },
     {
@@ -8921,8 +8921,8 @@
       "Period": "P1",
       "ClassCode": "8VA2",
       "EdvalClassCode": "8VA 2",
-      "TeacherId": "1088",
-      "TeacherCode": "BASSETT",
+      "TeacherId": "1221",
+      "TeacherCode": "ESPEJEL",
       "RoomCode": "C8"
     },
     {
