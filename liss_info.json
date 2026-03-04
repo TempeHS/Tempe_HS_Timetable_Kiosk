@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-03-04T00:30:02.694530",
+    "generated_at": "2026-03-04T20:42:41.431556",
     "source": "sentral_api",
     "total_lessons": 1406,
     "date_range": "2026-03-04 to 2026-03-11",
@@ -1147,7 +1147,7 @@
       "EdvalClassCode": "11PHY 1",
       "TeacherId": "187",
       "TeacherCode": "MURPHY",
-      "RoomCode": "D10"
+      "RoomCode": "TP23"
     },
     {
       "DayNumber": 2,
@@ -3532,7 +3532,7 @@
       "EdvalClassCode": "9SCI P",
       "TeacherId": "736",
       "TeacherCode": "RAY",
-      "RoomCode": "TP23"
+      "RoomCode": "D11"
     },
     {
       "DayNumber": 5,
@@ -5503,7 +5503,7 @@
       "EdvalClassCode": "9SCI G",
       "TeacherId": "1342",
       "TeacherCode": "SMITH",
-      "RoomCode": "D11"
+      "RoomCode": "D10"
     },
     {
       "DayNumber": 1,
