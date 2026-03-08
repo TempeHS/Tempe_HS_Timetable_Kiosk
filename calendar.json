@@ -1,93 +1,93 @@
 {
   "metadata": {
-    "generated": "2026-03-01T19:09:47.241477",
+    "generated": "2026-03-08T18:04:30.210338",
     "source": "sentral_api",
     "total_days": 8,
     "date_range": {
-      "from": "2026-03-01",
-      "to": "2026-03-08"
+      "from": "2026-03-08",
+      "to": "2026-03-15"
     }
   },
   "calendar": [
     {
-      "date": "2026-03-01",
-      "day_name": "weekend",
-      "day_number": 0,
-      "day_type": "school",
-      "cycle": null,
-      "interval": "1",
-      "is_daily_timetable": true,
-      "is_school_day": false,
-      "source": "sentral_api"
-    },
-    {
-      "date": "2026-03-02",
-      "day_name": "MonA",
-      "day_number": 1,
-      "day_type": "school",
-      "cycle": "3",
-      "interval": "1",
-      "is_daily_timetable": true,
-      "is_school_day": true,
-      "source": "sentral_api"
-    },
-    {
-      "date": "2026-03-03",
-      "day_name": "TueA",
-      "day_number": 2,
-      "day_type": "school",
-      "cycle": "3",
-      "interval": "1",
-      "is_daily_timetable": true,
-      "is_school_day": true,
-      "source": "sentral_api"
-    },
-    {
-      "date": "2026-03-04",
-      "day_name": "WedA",
-      "day_number": 3,
-      "day_type": "school",
-      "cycle": "3",
-      "interval": "1",
-      "is_daily_timetable": true,
-      "is_school_day": true,
-      "source": "sentral_api"
-    },
-    {
-      "date": "2026-03-05",
-      "day_name": "ThuA",
-      "day_number": 4,
-      "day_type": "school",
-      "cycle": "3",
-      "interval": "1",
-      "is_daily_timetable": true,
-      "is_school_day": true,
-      "source": "sentral_api"
-    },
-    {
-      "date": "2026-03-06",
-      "day_name": "FriA",
-      "day_number": 5,
-      "day_type": "school",
-      "cycle": "3",
-      "interval": "1",
-      "is_daily_timetable": true,
-      "is_school_day": true,
-      "source": "sentral_api"
-    },
-    {
-      "date": "2026-03-07",
-      "day_name": "weekend",
-      "day_number": 0,
-      "day_type": "school",
-      "cycle": null,
-      "interval": "1",
-      "is_daily_timetable": true,
-      "is_school_day": false,
-      "source": "sentral_api"
-    },
-    {
       "date": "2026-03-08",
+      "day_name": "weekend",
+      "day_number": 0,
+      "day_type": "school",
+      "cycle": null,
+      "interval": "1",
+      "is_daily_timetable": true,
+      "is_school_day": false,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2026-03-09",
+      "day_name": "MonB",
+      "day_number": 6,
+      "day_type": "school",
+      "cycle": "3",
+      "interval": "1",
+      "is_daily_timetable": true,
+      "is_school_day": true,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2026-03-10",
+      "day_name": "TueB",
+      "day_number": 7,
+      "day_type": "school",
+      "cycle": "3",
+      "interval": "1",
+      "is_daily_timetable": true,
+      "is_school_day": true,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2026-03-11",
+      "day_name": "WedB",
+      "day_number": 8,
+      "day_type": "school",
+      "cycle": "3",
+      "interval": "1",
+      "is_daily_timetable": true,
+      "is_school_day": true,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2026-03-12",
+      "day_name": "ThuB",
+      "day_number": 9,
+      "day_type": "school",
+      "cycle": "3",
+      "interval": "1",
+      "is_daily_timetable": true,
+      "is_school_day": true,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2026-03-13",
+      "day_name": "FriB",
+      "day_number": 10,
+      "day_type": "school",
+      "cycle": "3",
+      "interval": "1",
+      "is_daily_timetable": true,
+      "is_school_day": true,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2026-03-14",
+      "day_name": "weekend",
+      "day_number": 0,
+      "day_type": "school",
+      "cycle": null,
+      "interval": "1",
+      "is_daily_timetable": true,
+      "is_school_day": false,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2026-03-15",
       "day_name": "weekend",
       "day_number": 0,
       "day_type": "school",
