@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-03-10T00:27:45.940111",
+    "generated_at": "2026-03-10T20:43:16.558614",
     "source": "sentral_api",
     "total_lessons": 1402,
     "date_range": "2026-03-10 to 2026-03-17",
@@ -1003,7 +1003,7 @@
       "EdvalClassCode": "8SCI W",
       "TeacherId": "736",
       "TeacherCode": "RAY",
-      "RoomCode": "D12"
+      "RoomCode": "D11"
     },
     {
       "DayNumber": 6,
@@ -2146,7 +2146,7 @@
       "EdvalClassCode": "10SCI Y",
       "TeacherId": "839",
       "TeacherCode": "FULTON",
-      "RoomCode": "D8"
+      "RoomCode": "D12"
     },
     {
       "DayNumber": 6,
@@ -3284,7 +3284,7 @@
     },
     {
       "DayNumber": 7,
-      "Period": "P5",
+      "Period": "P4",
       "ClassCode": "12ISC1",
       "EdvalClassCode": "12ISC 1",
       "TeacherId": "618",
@@ -7996,7 +7996,7 @@
       "EdvalClassCode": "10SCI Y",
       "TeacherId": "839",
       "TeacherCode": "FULTON",
-      "RoomCode": "D11"
+      "RoomCode": "D12"
     },
     {
       "DayNumber": 8,
@@ -8176,7 +8176,7 @@
       "EdvalClassCode": "7SCI Y",
       "TeacherId": "736",
       "TeacherCode": "RAY",
-      "RoomCode": "D12"
+      "RoomCode": "D8"
     },
     {
       "DayNumber": 8,
