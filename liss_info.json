@@ -1,9 +1,9 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-03-24T00:28:33.809409",
+    "generated_at": "2026-03-24T20:44:22.097436",
     "source": "sentral_api",
-    "total_lessons": 1403,
+    "total_lessons": 1400,
     "date_range": "2026-03-24 to 2026-03-31",
     "days_covered": [
       6,
@@ -12481,15 +12481,6 @@
       "RoomCode": "LIB_OHS"
     },
     {
-      "DayNumber": 7,
-      "Period": "P1",
-      "ClassCode": "10OHS2",
-      "EdvalClassCode": "10OHS 2",
-      "TeacherId": "289",
-      "TeacherCode": "SALISBURY",
-      "RoomCode": "LIB_OHS"
-    },
-    {
       "DayNumber": 8,
       "Period": "P1",
       "ClassCode": "10OHS1",
@@ -12512,24 +12503,6 @@
       "Period": "P3",
       "ClassCode": "10OHS1",
       "EdvalClassCode": "10OHS 1",
-      "TeacherId": "289",
-      "TeacherCode": "SALISBURY",
-      "RoomCode": "LIB_OHS"
-    },
-    {
-      "DayNumber": 9,
-      "Period": "P4",
-      "ClassCode": "10OHS2",
-      "EdvalClassCode": "10OHS 2",
-      "TeacherId": "289",
-      "TeacherCode": "SALISBURY",
-      "RoomCode": "LIB_OHS"
-    },
-    {
-      "DayNumber": 10,
-      "Period": "P6",
-      "ClassCode": "10OHS2",
-      "EdvalClassCode": "10OHS 2",
       "TeacherId": "289",
       "TeacherCode": "SALISBURY",
       "RoomCode": "LIB_OHS"
