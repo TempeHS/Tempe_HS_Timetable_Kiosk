@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-04-20T00:40:07.283322",
+    "generated_at": "2026-04-20T02:39:24.697097",
     "source": "sentral_api",
     "total_lessons": 881,
     "date_range": "2026-04-20 to 2026-04-27",
@@ -5636,7 +5636,7 @@
       "EdvalClassCode": "11PVDI 1",
       "TeacherId": "1088",
       "TeacherCode": "BASSETT",
-      "RoomCode": "CTC"
+      "RoomCode": "C10"
     },
     {
       "DayNumber": 9,
