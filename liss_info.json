@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-04-29T00:46:35.301982",
+    "generated_at": "2026-04-29T21:51:01.951365",
     "source": "sentral_api",
     "total_lessons": 1111,
     "date_range": "2026-04-29 to 2026-05-06",
@@ -9658,8 +9658,8 @@
       "Period": "P2",
       "ClassCode": "HUB",
       "EdvalClassCode": "HU B",
-      "TeacherId": "979",
-      "TeacherCode": "ZLOTKOWSKI",
+      "TeacherId": "1223",
+      "TeacherCode": "DJAVADKHAN",
       "RoomCode": "HUB"
     },
     {
@@ -9667,8 +9667,8 @@
       "Period": "P3",
       "ClassCode": "HUB",
       "EdvalClassCode": "HU B",
-      "TeacherId": "1223",
-      "TeacherCode": "DJAVADKHAN",
+      "TeacherId": "979",
+      "TeacherCode": "ZLOTKOWSKI",
       "RoomCode": "HUB"
     },
     {
@@ -9811,8 +9811,8 @@
       "Period": "P2",
       "ClassCode": "HUB",
       "EdvalClassCode": "HU B",
-      "TeacherId": "979",
-      "TeacherCode": "ZLOTKOWSKI",
+      "TeacherId": "1223",
+      "TeacherCode": "DJAVADKHAN",
       "RoomCode": "HUB"
     },
     {
@@ -9820,8 +9820,8 @@
       "Period": "P3",
       "ClassCode": "HUB",
       "EdvalClassCode": "HU B",
-      "TeacherId": "1223",
-      "TeacherCode": "DJAVADKHAN",
+      "TeacherId": "979",
+      "TeacherCode": "ZLOTKOWSKI",
       "RoomCode": "HUB"
     },
     {
