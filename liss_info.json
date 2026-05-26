@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-05-26T00:51:02.277913",
+    "generated_at": "2026-05-26T21:37:11.540174",
     "source": "sentral_api",
     "total_lessons": 1384,
     "date_range": "2026-05-26 to 2026-06-02",
@@ -6817,7 +6817,7 @@
       "EdvalClassCode": "7&8_Basketball_Recreation 2",
       "TeacherId": "1088",
       "TeacherCode": "BASSETT",
-      "RoomCode": "C8"
+      "RoomCode": "C9"
     },
     {
       "DayNumber": 2,
@@ -6826,7 +6826,7 @@
       "EdvalClassCode": "7&8_Basketball_Recreation 2",
       "TeacherId": "1088",
       "TeacherCode": "BASSETT",
-      "RoomCode": "C8"
+      "RoomCode": "C9"
     },
     {
       "DayNumber": 2,
