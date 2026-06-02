@@ -1,9 +1,9 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-06-02T00:11:57.326560",
+    "generated_at": "2026-06-02T22:43:12.684086",
     "source": "sentral_api",
-    "total_lessons": 1381,
+    "total_lessons": 1400,
     "date_range": "2026-06-02 to 2026-06-09",
     "days_covered": [
       6,
@@ -1055,7 +1055,7 @@
       "Period": "P5",
       "ClassCode": "7ENGP",
       "EdvalClassCode": "7ENG P",
-      "TeacherId": "572",
+      "TeacherId": "1096",
       "TeacherCode": "SMITH",
       "RoomCode": "F5"
     },
@@ -1064,7 +1064,7 @@
       "Period": "P2",
       "ClassCode": "7GEOR",
       "EdvalClassCode": "7GEO R",
-      "TeacherId": "572",
+      "TeacherId": "1096",
       "TeacherCode": "SMITH",
       "RoomCode": "E3"
     },
@@ -1100,8 +1100,8 @@
       "Period": "P3",
       "ClassCode": "7SCIR",
       "EdvalClassCode": "7SCI R",
-      "TeacherId": "572",
-      "TeacherCode": "SMITH",
+      "TeacherId": "839",
+      "TeacherCode": "FULTON",
       "RoomCode": "E2"
     },
     {
@@ -1262,8 +1262,8 @@
       "Period": "P2",
       "ClassCode": "8MATP",
       "EdvalClassCode": "8MAT P",
-      "TeacherId": "572",
-      "TeacherCode": "SMITH",
+      "TeacherId": "866",
+      "TeacherCode": "ZHAO",
       "RoomCode": "F9"
     },
     {
@@ -1343,7 +1343,7 @@
       "Period": "P4",
       "ClassCode": "7ENGR",
       "EdvalClassCode": "7ENG R",
-      "TeacherId": "572",
+      "TeacherId": "1096",
       "TeacherCode": "SMITH",
       "RoomCode": "LIB_CLASS"
     },
@@ -2189,8 +2189,8 @@
       "Period": "P1",
       "ClassCode": "7MATR",
       "EdvalClassCode": "7MAT R",
-      "TeacherId": "572",
-      "TeacherCode": "SMITH",
+      "TeacherId": "866",
+      "TeacherCode": "ZHAO",
       "RoomCode": "F9"
     },
     {
@@ -4300,6 +4300,15 @@
       "RoomCode": "D10"
     },
     {
+      "DayNumber": 10,
+      "Period": "P5",
+      "ClassCode": "7VA2",
+      "EdvalClassCode": "7VA 2",
+      "TeacherId": "127",
+      "TeacherCode": "PALMER",
+      "RoomCode": "C8"
+    },
+    {
       "DayNumber": 9,
       "Period": "P5",
       "ClassCode": "12ECO1",
@@ -4631,6 +4640,15 @@
       "TeacherId": "436",
       "TeacherCode": "EAGAN",
       "RoomCode": "D6"
+    },
+    {
+      "DayNumber": 10,
+      "Period": "P5",
+      "ClassCode": "7DRA1",
+      "EdvalClassCode": "7DRA 1",
+      "TeacherId": "980",
+      "TeacherCode": "HALL",
+      "RoomCode": "P4"
     },
     {
       "DayNumber": 7,
@@ -5814,11 +5832,38 @@
     {
       "DayNumber": 6,
       "Period": "P2",
+      "ClassCode": "7VA2",
+      "EdvalClassCode": "7VA 2",
+      "TeacherId": "127",
+      "TeacherCode": "PALMER",
+      "RoomCode": "C8"
+    },
+    {
+      "DayNumber": 6,
+      "Period": "P2",
       "ClassCode": "11PHY1",
       "EdvalClassCode": "11PHY 1",
       "TeacherId": "187",
       "TeacherCode": "MURPHY",
       "RoomCode": "D10"
+    },
+    {
+      "DayNumber": 6,
+      "Period": "P2",
+      "ClassCode": "7DRA1",
+      "EdvalClassCode": "7DRA 1",
+      "TeacherId": "980",
+      "TeacherCode": "HALL",
+      "RoomCode": "COLJONES"
+    },
+    {
+      "DayNumber": 6,
+      "Period": "P2",
+      "ClassCode": "7DRA3",
+      "EdvalClassCode": "7DRA 3",
+      "TeacherId": "616",
+      "TeacherCode": "BYRNES",
+      "RoomCode": "P4"
     },
     {
       "DayNumber": 6,
@@ -6489,6 +6534,33 @@
     {
       "DayNumber": 6,
       "Period": "P5",
+      "ClassCode": "7DRA7",
+      "EdvalClassCode": "7DRA 7",
+      "TeacherId": "980",
+      "TeacherCode": "HALL",
+      "RoomCode": "COLJONES"
+    },
+    {
+      "DayNumber": 6,
+      "Period": "P5",
+      "ClassCode": "7VA8",
+      "EdvalClassCode": "7VA 8",
+      "TeacherId": "1088",
+      "TeacherCode": "BASSETT",
+      "RoomCode": "TP24"
+    },
+    {
+      "DayNumber": 6,
+      "Period": "P5",
+      "ClassCode": "7DRA9",
+      "EdvalClassCode": "7DRA 9",
+      "TeacherId": "616",
+      "TeacherCode": "BYRNES",
+      "RoomCode": "P4"
+    },
+    {
+      "DayNumber": 6,
+      "Period": "P5",
       "ClassCode": "8DT9",
       "EdvalClassCode": "8DT 9",
       "TeacherId": "750",
@@ -7070,6 +7142,24 @@
       "TeacherId": "1317",
       "TeacherCode": "MCCANN",
       "RoomCode": "D10"
+    },
+    {
+      "DayNumber": 7,
+      "Period": "P2",
+      "ClassCode": "7DRA7",
+      "EdvalClassCode": "7DRA 7",
+      "TeacherId": "980",
+      "TeacherCode": "HALL",
+      "RoomCode": "P4"
+    },
+    {
+      "DayNumber": 7,
+      "Period": "P2",
+      "ClassCode": "7VA8",
+      "EdvalClassCode": "7VA 8",
+      "TeacherId": "1088",
+      "TeacherCode": "BASSETT",
+      "RoomCode": "TP24"
     },
     {
       "DayNumber": 7,
@@ -8325,6 +8415,15 @@
     {
       "DayNumber": 8,
       "Period": "P4",
+      "ClassCode": "7VA6",
+      "EdvalClassCode": "7VA 6",
+      "TeacherId": "616",
+      "TeacherCode": "BYRNES",
+      "RoomCode": "C8"
+    },
+    {
+      "DayNumber": 8,
+      "Period": "P4",
       "ClassCode": "12AH1",
       "EdvalClassCode": "12AH 1",
       "TeacherId": "144",
@@ -9063,6 +9162,33 @@
     {
       "DayNumber": 9,
       "Period": "P1",
+      "ClassCode": "7VA2",
+      "EdvalClassCode": "7VA 2",
+      "TeacherId": "127",
+      "TeacherCode": "PALMER",
+      "RoomCode": "LIB_CLASS"
+    },
+    {
+      "DayNumber": 9,
+      "Period": "P1",
+      "ClassCode": "7DRA1",
+      "EdvalClassCode": "7DRA 1",
+      "TeacherId": "980",
+      "TeacherCode": "HALL",
+      "RoomCode": "P4"
+    },
+    {
+      "DayNumber": 9,
+      "Period": "P1",
+      "ClassCode": "7DRA3",
+      "EdvalClassCode": "7DRA 3",
+      "TeacherId": "616",
+      "TeacherCode": "BYRNES",
+      "RoomCode": "P5"
+    },
+    {
+      "DayNumber": 9,
+      "Period": "P1",
       "ClassCode": "12MAT2",
       "EdvalClassCode": "12MAT 2",
       "TeacherId": "866",
@@ -9545,6 +9671,15 @@
       "TeacherId": "843",
       "TeacherCode": "TSERPES",
       "RoomCode": "D2"
+    },
+    {
+      "DayNumber": 9,
+      "Period": "P3",
+      "ClassCode": "7DRA9",
+      "EdvalClassCode": "7DRA 9",
+      "TeacherId": "616",
+      "TeacherCode": "BYRNES",
+      "RoomCode": "P4"
     },
     {
       "DayNumber": 9,
@@ -10107,6 +10242,24 @@
     {
       "DayNumber": 9,
       "Period": "P5",
+      "ClassCode": "7VA4",
+      "EdvalClassCode": "7VA 4",
+      "TeacherId": "127",
+      "TeacherCode": "PALMER",
+      "RoomCode": "C8"
+    },
+    {
+      "DayNumber": 9,
+      "Period": "P5",
+      "ClassCode": "7DRA5",
+      "EdvalClassCode": "7DRA 5",
+      "TeacherId": "980",
+      "TeacherCode": "HALL",
+      "RoomCode": "P4"
+    },
+    {
+      "DayNumber": 9,
+      "Period": "P5",
       "ClassCode": "12PVDI1",
       "EdvalClassCode": "12PVDI 1",
       "TeacherId": "1088",
@@ -10226,7 +10379,7 @@
       "Period": "P6",
       "ClassCode": "8SCIP",
       "EdvalClassCode": "8SCI P",
-      "TeacherId": "572",
+      "TeacherId": "1096",
       "TeacherCode": "SMITH",
       "RoomCode": "D11"
     },
@@ -10485,6 +10638,15 @@
     {
       "DayNumber": 10,
       "Period": "P1",
+      "ClassCode": "7DRA3",
+      "EdvalClassCode": "7DRA 3",
+      "TeacherId": "616",
+      "TeacherCode": "BYRNES",
+      "RoomCode": "P4"
+    },
+    {
+      "DayNumber": 10,
+      "Period": "P1",
       "ClassCode": "12MAT2",
       "EdvalClassCode": "12MAT 2",
       "TeacherId": "866",
@@ -10697,6 +10859,15 @@
       "TeacherId": "750",
       "TeacherCode": "BLACK",
       "RoomCode": "D2"
+    },
+    {
+      "DayNumber": 10,
+      "Period": "P2",
+      "ClassCode": "7DRA9",
+      "EdvalClassCode": "7DRA 9",
+      "TeacherId": "616",
+      "TeacherCode": "BYRNES",
+      "RoomCode": "P4"
     },
     {
       "DayNumber": 10,
