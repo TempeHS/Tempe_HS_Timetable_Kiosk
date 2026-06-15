@@ -1,9 +1,9 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-06-15T00:10:48.251090",
+    "generated_at": "2026-06-15T21:56:39.187067",
     "source": "sentral_api",
-    "total_lessons": 1377,
+    "total_lessons": 1382,
     "date_range": "2026-06-15 to 2026-06-22",
     "days_covered": [
       6,
@@ -11776,6 +11776,51 @@
       "EdvalClassCode": "SnrExec Meeting",
       "TeacherId": "142",
       "TeacherCode": "TAOUBE",
+      "RoomCode": ""
+    },
+    {
+      "DayNumber": 6,
+      "Period": "Lunch",
+      "ClassCode": "Duty.HubL",
+      "EdvalClassCode": "Duty.HubL ",
+      "TeacherId": "1223",
+      "TeacherCode": "DJAVADKHAN",
+      "RoomCode": ""
+    },
+    {
+      "DayNumber": 7,
+      "Period": "Lunch",
+      "ClassCode": "Duty.HubL",
+      "EdvalClassCode": "Duty.HubL ",
+      "TeacherId": "1223",
+      "TeacherCode": "UNKN",
+      "RoomCode": ""
+    },
+    {
+      "DayNumber": 8,
+      "Period": "Lunch",
+      "ClassCode": "Duty.HubL",
+      "EdvalClassCode": "Duty.HubL ",
+      "TeacherId": "1243",
+      "TeacherCode": "STOJA-AYHA",
+      "RoomCode": ""
+    },
+    {
+      "DayNumber": 9,
+      "Period": "Lunch",
+      "ClassCode": "Duty.HubL",
+      "EdvalClassCode": "Duty.HubL ",
+      "TeacherId": "1223",
+      "TeacherCode": "DJAVADKHAN",
+      "RoomCode": ""
+    },
+    {
+      "DayNumber": 10,
+      "Period": "Lunch",
+      "ClassCode": "Duty.HubL",
+      "EdvalClassCode": "Duty.HubL ",
+      "TeacherId": "1092",
+      "TeacherCode": "SHOCKAIR",
       "RoomCode": ""
     },
     {
