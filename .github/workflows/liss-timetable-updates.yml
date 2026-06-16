@@ -105,7 +105,7 @@ jobs:
       - name: Generate LISS timetable data
         if: steps.time_check.outputs.within_hours == 'true'
         env:
-          LISS_DEBUG: "true"  # Enable debug mode for better diagnostics
+          LISS_DEBUG: "true" # Enable debug mode for better diagnostics
         run: |
           echo "🏫 Generating LISS timetable data..."
           echo "🐛 Debug mode enabled for enhanced API diagnostics"
@@ -128,7 +128,7 @@ jobs:
           else
             echo "❌ Cannot reach Sentral server"
           fi
-          
+
           # Test DNS resolution
           echo "🔍 DNS Resolution:"
           nslookup tempe-h.sentral.com.au || echo "❌ DNS resolution failed"
@@ -137,7 +137,7 @@ jobs:
           # Run the generation script with enhanced error capture
           echo "🚀 Starting LISS generation with debug mode..."
           start_time=$(date +%s)
-          
+
           if timeout 300s python3 generate_liss_info.py --debug 2>&1 | tee liss_generation.log; then
             end_time=$(date +%s)
             duration=$((end_time - start_time))
@@ -278,39 +278,40 @@ jobs:
       - name: Create summary
         if: always()
         run: |
-          echo "## 📚 LISS Timetable Update Summary" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-
           sydney_time=$(TZ='Australia/Sydney' date '+%H:%M')
           sydney_day=$(TZ='Australia/Sydney' date '+%u')
 
-          if [ "${{ steps.time_check.outputs.within_hours }}" == "true" ]; then
-            echo "✅ **Status:** Within school hours - update executed" >> $GITHUB_STEP_SUMMARY
-            
-            if [ "${{ steps.changes.outputs.changes }}" == "true" ]; then
-              echo "✅ **Result:** LISS data updated and committed" >> $GITHUB_STEP_SUMMARY
+          {
+            echo "## 📚 LISS Timetable Update Summary"
+            echo ""
+
+            if [ "${{ steps.time_check.outputs.within_hours }}" == "true" ]; then
+              echo "✅ **Status:** Within school hours - update executed"
+              if [ "${{ steps.changes.outputs.changes }}" == "true" ]; then
+                echo "✅ **Result:** LISS data updated and committed"
+              else
+                echo "ℹ️ **Result:** No meaningful changes detected (only timestamp updated)"
+                echo "⏭️ **Action:** Skipped commit to avoid unnecessary updates"
+              fi
             else
-              echo "ℹ️ **Result:** No meaningful changes detected (only timestamp updated)" >> $GITHUB_STEP_SUMMARY
-              echo "⏭️ **Action:** Skipped commit to avoid unnecessary updates" >> $GITHUB_STEP_SUMMARY
+              echo "⏰ **Status:** Outside school hours - update skipped"
+              echo "ℹ️ **Result:** No action taken"
             fi
-          else
-            echo "⏰ **Status:** Outside school hours - update skipped" >> $GITHUB_STEP_SUMMARY
-            echo "ℹ️ **Result:** No action taken" >> $GITHUB_STEP_SUMMARY
-          fi
 
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Time Information:**" >> $GITHUB_STEP_SUMMARY
-          echo "- 🇦🇺 Sydney time: $sydney_time" >> $GITHUB_STEP_SUMMARY
-          echo "- 📅 Day of week: $sydney_day (1=Mon, 7=Sun)" >> $GITHUB_STEP_SUMMARY
-          echo "- ⏰ School hours: 7:30 AM - 3:30 PM (weekdays)" >> $GITHUB_STEP_SUMMARY
-          echo "- 🔄 Update frequency: Every 15 minutes during school hours" >> $GITHUB_STEP_SUMMARY
+            echo ""
+            echo "**Time Information:**"
+            echo "- 🇦🇺 Sydney time: $sydney_time"
+            echo "- 📅 Day of week: $sydney_day (1=Mon, 7=Sun)"
+            echo "- ⏰ School hours: 7:30 AM - 3:30 PM (weekdays)"
+            echo "- 🔄 Update frequency: Every 15 minutes during school hours"
 
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Workflow Details:**" >> $GITHUB_STEP_SUMMARY
-          echo "- 🐍 Python version: ${{ env.PYTHON_VERSION }}" >> $GITHUB_STEP_SUMMARY
-          echo "- 🌏 Timezone: Australia/Sydney" >> $GITHUB_STEP_SUMMARY
-          echo "- 📁 Repository: ${{ github.repository }}" >> $GITHUB_STEP_SUMMARY
-          echo "- 🌿 Branch: ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+            echo ""
+            echo "**Workflow Details:**"
+            echo "- 🐍 Python version: ${{ env.PYTHON_VERSION }}"
+            echo "- 🌏 Timezone: Australia/Sydney"
+            echo "- 📁 Repository: ${{ github.repository }}"
+            echo "- 🌿 Branch: ${{ github.ref_name }}"
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload artifacts
         if: steps.time_check.outputs.within_hours == 'true'
@@ -334,20 +335,20 @@ jobs:
           echo "   - Time: $(date)"
           echo "   - Sydney time: $(TZ='Australia/Sydney' date)"
           echo ""
-          
+
           # Show recent logs if available
           if [ -f "liss_generation.log" ]; then
             echo "📋 Generation Log (last 50 lines):"
             tail -50 liss_generation.log
             echo ""
           fi
-          
+
           if [ -f ".logs/liss_info_generation.log" ]; then
             echo "📋 Recent Generation History:"
             tail -10 .logs/liss_info_generation.log
             echo ""
           fi
-          
+
           echo "🛠️ Troubleshooting Steps:"
           echo "1. Check the logs above for specific error messages"
           echo "2. Verify the artifacts uploaded for this run contain detailed logs"

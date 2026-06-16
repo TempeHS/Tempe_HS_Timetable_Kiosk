@@ -166,34 +166,36 @@ jobs:
       - name: Create summary
         if: always()
         run: |
-          echo "## 📊 Weekly Data Update Summary" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Generated Files:**" >> $GITHUB_STEP_SUMMARY
+          {
+            echo "## 📊 Weekly Data Update Summary"
+            echo ""
+            echo "**Generated Files:**"
 
-          if [ -f "bell_times.json" ]; then
-            echo "- ✅ Bell times data" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "- ❌ Bell times data (failed)" >> $GITHUB_STEP_SUMMARY
-          fi
+            if [ -f "bell_times.json" ]; then
+              echo "- ✅ Bell times data"
+            else
+              echo "- ❌ Bell times data (failed)"
+            fi
 
-          if [ -f "calendar.json" ]; then
-            echo "- ✅ Calendar data" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "- ❌ Calendar data (failed)" >> $GITHUB_STEP_SUMMARY
-          fi
+            if [ -f "calendar.json" ]; then
+              echo "- ✅ Calendar data"
+            else
+              echo "- ❌ Calendar data (failed)"
+            fi
 
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Workflow Details:**" >> $GITHUB_STEP_SUMMARY
-          echo "- 🕐 Scheduled: Weekdays at 8:00 AM Sydney time" >> $GITHUB_STEP_SUMMARY
-          echo "- 🐍 Python version: ${{ env.PYTHON_VERSION }}" >> $GITHUB_STEP_SUMMARY
-          echo "- 🌏 Timezone: Australia/Sydney" >> $GITHUB_STEP_SUMMARY
-          echo "- 📁 Repository: ${{ github.repository }}" >> $GITHUB_STEP_SUMMARY
-          echo "- 🌿 Branch: ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+            echo ""
+            echo "**Workflow Details:**"
+            echo "- 🕐 Scheduled: Weekdays at 8:00 AM Sydney time"
+            echo "- 🐍 Python version: ${{ env.PYTHON_VERSION }}"
+            echo "- 🌏 Timezone: Australia/Sydney"
+            echo "- 📁 Repository: ${{ github.repository }}"
+            echo "- 🌿 Branch: ${{ github.ref_name }}"
 
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Current Time:**" >> $GITHUB_STEP_SUMMARY
-          echo "- 🌍 UTC: $(date -u)" >> $GITHUB_STEP_SUMMARY
-          echo "- 🇦🇺 Sydney: $(TZ='Australia/Sydney' date)" >> $GITHUB_STEP_SUMMARY
+            echo ""
+            echo "**Current Time:**"
+            echo "- 🌍 UTC: $(date -u)"
+            echo "- 🇦🇺 Sydney: $(TZ='Australia/Sydney' date)"
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload artifacts
         if: always()

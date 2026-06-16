@@ -49,11 +49,10 @@ jobs:
             if [ -f "$file" ]; then
               PYTHON_FILES_FOUND=true
               echo "Running $file..."
-              python "$file"
-              if [ $? -ne 0 ]; then
-                echo "Warning: $file failed with exit code $?"
-              else
+              if python "$file"; then
                 echo "Successfully completed $file"
+              else
+                echo "Warning: $file failed with exit code $?"
               fi
             fi
           done
@@ -68,11 +67,10 @@ jobs:
             if [ -f "$file" ]; then
               SHELL_FILES_FOUND=true
               echo "Running $file..."
-              ./"$file"
-              if [ $? -ne 0 ]; then
-                echo "Warning: $file failed with exit code $?"
-              else
+              if ./"$file"; then
                 echo "Successfully completed $file"
+              else
+                echo "Warning: $file failed with exit code $?"
               fi
             fi
           done
