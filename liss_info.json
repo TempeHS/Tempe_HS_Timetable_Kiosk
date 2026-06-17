@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-06-17T00:12:22.684809",
+    "generated_at": "2026-06-17T21:44:06.531321",
     "source": "sentral_api",
     "total_lessons": 1382,
     "date_range": "2026-06-17 to 2026-06-24",
@@ -2173,7 +2173,7 @@
       "EdvalClassCode": "7GEO G",
       "TeacherId": "1340",
       "TeacherCode": "MEMIS",
-      "RoomCode": "P3"
+      "RoomCode": "LIB_CLASS"
     },
     {
       "DayNumber": 6,
@@ -8023,7 +8023,7 @@
       "EdvalClassCode": "7GEO G",
       "TeacherId": "1340",
       "TeacherCode": "MEMIS",
-      "RoomCode": "P3"
+      "RoomCode": "LIB_CLASS"
     },
     {
       "DayNumber": 8,
@@ -11650,7 +11650,7 @@
       "EdvalClassCode": "10COM 1",
       "TeacherId": "1340",
       "TeacherCode": "MEMIS",
-      "RoomCode": "P2"
+      "RoomCode": "D5"
     },
     {
       "DayNumber": 10,
