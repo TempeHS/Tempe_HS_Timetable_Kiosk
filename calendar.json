@@ -1,91 +1,14 @@
 {
   "metadata": {
-    "generated": "2026-07-05T19:32:47.519733",
+    "generated": "2026-07-12T18:17:36.988036",
     "source": "sentral_api",
     "total_days": 8,
     "date_range": {
-      "from": "2026-07-05",
-      "to": "2026-07-12"
+      "from": "2026-07-12",
+      "to": "2026-07-19"
     }
   },
   "calendar": [
-    {
-      "date": "2026-07-05",
-      "day_name": "weekend",
-      "day_number": 0,
-      "day_type": "school",
-      "cycle": null,
-      "interval": "1",
-      "is_daily_timetable": true,
-      "is_school_day": false,
-      "source": "sentral_api"
-    },
-    {
-      "date": "2026-07-06",
-      "day_name": "holiday",
-      "day_number": 0,
-      "day_type": "school",
-      "cycle": null,
-      "interval": "1",
-      "is_daily_timetable": true,
-      "is_school_day": false,
-      "source": "sentral_api"
-    },
-    {
-      "date": "2026-07-07",
-      "day_name": "holiday",
-      "day_number": 0,
-      "day_type": "school",
-      "cycle": null,
-      "interval": "1",
-      "is_daily_timetable": true,
-      "is_school_day": false,
-      "source": "sentral_api"
-    },
-    {
-      "date": "2026-07-08",
-      "day_name": "holiday",
-      "day_number": 0,
-      "day_type": "school",
-      "cycle": null,
-      "interval": "1",
-      "is_daily_timetable": true,
-      "is_school_day": false,
-      "source": "sentral_api"
-    },
-    {
-      "date": "2026-07-09",
-      "day_name": "holiday",
-      "day_number": 0,
-      "day_type": "school",
-      "cycle": null,
-      "interval": "1",
-      "is_daily_timetable": true,
-      "is_school_day": false,
-      "source": "sentral_api"
-    },
-    {
-      "date": "2026-07-10",
-      "day_name": "holiday",
-      "day_number": 0,
-      "day_type": "school",
-      "cycle": null,
-      "interval": "1",
-      "is_daily_timetable": true,
-      "is_school_day": false,
-      "source": "sentral_api"
-    },
-    {
-      "date": "2026-07-11",
-      "day_name": "weekend",
-      "day_number": 0,
-      "day_type": "school",
-      "cycle": null,
-      "interval": "1",
-      "is_daily_timetable": true,
-      "is_school_day": false,
-      "source": "sentral_api"
-    },
     {
       "date": "2026-07-12",
       "day_name": "weekend",
@@ -94,6 +17,83 @@
       "cycle": null,
       "interval": "1",
       "is_daily_timetable": true,
+      "is_school_day": false,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2026-07-13",
+      "day_name": "holiday",
+      "day_number": 0,
+      "day_type": "school",
+      "cycle": null,
+      "interval": "1",
+      "is_daily_timetable": true,
+      "is_school_day": false,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2026-07-14",
+      "day_name": "holiday",
+      "day_number": 0,
+      "day_type": "school",
+      "cycle": null,
+      "interval": "1",
+      "is_daily_timetable": true,
+      "is_school_day": false,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2026-07-15",
+      "day_name": "holiday",
+      "day_number": 0,
+      "day_type": "school",
+      "cycle": null,
+      "interval": "1",
+      "is_daily_timetable": true,
+      "is_school_day": false,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2026-07-16",
+      "day_name": "holiday",
+      "day_number": 0,
+      "day_type": "holiday",
+      "cycle": null,
+      "interval": "1",
+      "is_daily_timetable": false,
+      "is_school_day": false,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2026-07-17",
+      "day_name": "holiday",
+      "day_number": 0,
+      "day_type": "holiday",
+      "cycle": null,
+      "interval": "1",
+      "is_daily_timetable": false,
+      "is_school_day": false,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2026-07-18",
+      "day_name": "weekend",
+      "day_number": 0,
+      "day_type": "weekend",
+      "cycle": null,
+      "interval": "1",
+      "is_daily_timetable": false,
+      "is_school_day": false,
+      "source": "sentral_api"
+    },
+    {
+      "date": "2026-07-19",
+      "day_name": "weekend",
+      "day_number": 0,
+      "day_type": "weekend",
+      "cycle": null,
+      "interval": "1",
+      "is_daily_timetable": false,
       "is_school_day": false,
       "source": "sentral_api"
     }
