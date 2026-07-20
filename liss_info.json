@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-07-20T00:39:19.042833",
+    "generated_at": "2026-07-20T23:49:44.331639",
     "source": "sentral_api",
     "total_lessons": 1110,
     "date_range": "2026-07-20 to 2026-07-27",
@@ -8058,7 +8058,7 @@
       "EdvalClassCode": "12TAD 1",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "C4"
+      "RoomCode": "C5"
     },
     {
       "DayNumber": 4,
@@ -8814,7 +8814,7 @@
       "EdvalClassCode": "12TAD 1",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "C4"
+      "RoomCode": "C5"
     },
     {
       "DayNumber": 5,
