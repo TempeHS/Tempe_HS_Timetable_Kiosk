@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-10-07T00:36:51.488015",
+    "generated_at": "2026-10-07T20:36:53.874932",
     "source": "sentral_api",
     "total_lessons": 1688,
     "date_range": "2026-10-07 to 2026-10-14",
@@ -3396,8 +3396,8 @@
       "Period": "P5",
       "ClassCode": "11EMAT1",
       "EdvalClassCode": "11EMAT 1",
-      "TeacherId": "808",
-      "TeacherCode": "UNKN",
+      "TeacherId": "160",
+      "TeacherCode": "GOUZOULIS",
       "RoomCode": "F11"
     },
     {
@@ -4260,8 +4260,8 @@
       "Period": "P4",
       "ClassCode": "11EMAT1",
       "EdvalClassCode": "11EMAT 1",
-      "TeacherId": "808",
-      "TeacherCode": "UNKN",
+      "TeacherId": "729",
+      "TeacherCode": "PALEOLOGOS",
       "RoomCode": "F9"
     },
     {
@@ -4269,8 +4269,8 @@
       "Period": "P1",
       "ClassCode": "11EMAT1",
       "EdvalClassCode": "11EMAT 1",
-      "TeacherId": "808",
-      "TeacherCode": "UNKN",
+      "TeacherId": "160",
+      "TeacherCode": "GOUZOULIS",
       "RoomCode": "F11"
     },
     {
@@ -8121,8 +8121,8 @@
       "Period": "P1",
       "ClassCode": "11EMAT1",
       "EdvalClassCode": "11EMAT 1",
-      "TeacherId": "144",
-      "TeacherCode": "UNKN",
+      "TeacherId": "160",
+      "TeacherCode": "GOUZOULIS",
       "RoomCode": "F11"
     },
     {
@@ -12450,8 +12450,8 @@
       "Period": "P4",
       "ClassCode": "11EMAT1",
       "EdvalClassCode": "11EMAT 1",
-      "TeacherId": "1221",
-      "TeacherCode": "UNKN",
+      "TeacherId": "729",
+      "TeacherCode": "PALEOLOGOS",
       "RoomCode": "F9"
     },
     {
