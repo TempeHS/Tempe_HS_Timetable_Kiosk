@@ -1,9 +1,9 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-10-08T00:35:42.145044",
+    "generated_at": "2026-10-08T03:18:59.947490",
     "source": "sentral_api",
-    "total_lessons": 1688,
+    "total_lessons": 1638,
     "date_range": "2026-10-08 to 2026-10-15",
     "days_covered": [
       5,
@@ -6174,24 +6174,6 @@
     },
     {
       "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "12MAXX",
-      "EdvalClassCode": "12MAX X",
-      "TeacherId": "158",
-      "TeacherCode": "LIU",
-      "RoomCode": ""
-    },
-    {
-      "DayNumber": 9,
-      "Period": "P0",
-      "ClassCode": "12MAXX",
-      "EdvalClassCode": "12MAX X",
-      "TeacherId": "158",
-      "TeacherCode": "LIU",
-      "RoomCode": ""
-    },
-    {
-      "DayNumber": 7,
       "Period": "P4",
       "ClassCode": "SportCoordinator",
       "EdvalClassCode": "SportCoordinato r",
@@ -6285,8 +6267,8 @@
       "Period": "P4",
       "ClassCode": "9&10_Walking2",
       "EdvalClassCode": "9&10_Walking 2",
-      "TeacherId": "144",
-      "TeacherCode": "JACKSON",
+      "TeacherId": "218",
+      "TeacherCode": "CAMBRIDGE",
       "RoomCode": "P2"
     },
     {
@@ -6294,8 +6276,8 @@
       "Period": "P5",
       "ClassCode": "9&10_Walking2",
       "EdvalClassCode": "9&10_Walking 2",
-      "TeacherId": "144",
-      "TeacherCode": "JACKSON",
+      "TeacherId": "218",
+      "TeacherCode": "CAMBRIDGE",
       "RoomCode": "P2"
     },
     {
@@ -6303,18 +6285,18 @@
       "Period": "P4",
       "ClassCode": "9&10_Walking3",
       "EdvalClassCode": "9&10_Walking 3",
-      "TeacherId": "682",
-      "TeacherCode": "BARZOVSKI",
-      "RoomCode": "F12"
+      "TeacherId": "144",
+      "TeacherCode": "JACKSON",
+      "RoomCode": "P1"
     },
     {
       "DayNumber": 7,
       "Period": "P5",
       "ClassCode": "9&10_Walking3",
       "EdvalClassCode": "9&10_Walking 3",
-      "TeacherId": "682",
-      "TeacherCode": "BARZOVSKI",
-      "RoomCode": "F12"
+      "TeacherId": "144",
+      "TeacherCode": "JACKSON",
+      "RoomCode": "P1"
     },
     {
       "DayNumber": 7,
@@ -6337,60 +6319,6 @@
     {
       "DayNumber": 7,
       "Period": "P4",
-      "ClassCode": "9&10_OzTag_Boys1",
-      "EdvalClassCode": "9&10_OzTag_Boys 1",
-      "TeacherId": "1051",
-      "TeacherCode": "NEWTON-GRE",
-      "RoomCode": "F2"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "9&10_OzTag_Boys1",
-      "EdvalClassCode": "9&10_OzTag_Boys 1",
-      "TeacherId": "1051",
-      "TeacherCode": "NEWTON-GRE",
-      "RoomCode": "F2"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
-      "ClassCode": "9&10_Basketball_Boys1",
-      "EdvalClassCode": "9&10_Basketball_Boys 1",
-      "TeacherId": "732",
-      "TeacherCode": "IBRAHIM",
-      "RoomCode": "F3"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "9&10_Basketball_Boys1",
-      "EdvalClassCode": "9&10_Basketball_Boys 1",
-      "TeacherId": "732",
-      "TeacherCode": "IBRAHIM",
-      "RoomCode": "F3"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
-      "ClassCode": "9&10_Soccer_Boys1",
-      "EdvalClassCode": "9&10_Soccer_Boys 1",
-      "TeacherId": "1317",
-      "TeacherCode": "MCCANN",
-      "RoomCode": "D11"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "9&10_Soccer_Boys1",
-      "EdvalClassCode": "9&10_Soccer_Boys 1",
-      "TeacherId": "1317",
-      "TeacherCode": "MCCANN",
-      "RoomCode": "D11"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
       "ClassCode": "9&10_Gym&Weights1",
       "EdvalClassCode": "9&10_Gym&Weights 1",
       "TeacherId": "1316",
@@ -6405,276 +6333,6 @@
       "TeacherId": "1316",
       "TeacherCode": "BATTERS",
       "RoomCode": "GP"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
-      "ClassCode": "9&10_Canoeing1",
-      "EdvalClassCode": "9&10_Canoeing 1",
-      "TeacherId": "744",
-      "TeacherCode": "LEE",
-      "RoomCode": "CTC"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "9&10_Canoeing1",
-      "EdvalClassCode": "9&10_Canoeing 1",
-      "TeacherId": "744",
-      "TeacherCode": "LEE",
-      "RoomCode": "CTC"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
-      "ClassCode": "9&10_Tennis1",
-      "EdvalClassCode": "9&10_Tennis 1",
-      "TeacherId": "866",
-      "TeacherCode": "ZHAO",
-      "RoomCode": "P5"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "9&10_Tennis1",
-      "EdvalClassCode": "9&10_Tennis 1",
-      "TeacherId": "866",
-      "TeacherCode": "ZHAO",
-      "RoomCode": "P5"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
-      "ClassCode": "9&10_RockClimbing1",
-      "EdvalClassCode": "9&10_RockClimbing 1",
-      "TeacherId": "990",
-      "TeacherCode": "LUO",
-      "RoomCode": "D9"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "9&10_RockClimbing1",
-      "EdvalClassCode": "9&10_RockClimbing 1",
-      "TeacherId": "990",
-      "TeacherCode": "LUO",
-      "RoomCode": "D9"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
-      "ClassCode": "9&10_Volleyball_Recreation1",
-      "EdvalClassCode": "9&10_Volleyball_Recreation 1",
-      "TeacherId": "218",
-      "TeacherCode": "CAMBRIDGE",
-      "RoomCode": "P1"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "9&10_Volleyball_Recreation1",
-      "EdvalClassCode": "9&10_Volleyball_Recreation 1",
-      "TeacherId": "218",
-      "TeacherCode": "CAMBRIDGE",
-      "RoomCode": "P1"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
-      "ClassCode": "7&8_Basketball_Boys1",
-      "EdvalClassCode": "7&8_Basketball_Boys 1",
-      "TeacherId": "737",
-      "TeacherCode": "ROBINSON",
-      "RoomCode": "A1"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "7&8_Basketball_Boys1",
-      "EdvalClassCode": "7&8_Basketball_Boys 1",
-      "TeacherId": "737",
-      "TeacherCode": "ROBINSON",
-      "RoomCode": "A1"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
-      "ClassCode": "7&8_Soccer_Boys1",
-      "EdvalClassCode": "7&8_Soccer_Boys 1",
-      "TeacherId": "734",
-      "TeacherCode": "DOUGLAS",
-      "RoomCode": "D5"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "7&8_Soccer_Boys1",
-      "EdvalClassCode": "7&8_Soccer_Boys 1",
-      "TeacherId": "734",
-      "TeacherCode": "DOUGLAS",
-      "RoomCode": "D5"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
-      "ClassCode": "7&8_Netball_Girls1",
-      "EdvalClassCode": "7&8_Netball_Girls 1",
-      "TeacherId": "1337",
-      "TeacherCode": "MCGUINNESS",
-      "RoomCode": "C2"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "7&8_Netball_Girls1",
-      "EdvalClassCode": "7&8_Netball_Girls 1",
-      "TeacherId": "1337",
-      "TeacherCode": "MCGUINNESS",
-      "RoomCode": "C2"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
-      "ClassCode": "7&8_Volleyball_Girls1",
-      "EdvalClassCode": "7&8_Volleyball_Girls 1",
-      "TeacherId": "1340",
-      "TeacherCode": "MEMIS",
-      "RoomCode": "D12"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "7&8_Volleyball_Girls1",
-      "EdvalClassCode": "7&8_Volleyball_Girls 1",
-      "TeacherId": "1340",
-      "TeacherCode": "MEMIS",
-      "RoomCode": "D12"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
-      "ClassCode": "7&8_Basketball_Recreation1",
-      "EdvalClassCode": "7&8_Basketball_Recreation 1",
-      "TeacherId": "1327",
-      "TeacherCode": "LITTLE",
-      "RoomCode": "BBLAB"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "7&8_Basketball_Recreation1",
-      "EdvalClassCode": "7&8_Basketball_Recreation 1",
-      "TeacherId": "1327",
-      "TeacherCode": "LITTLE",
-      "RoomCode": "BBLAB"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
-      "ClassCode": "7&8_Basketball_Recreation2",
-      "EdvalClassCode": "7&8_Basketball_Recreation 2",
-      "TeacherId": "1088",
-      "TeacherCode": "BASSETT",
-      "RoomCode": "C9"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "7&8_Basketball_Recreation2",
-      "EdvalClassCode": "7&8_Basketball_Recreation 2",
-      "TeacherId": "1088",
-      "TeacherCode": "BASSETT",
-      "RoomCode": "C9"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
-      "ClassCode": "7&8_TableTennis1",
-      "EdvalClassCode": "7&8_TableTennis 1",
-      "TeacherId": "808",
-      "TeacherCode": "BANSAL",
-      "RoomCode": "E1"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "7&8_TableTennis1",
-      "EdvalClassCode": "7&8_TableTennis 1",
-      "TeacherId": "808",
-      "TeacherCode": "BANSAL",
-      "RoomCode": "E1"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
-      "ClassCode": "7&8_IceSkating1",
-      "EdvalClassCode": "7&8_IceSkating 1",
-      "TeacherId": "127",
-      "TeacherCode": "PALMER",
-      "RoomCode": "C6"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "7&8_IceSkating1",
-      "EdvalClassCode": "7&8_IceSkating 1",
-      "TeacherId": "127",
-      "TeacherCode": "PALMER",
-      "RoomCode": "C6"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
-      "ClassCode": "7&8_JustDance1",
-      "EdvalClassCode": "7&8_JustDance 1",
-      "TeacherId": "1338",
-      "TeacherCode": "KAPPAS",
-      "RoomCode": "P4"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "7&8_JustDance1",
-      "EdvalClassCode": "7&8_JustDance 1",
-      "TeacherId": "1338",
-      "TeacherCode": "KAPPAS",
-      "RoomCode": "P4"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
-      "ClassCode": "7&8_Soccer_Boys2",
-      "EdvalClassCode": "7&8_Soccer_Boys 2",
-      "TeacherId": "1221",
-      "TeacherCode": "ESPEJEL",
-      "RoomCode": "D6"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "7&8_Soccer_Boys2",
-      "EdvalClassCode": "7&8_Soccer_Boys 2",
-      "TeacherId": "1221",
-      "TeacherCode": "ESPEJEL",
-      "RoomCode": "D6"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
-      "ClassCode": "9&10_RockClimbing2",
-      "EdvalClassCode": "9&10_RockClimbing 2",
-      "TeacherId": "1223",
-      "TeacherCode": "DJAVADKHAN",
-      "RoomCode": "D7"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "9&10_RockClimbing2",
-      "EdvalClassCode": "9&10_RockClimbing 2",
-      "TeacherId": "1223",
-      "TeacherCode": "DJAVADKHAN",
-      "RoomCode": "D7"
     },
     {
       "DayNumber": 10,
@@ -6746,7 +6404,7 @@
       "EdvalClassCode": "7DT 8",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "C3"
+      "RoomCode": "CTC"
     },
     {
       "DayNumber": 5,
@@ -6935,7 +6593,7 @@
       "EdvalClassCode": "7DT 4",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "CTC"
+      "RoomCode": "C5"
     },
     {
       "DayNumber": 5,
@@ -7142,7 +6800,7 @@
       "EdvalClassCode": "7DT 6",
       "TeacherId": "843",
       "TeacherCode": "TSERPES",
-      "RoomCode": "C3"
+      "RoomCode": "CTC"
     },
     {
       "DayNumber": 5,
@@ -7763,7 +7421,7 @@
       "EdvalClassCode": "8DT 3",
       "TeacherId": "914",
       "TeacherCode": "FORISTAL",
-      "RoomCode": "C3"
+      "RoomCode": "CTC"
     },
     {
       "DayNumber": 5,
@@ -7790,7 +7448,7 @@
       "EdvalClassCode": "7DT 1",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "CTC"
+      "RoomCode": "C5"
     },
     {
       "DayNumber": 5,
@@ -7799,7 +7457,7 @@
       "EdvalClassCode": "7DT 2",
       "TeacherId": "904",
       "TeacherCode": "JONES",
-      "RoomCode": "C5"
+      "RoomCode": "D2"
     },
     {
       "DayNumber": 5,
@@ -7808,7 +7466,7 @@
       "EdvalClassCode": "7DT 3",
       "TeacherId": "843",
       "TeacherCode": "TSERPES",
-      "RoomCode": "D2"
+      "RoomCode": "C3"
     },
     {
       "DayNumber": 5,
@@ -7965,15 +7623,6 @@
     },
     {
       "DayNumber": 6,
-      "Period": "P0",
-      "ClassCode": "12MAXX",
-      "EdvalClassCode": "12MAX X",
-      "TeacherId": "158",
-      "TeacherCode": "LIU",
-      "RoomCode": ""
-    },
-    {
-      "DayNumber": 6,
       "Period": "P1",
       "ClassCode": "8JPNY",
       "EdvalClassCode": "8JPN Y",
@@ -8015,7 +7664,7 @@
       "EdvalClassCode": "7DT 9",
       "TeacherId": "744",
       "TeacherCode": "LEE",
-      "RoomCode": "CTC"
+      "RoomCode": "C5"
     },
     {
       "DayNumber": 6,
@@ -8267,7 +7916,7 @@
       "EdvalClassCode": "7DT 7",
       "TeacherId": "843",
       "TeacherCode": "TSERPES",
-      "RoomCode": "D2"
+      "RoomCode": "C3"
     },
     {
       "DayNumber": 6,
@@ -8276,7 +7925,7 @@
       "EdvalClassCode": "7DT 8",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "C3"
+      "RoomCode": "CTC"
     },
     {
       "DayNumber": 6,
@@ -8447,7 +8096,7 @@
       "EdvalClassCode": "8DT 4",
       "TeacherId": "1033",
       "TeacherCode": "MC HALE",
-      "RoomCode": "C5"
+      "RoomCode": "C2"
     },
     {
       "DayNumber": 6,
@@ -8492,7 +8141,7 @@
       "EdvalClassCode": "7DT 6",
       "TeacherId": "843",
       "TeacherCode": "TSERPES",
-      "RoomCode": "C2"
+      "RoomCode": "CTC"
     },
     {
       "DayNumber": 6,
@@ -8681,7 +8330,7 @@
       "EdvalClassCode": "8DT 5",
       "TeacherId": "744",
       "TeacherCode": "LEE",
-      "RoomCode": "CTC"
+      "RoomCode": "C5"
     },
     {
       "DayNumber": 6,
@@ -8690,7 +8339,7 @@
       "EdvalClassCode": "8DT 6",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "D2"
+      "RoomCode": "CTC"
     },
     {
       "DayNumber": 6,
@@ -8942,7 +8591,7 @@
       "EdvalClassCode": "8DT 7",
       "TeacherId": "914",
       "TeacherCode": "FORISTAL",
-      "RoomCode": "C3"
+      "RoomCode": "D2"
     },
     {
       "DayNumber": 6,
@@ -8951,7 +8600,7 @@
       "EdvalClassCode": "8DT 8",
       "TeacherId": "744",
       "TeacherCode": "LEE",
-      "RoomCode": "CTC"
+      "RoomCode": "C5"
     },
     {
       "DayNumber": 6,
@@ -8960,7 +8609,7 @@
       "EdvalClassCode": "8DT 9",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "D2"
+      "RoomCode": "CTC"
     },
     {
       "DayNumber": 6,
@@ -9086,7 +8735,7 @@
       "EdvalClassCode": "8DT 2",
       "TeacherId": "744",
       "TeacherCode": "LEE",
-      "RoomCode": "D2"
+      "RoomCode": "CTC"
     },
     {
       "DayNumber": 6,
@@ -9095,7 +8744,7 @@
       "EdvalClassCode": "8DT 3",
       "TeacherId": "914",
       "TeacherCode": "FORISTAL",
-      "RoomCode": "C3"
+      "RoomCode": "D2"
     },
     {
       "DayNumber": 6,
@@ -9149,7 +8798,7 @@
       "EdvalClassCode": "7DT 1",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "CTC"
+      "RoomCode": "C5"
     },
     {
       "DayNumber": 6,
@@ -9365,7 +9014,7 @@
       "EdvalClassCode": "7DT 7",
       "TeacherId": "843",
       "TeacherCode": "TSERPES",
-      "RoomCode": "D2"
+      "RoomCode": "C3"
     },
     {
       "DayNumber": 7,
@@ -9374,7 +9023,7 @@
       "EdvalClassCode": "7DT 9",
       "TeacherId": "744",
       "TeacherCode": "LEE",
-      "RoomCode": "CTC"
+      "RoomCode": "C5"
     },
     {
       "DayNumber": 7,
@@ -9518,7 +9167,7 @@
       "EdvalClassCode": "8DT 7",
       "TeacherId": "914",
       "TeacherCode": "FORISTAL",
-      "RoomCode": "C3"
+      "RoomCode": "D3"
     },
     {
       "DayNumber": 7,
@@ -9527,7 +9176,7 @@
       "EdvalClassCode": "8DT 8",
       "TeacherId": "744",
       "TeacherCode": "LEE",
-      "RoomCode": "CTC"
+      "RoomCode": "C4"
     },
     {
       "DayNumber": 7,
@@ -9797,7 +9446,7 @@
       "EdvalClassCode": "8DT 4",
       "TeacherId": "1033",
       "TeacherCode": "MC HALE",
-      "RoomCode": "CTC"
+      "RoomCode": "C1"
     },
     {
       "DayNumber": 7,
@@ -9806,7 +9455,7 @@
       "EdvalClassCode": "8DT 6",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "D2"
+      "RoomCode": "CTC"
     },
     {
       "DayNumber": 7,
@@ -9842,7 +9491,7 @@
       "EdvalClassCode": "7DT 2",
       "TeacherId": "914",
       "TeacherCode": "FORISTAL",
-      "RoomCode": "C5"
+      "RoomCode": "D2"
     },
     {
       "DayNumber": 7,
@@ -9851,7 +9500,7 @@
       "EdvalClassCode": "7DT 3",
       "TeacherId": "744",
       "TeacherCode": "LEE",
-      "RoomCode": "D3"
+      "RoomCode": "C3"
     },
     {
       "DayNumber": 7,
@@ -9986,15 +9635,6 @@
       "EdvalClassCode": "12ENX 1",
       "TeacherId": "598",
       "TeacherCode": "UNKN",
-      "RoomCode": ""
-    },
-    {
-      "DayNumber": 8,
-      "Period": "P0",
-      "ClassCode": "12MAXX",
-      "EdvalClassCode": "12MAX X",
-      "TeacherId": "158",
-      "TeacherCode": "LIU",
       "RoomCode": ""
     },
     {
@@ -10220,7 +9860,7 @@
       "EdvalClassCode": "7DT 9",
       "TeacherId": "914",
       "TeacherCode": "FORISTAL",
-      "RoomCode": "CTC"
+      "RoomCode": "C5"
     },
     {
       "DayNumber": 8,
@@ -10454,7 +10094,7 @@
       "EdvalClassCode": "8DT 8",
       "TeacherId": "744",
       "TeacherCode": "LEE",
-      "RoomCode": "CTC"
+      "RoomCode": "C5"
     },
     {
       "DayNumber": 8,
@@ -10508,7 +10148,7 @@
       "EdvalClassCode": "8DT 9",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "D2"
+      "RoomCode": "CTC"
     },
     {
       "DayNumber": 8,
@@ -10724,7 +10364,7 @@
       "EdvalClassCode": "8DT 4",
       "TeacherId": "1033",
       "TeacherCode": "MC HALE",
-      "RoomCode": "C5"
+      "RoomCode": "C1"
     },
     {
       "DayNumber": 8,
@@ -10733,7 +10373,7 @@
       "EdvalClassCode": "8DT 5",
       "TeacherId": "744",
       "TeacherCode": "LEE",
-      "RoomCode": "CTC"
+      "RoomCode": "C5"
     },
     {
       "DayNumber": 8,
@@ -10742,7 +10382,7 @@
       "EdvalClassCode": "8DT 6",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "D2"
+      "RoomCode": "CTC"
     },
     {
       "DayNumber": 8,
@@ -10787,7 +10427,7 @@
       "EdvalClassCode": "7DT 5",
       "TeacherId": "914",
       "TeacherCode": "FORISTAL",
-      "RoomCode": "D3"
+      "RoomCode": "C3"
     },
     {
       "DayNumber": 8,
@@ -10976,7 +10616,7 @@
       "EdvalClassCode": "7DT 2",
       "TeacherId": "914",
       "TeacherCode": "FORISTAL",
-      "RoomCode": "C5"
+      "RoomCode": "D2"
     },
     {
       "DayNumber": 8,
@@ -10985,7 +10625,7 @@
       "EdvalClassCode": "7DT 3",
       "TeacherId": "843",
       "TeacherCode": "TSERPES",
-      "RoomCode": "D2"
+      "RoomCode": "C3"
     },
     {
       "DayNumber": 8,
@@ -11174,7 +10814,7 @@
       "EdvalClassCode": "8DT 2",
       "TeacherId": "744",
       "TeacherCode": "LEE",
-      "RoomCode": "D2"
+      "RoomCode": "CTC"
     },
     {
       "DayNumber": 8,
@@ -11219,7 +10859,7 @@
       "EdvalClassCode": "7DT 4",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "CTC"
+      "RoomCode": "C5"
     },
     {
       "DayNumber": 8,
@@ -11498,7 +11138,7 @@
       "EdvalClassCode": "8DT 3",
       "TeacherId": "914",
       "TeacherCode": "FORISTAL",
-      "RoomCode": "C3"
+      "RoomCode": "D3"
     },
     {
       "DayNumber": 9,
@@ -11750,7 +11390,7 @@
       "EdvalClassCode": "8DT 4",
       "TeacherId": "1033",
       "TeacherCode": "MC HALE",
-      "RoomCode": "C5"
+      "RoomCode": "C1"
     },
     {
       "DayNumber": 9,
@@ -11759,7 +11399,7 @@
       "EdvalClassCode": "8DT 5",
       "TeacherId": "744",
       "TeacherCode": "LEE",
-      "RoomCode": "CTC"
+      "RoomCode": "C5"
     },
     {
       "DayNumber": 9,
@@ -11993,7 +11633,7 @@
       "EdvalClassCode": "7DT 4",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "CTC"
+      "RoomCode": "C5"
     },
     {
       "DayNumber": 9,
@@ -12002,7 +11642,7 @@
       "EdvalClassCode": "7DT 5",
       "TeacherId": "914",
       "TeacherCode": "FORISTAL",
-      "RoomCode": "D2"
+      "RoomCode": "C2"
     },
     {
       "DayNumber": 9,
@@ -12011,7 +11651,7 @@
       "EdvalClassCode": "7DT 6",
       "TeacherId": "843",
       "TeacherCode": "TSERPES",
-      "RoomCode": "C2"
+      "RoomCode": "CTC"
     },
     {
       "DayNumber": 9,
@@ -12263,7 +11903,7 @@
       "EdvalClassCode": "8DT 8",
       "TeacherId": "744",
       "TeacherCode": "LEE",
-      "RoomCode": "CTC"
+      "RoomCode": "C5"
     },
     {
       "DayNumber": 9,
@@ -12308,7 +11948,7 @@
       "EdvalClassCode": "7DT 7",
       "TeacherId": "843",
       "TeacherCode": "TSERPES",
-      "RoomCode": "D2"
+      "RoomCode": "C3"
     },
     {
       "DayNumber": 9,
@@ -12560,7 +12200,7 @@
       "EdvalClassCode": "7DT 1",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "CTC"
+      "RoomCode": "C5"
     },
     {
       "DayNumber": 9,
@@ -12569,7 +12209,7 @@
       "EdvalClassCode": "7DT 3",
       "TeacherId": "843",
       "TeacherCode": "TSERPES",
-      "RoomCode": "D2"
+      "RoomCode": "C3"
     },
     {
       "DayNumber": 9,
@@ -12722,7 +12362,7 @@
       "EdvalClassCode": "7DT 1",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "CTC"
+      "RoomCode": "C5"
     },
     {
       "DayNumber": 9,
@@ -12938,7 +12578,7 @@
       "EdvalClassCode": "7DT 1",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "CTC"
+      "RoomCode": "C5"
     },
     {
       "DayNumber": 10,
@@ -12947,7 +12587,7 @@
       "EdvalClassCode": "7DT 2",
       "TeacherId": "914",
       "TeacherCode": "FORISTAL",
-      "RoomCode": "C5"
+      "RoomCode": "D2"
     },
     {
       "DayNumber": 10,
@@ -13145,7 +12785,7 @@
       "EdvalClassCode": "8MAT R",
       "TeacherId": "808",
       "TeacherCode": "BANSAL",
-      "RoomCode": "CTC"
+      "RoomCode": "D6"
     },
     {
       "DayNumber": 10,
@@ -13172,7 +12812,7 @@
       "EdvalClassCode": "7DT 8",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "C3"
+      "RoomCode": "CTC"
     },
     {
       "DayNumber": 10,
@@ -13406,7 +13046,7 @@
       "EdvalClassCode": "8DT 1",
       "TeacherId": "169",
       "TeacherCode": "GREENE",
-      "RoomCode": "C5"
+      "RoomCode": "C1"
     },
     {
       "DayNumber": 10,
@@ -13415,7 +13055,7 @@
       "EdvalClassCode": "8DT 7",
       "TeacherId": "666",
       "TeacherCode": "TABUTEAU",
-      "RoomCode": "C3"
+      "RoomCode": "D2"
     },
     {
       "DayNumber": 10,
@@ -13469,7 +13109,7 @@
       "EdvalClassCode": "8DT 9",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "D2"
+      "RoomCode": "CTC"
     },
     {
       "DayNumber": 10,
@@ -13847,7 +13487,7 @@
       "EdvalClassCode": "7DT 4",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "CTC"
+      "RoomCode": "C5"
     },
     {
       "DayNumber": 10,
@@ -13856,7 +13496,7 @@
       "EdvalClassCode": "7DT 5",
       "TeacherId": "914",
       "TeacherCode": "FORISTAL",
-      "RoomCode": "D2"
+      "RoomCode": "C3"
     },
     {
       "DayNumber": 10,
@@ -13865,7 +13505,7 @@
       "EdvalClassCode": "7DT 6",
       "TeacherId": "843",
       "TeacherCode": "TSERPES",
-      "RoomCode": "C2"
+      "RoomCode": "CTC"
     },
     {
       "DayNumber": 10,
@@ -14009,7 +13649,7 @@
       "EdvalClassCode": "7DT 3",
       "TeacherId": "843",
       "TeacherCode": "TSERPES",
-      "RoomCode": "D2"
+      "RoomCode": "C3"
     },
     {
       "DayNumber": 10,
@@ -14018,7 +13658,7 @@
       "EdvalClassCode": "7DT 8",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "C3"
+      "RoomCode": "CTC"
     },
     {
       "DayNumber": 10,
@@ -14820,96 +14460,6 @@
       "TeacherId": "218",
       "TeacherCode": "CAMBRIDGE",
       "RoomCode": ""
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
-      "ClassCode": "7&8_Netball_Girls2",
-      "EdvalClassCode": "7&8_Netball_Girls 2",
-      "TeacherId": "980",
-      "TeacherCode": "HALL",
-      "RoomCode": "C1"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
-      "ClassCode": "9&10_Soccer_7s_Girls1",
-      "EdvalClassCode": "9&10_Soccer_7s_Girls 1",
-      "TeacherId": "776",
-      "TeacherCode": "CUGALY",
-      "RoomCode": "P3"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
-      "ClassCode": "7&8_PickleBall1",
-      "EdvalClassCode": "7&8_PickleBall 1",
-      "TeacherId": "1125",
-      "TeacherCode": "KIM",
-      "RoomCode": "TP22"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
-      "ClassCode": "9&10_RockClimbing3",
-      "EdvalClassCode": "9&10_RockClimbing 3",
-      "TeacherId": "1243",
-      "TeacherCode": "STOJA-AYHA",
-      "RoomCode": "D8"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P4",
-      "ClassCode": "7&8_Soccer_Boys3",
-      "EdvalClassCode": "7&8_Soccer_Boys 3",
-      "TeacherId": "160",
-      "TeacherCode": "GOUZOULIS",
-      "RoomCode": "D4"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "7&8_Netball_Girls2",
-      "EdvalClassCode": "7&8_Netball_Girls 2",
-      "TeacherId": "980",
-      "TeacherCode": "HALL",
-      "RoomCode": "C1"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "9&10_Soccer_7s_Girls1",
-      "EdvalClassCode": "9&10_Soccer_7s_Girls 1",
-      "TeacherId": "776",
-      "TeacherCode": "CUGALY",
-      "RoomCode": "P3"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "7&8_PickleBall1",
-      "EdvalClassCode": "7&8_PickleBall 1",
-      "TeacherId": "1125",
-      "TeacherCode": "KIM",
-      "RoomCode": "TP22"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "9&10_RockClimbing3",
-      "EdvalClassCode": "9&10_RockClimbing 3",
-      "TeacherId": "1243",
-      "TeacherCode": "STOJA-AYHA",
-      "RoomCode": "D8"
-    },
-    {
-      "DayNumber": 7,
-      "Period": "P5",
-      "ClassCode": "7&8_Soccer_Boys3",
-      "EdvalClassCode": "7&8_Soccer_Boys 3",
-      "TeacherId": "160",
-      "TeacherCode": "GOUZOULIS",
-      "RoomCode": "D4"
     },
     {
       "DayNumber": 5,
