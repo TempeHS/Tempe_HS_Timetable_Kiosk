@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-10-11T20:50:07.202883",
+    "generated_at": "2026-10-11T23:51:02.424571",
     "source": "sentral_api",
     "total_lessons": 1064,
     "date_range": "2026-10-11 to 2026-10-18",
@@ -822,7 +822,7 @@
       "EdvalClassCode": "11ES 1",
       "TeacherId": "843",
       "TeacherCode": "TSERPES",
-      "RoomCode": "C2"
+      "RoomCode": "CTC"
     },
     {
       "DayNumber": 5,
@@ -4620,7 +4620,7 @@
       "EdvalClassCode": "11ES 1",
       "TeacherId": "843",
       "TeacherCode": "TSERPES",
-      "RoomCode": "C2"
+      "RoomCode": "CTC"
     },
     {
       "DayNumber": 3,
@@ -5196,7 +5196,7 @@
       "EdvalClassCode": "7VA 9",
       "TeacherId": "776",
       "TeacherCode": "CUGALY",
-      "RoomCode": "TP24"
+      "RoomCode": "P6"
     },
     {
       "DayNumber": 4,
@@ -5520,7 +5520,7 @@
       "EdvalClassCode": "8DT 9",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "CTC"
+      "RoomCode": "C10"
     },
     {
       "DayNumber": 2,
@@ -6501,7 +6501,7 @@
       "EdvalClassCode": "8DT 6",
       "TeacherId": "750",
       "TeacherCode": "BLACK",
-      "RoomCode": "CTC"
+      "RoomCode": "C10"
     },
     {
       "DayNumber": 3,
