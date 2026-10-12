@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-10-12T02:14:46.428765",
+    "generated_at": "2026-10-12T03:27:10.241049",
     "source": "sentral_api",
     "total_lessons": 1111,
     "date_range": "2026-10-12 to 2026-10-19",
@@ -9615,7 +9615,7 @@
       "EdvalClassCode": "9&10_TableTennis 1",
       "TeacherId": "1088",
       "TeacherCode": "BASSETT",
-      "RoomCode": "E1"
+      "RoomCode": "C9"
     },
     {
       "DayNumber": 2,
@@ -9768,7 +9768,7 @@
       "EdvalClassCode": "9&10_TableTennis 1",
       "TeacherId": "1088",
       "TeacherCode": "BASSETT",
-      "RoomCode": "E1"
+      "RoomCode": "C9"
     },
     {
       "DayNumber": 2,
