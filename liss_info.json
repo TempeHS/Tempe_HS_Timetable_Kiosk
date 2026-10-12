@@ -1,9 +1,9 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-10-12T00:41:04.864399",
+    "generated_at": "2026-10-12T02:14:46.428765",
     "source": "sentral_api",
-    "total_lessons": 1064,
+    "total_lessons": 1111,
     "date_range": "2026-10-12 to 2026-10-19",
     "days_covered": [
       2,
@@ -1426,6 +1426,15 @@
       "TeacherId": "990",
       "TeacherCode": "LUO",
       "RoomCode": "P3"
+    },
+    {
+      "DayNumber": 3,
+      "Period": "P0",
+      "ClassCode": "12MAXX1",
+      "EdvalClassCode": "12MAXX 1",
+      "TeacherId": "158",
+      "TeacherCode": "LIU",
+      "RoomCode": ""
     },
     {
       "DayNumber": 5,
@@ -5039,6 +5048,24 @@
     {
       "DayNumber": 2,
       "Period": "P4",
+      "ClassCode": "7&8_RockClimbing1",
+      "EdvalClassCode": "7&8_RockClimbing 1",
+      "TeacherId": "990",
+      "TeacherCode": "LUO",
+      "RoomCode": "D9"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "7&8_RockClimbing1",
+      "EdvalClassCode": "7&8_RockClimbing 1",
+      "TeacherId": "990",
+      "TeacherCode": "LUO",
+      "RoomCode": "D9"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
       "ClassCode": "9&10_Walking1",
       "EdvalClassCode": "9&10_Walking 1",
       "TeacherId": "159",
@@ -5053,6 +5080,42 @@
       "TeacherId": "159",
       "TeacherCode": "SELLIS",
       "RoomCode": "F11"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
+      "ClassCode": "7&8_RockClimbing2",
+      "EdvalClassCode": "7&8_RockClimbing 2",
+      "TeacherId": "1223",
+      "TeacherCode": "DJAVADKHAN",
+      "RoomCode": "D7"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "7&8_RockClimbing2",
+      "EdvalClassCode": "7&8_RockClimbing 2",
+      "TeacherId": "1223",
+      "TeacherCode": "DJAVADKHAN",
+      "RoomCode": "D7"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
+      "ClassCode": "7&8_RockClimbing3",
+      "EdvalClassCode": "7&8_RockClimbing 3",
+      "TeacherId": "1243",
+      "TeacherCode": "STOJA-AYHA",
+      "RoomCode": "D8"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "7&8_RockClimbing3",
+      "EdvalClassCode": "7&8_RockClimbing 3",
+      "TeacherId": "1243",
+      "TeacherCode": "STOJA-AYHA",
+      "RoomCode": "D8"
     },
     {
       "DayNumber": 2,
@@ -5093,6 +5156,24 @@
     {
       "DayNumber": 2,
       "Period": "P4",
+      "ClassCode": "9&10_Walking4",
+      "EdvalClassCode": "9&10_Walking 4",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
+      "RoomCode": "F12"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "9&10_Walking4",
+      "EdvalClassCode": "9&10_Walking 4",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
+      "RoomCode": "F12"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
       "ClassCode": "SportDetention",
       "EdvalClassCode": "Sport Detention",
       "TeacherId": "843",
@@ -5107,6 +5188,42 @@
       "TeacherId": "843",
       "TeacherCode": "TSERPES",
       "RoomCode": "E3"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
+      "ClassCode": "9&10_Basketball_Recreation1",
+      "EdvalClassCode": "9&10_Basketball_Recreation 1",
+      "TeacherId": "1327",
+      "TeacherCode": "LITTLE",
+      "RoomCode": "BBLAB"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "9&10_Basketball_Recreation1",
+      "EdvalClassCode": "9&10_Basketball_Recreation 1",
+      "TeacherId": "1327",
+      "TeacherCode": "LITTLE",
+      "RoomCode": "BBLAB"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
+      "ClassCode": "9&10_Basketball_Recreation2",
+      "EdvalClassCode": "9&10_Basketball_Recreation 2",
+      "TeacherId": "1338",
+      "TeacherCode": "KAPPAS",
+      "RoomCode": "D5"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "9&10_Basketball_Recreation2",
+      "EdvalClassCode": "9&10_Basketball_Recreation 2",
+      "TeacherId": "1338",
+      "TeacherCode": "KAPPAS",
+      "RoomCode": "D5"
     },
     {
       "DayNumber": 2,
@@ -9364,6 +9481,312 @@
       "TeacherId": "618",
       "TeacherCode": "BOURKE",
       "RoomCode": ""
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
+      "ClassCode": "7&8_Oztag_Boys1",
+      "EdvalClassCode": "7&8_Oztag_Boys 1",
+      "TeacherId": "734",
+      "TeacherCode": "DOUGLAS",
+      "RoomCode": "F2"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
+      "ClassCode": "7&8_Oztag_Boys2",
+      "EdvalClassCode": "7&8_Oztag_Boys 2",
+      "TeacherId": "160",
+      "TeacherCode": "GOUZOULIS",
+      "RoomCode": "F10"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
+      "ClassCode": "7&8_Canoeing1",
+      "EdvalClassCode": "7&8_Canoeing 1",
+      "TeacherId": "744",
+      "TeacherCode": "LEE",
+      "RoomCode": "CTC"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
+      "ClassCode": "7&8_Basketball_Girls1",
+      "EdvalClassCode": "7&8_Basketball_Girls 1",
+      "TeacherId": "737",
+      "TeacherCode": "ROBINSON",
+      "RoomCode": "A1"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
+      "ClassCode": "7&8_Oztag_Girls1",
+      "EdvalClassCode": "7&8_Oztag_Girls 1",
+      "TeacherId": "1221",
+      "TeacherCode": "ESPEJEL",
+      "RoomCode": "P3"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
+      "ClassCode": "7&8_Volleyball_Boys1",
+      "EdvalClassCode": "7&8_Volleyball_Boys 1",
+      "TeacherId": "732",
+      "TeacherCode": "IBRAHIM",
+      "RoomCode": "D6"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
+      "ClassCode": "7&8_Cricket_Boys1",
+      "EdvalClassCode": "7&8_Cricket_Boys 1",
+      "TeacherId": "1317",
+      "TeacherCode": "MCCANN",
+      "RoomCode": "D11"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
+      "ClassCode": "7&8_Tennis1",
+      "EdvalClassCode": "7&8_Tennis 1",
+      "TeacherId": "866",
+      "TeacherCode": "ZHAO",
+      "RoomCode": "P5"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
+      "ClassCode": "7&8_House_Sport1",
+      "EdvalClassCode": "7&8_House_Sport 1",
+      "TeacherId": "1337",
+      "TeacherCode": "MCGUINNESS",
+      "RoomCode": "C3"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
+      "ClassCode": "7&8_House_Sport2",
+      "EdvalClassCode": "7&8_House_Sport 2",
+      "TeacherId": "776",
+      "TeacherCode": "CUGALY",
+      "RoomCode": "C2"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
+      "ClassCode": "7&8_House_Sport3",
+      "EdvalClassCode": "7&8_House_Sport 3",
+      "TeacherId": "808",
+      "TeacherCode": "BANSAL",
+      "RoomCode": "C1"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
+      "ClassCode": "7&8_House_Sport4",
+      "EdvalClassCode": "7&8_House_Sport 4",
+      "TeacherId": "980",
+      "TeacherCode": "HALL",
+      "RoomCode": "P4"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
+      "ClassCode": "9&10_Touch_Football_Girls1",
+      "EdvalClassCode": "9&10_Touch_Football_Girls 1",
+      "TeacherId": "1051",
+      "TeacherCode": "NEWTON-GRE",
+      "RoomCode": "F3"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
+      "ClassCode": "9&10_Iceskating1",
+      "EdvalClassCode": "9&10_Iceskating 1",
+      "TeacherId": "127",
+      "TeacherCode": "PALMER",
+      "RoomCode": "C8"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
+      "ClassCode": "9&10_TableTennis1",
+      "EdvalClassCode": "9&10_TableTennis 1",
+      "TeacherId": "1088",
+      "TeacherCode": "BASSETT",
+      "RoomCode": "E1"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
+      "ClassCode": "9&10_Walking5",
+      "EdvalClassCode": "9&10_Walking 5",
+      "TeacherId": "1340",
+      "TeacherCode": "MEMIS",
+      "RoomCode": "D4"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P4",
+      "ClassCode": "9&10_Pickleball1",
+      "EdvalClassCode": "9&10_Pickleball 1",
+      "TeacherId": "1125",
+      "TeacherCode": "KIM",
+      "RoomCode": "TP22"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "7&8_Oztag_Boys1",
+      "EdvalClassCode": "7&8_Oztag_Boys 1",
+      "TeacherId": "734",
+      "TeacherCode": "DOUGLAS",
+      "RoomCode": "F2"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "7&8_Oztag_Boys2",
+      "EdvalClassCode": "7&8_Oztag_Boys 2",
+      "TeacherId": "160",
+      "TeacherCode": "GOUZOULIS",
+      "RoomCode": "F10"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "7&8_Canoeing1",
+      "EdvalClassCode": "7&8_Canoeing 1",
+      "TeacherId": "744",
+      "TeacherCode": "LEE",
+      "RoomCode": "CTC"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "7&8_Basketball_Girls1",
+      "EdvalClassCode": "7&8_Basketball_Girls 1",
+      "TeacherId": "737",
+      "TeacherCode": "ROBINSON",
+      "RoomCode": "A1"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "7&8_Oztag_Girls1",
+      "EdvalClassCode": "7&8_Oztag_Girls 1",
+      "TeacherId": "1221",
+      "TeacherCode": "ESPEJEL",
+      "RoomCode": "P3"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "7&8_Volleyball_Boys1",
+      "EdvalClassCode": "7&8_Volleyball_Boys 1",
+      "TeacherId": "732",
+      "TeacherCode": "IBRAHIM",
+      "RoomCode": "D6"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "7&8_Cricket_Boys1",
+      "EdvalClassCode": "7&8_Cricket_Boys 1",
+      "TeacherId": "1317",
+      "TeacherCode": "MCCANN",
+      "RoomCode": "D11"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "7&8_Tennis1",
+      "EdvalClassCode": "7&8_Tennis 1",
+      "TeacherId": "866",
+      "TeacherCode": "ZHAO",
+      "RoomCode": "P5"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "7&8_House_Sport1",
+      "EdvalClassCode": "7&8_House_Sport 1",
+      "TeacherId": "1337",
+      "TeacherCode": "MCGUINNESS",
+      "RoomCode": "C3"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "7&8_House_Sport2",
+      "EdvalClassCode": "7&8_House_Sport 2",
+      "TeacherId": "776",
+      "TeacherCode": "CUGALY",
+      "RoomCode": "C2"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "7&8_House_Sport3",
+      "EdvalClassCode": "7&8_House_Sport 3",
+      "TeacherId": "808",
+      "TeacherCode": "BANSAL",
+      "RoomCode": "C1"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "7&8_House_Sport4",
+      "EdvalClassCode": "7&8_House_Sport 4",
+      "TeacherId": "980",
+      "TeacherCode": "HALL",
+      "RoomCode": "P4"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "9&10_Touch_Football_Girls1",
+      "EdvalClassCode": "9&10_Touch_Football_Girls 1",
+      "TeacherId": "1051",
+      "TeacherCode": "NEWTON-GRE",
+      "RoomCode": "F3"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "9&10_Iceskating1",
+      "EdvalClassCode": "9&10_Iceskating 1",
+      "TeacherId": "127",
+      "TeacherCode": "PALMER",
+      "RoomCode": "C8"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "9&10_TableTennis1",
+      "EdvalClassCode": "9&10_TableTennis 1",
+      "TeacherId": "1088",
+      "TeacherCode": "BASSETT",
+      "RoomCode": "E1"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "9&10_Walking5",
+      "EdvalClassCode": "9&10_Walking 5",
+      "TeacherId": "1340",
+      "TeacherCode": "MEMIS",
+      "RoomCode": "D4"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P5",
+      "ClassCode": "9&10_Pickleball1",
+      "EdvalClassCode": "9&10_Pickleball 1",
+      "TeacherId": "1125",
+      "TeacherCode": "KIM",
+      "RoomCode": "TP22"
     },
     {
       "DayNumber": 4,
