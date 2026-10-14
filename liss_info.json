@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-10-14T00:29:57.107517",
+    "generated_at": "2026-10-14T20:34:40.589250",
     "source": "sentral_api",
     "total_lessons": 1111,
     "date_range": "2026-10-14 to 2026-10-21",
@@ -9478,8 +9478,8 @@
       "Period": "P5",
       "ClassCode": "12ISC1",
       "EdvalClassCode": "12ISC 1",
-      "TeacherId": "618",
-      "TeacherCode": "BOURKE",
+      "TeacherId": "142",
+      "TeacherCode": "UNKN",
       "RoomCode": ""
     },
     {
