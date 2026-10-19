@@ -1,9 +1,9 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-10-19T00:33:44.956411",
+    "generated_at": "2026-10-19T20:36:36.767202",
     "source": "sentral_api",
-    "total_lessons": 1402,
+    "total_lessons": 1409,
     "date_range": "2026-10-19 to 2026-10-26",
     "days_covered": [
       6,
@@ -2023,11 +2023,20 @@
       "RoomCode": "TP21"
     },
     {
+      "DayNumber": 7,
+      "Period": "P4",
+      "ClassCode": "11ISC1",
+      "EdvalClassCode": "11ISC 1",
+      "TeacherId": "618",
+      "TeacherCode": "BOURKE",
+      "RoomCode": "E2"
+    },
+    {
       "DayNumber": 8,
       "Period": "P0",
       "ClassCode": "12ISC1",
       "EdvalClassCode": "12ISC 1",
-      "TeacherId": "1346",
+      "TeacherId": "618",
       "TeacherCode": "UNKN",
       "RoomCode": ""
     },
@@ -4057,6 +4066,24 @@
       "RoomCode": "C4"
     },
     {
+      "DayNumber": 7,
+      "Period": "P5",
+      "ClassCode": "11ISC1",
+      "EdvalClassCode": "11ISC 1",
+      "TeacherId": "618",
+      "TeacherCode": "BOURKE",
+      "RoomCode": "E2"
+    },
+    {
+      "DayNumber": 10,
+      "Period": "P0",
+      "ClassCode": "11ISC1",
+      "EdvalClassCode": "11ISC 1",
+      "TeacherId": "618",
+      "TeacherCode": "BOURKE",
+      "RoomCode": "E2"
+    },
+    {
       "DayNumber": 6,
       "Period": "Lunch",
       "ClassCode": "Duty.TT-BUS-L",
@@ -4732,15 +4759,6 @@
       "RoomCode": "D12"
     },
     {
-      "DayNumber": 8,
-      "Period": "P0",
-      "ClassCode": "11EMAX1",
-      "EdvalClassCode": "11EMAX 1",
-      "TeacherId": "729",
-      "TeacherCode": "PALEOLOGOS",
-      "RoomCode": "F9"
-    },
-    {
       "DayNumber": 10,
       "Period": "P4",
       "ClassCode": "11SE1",
@@ -5288,6 +5306,33 @@
       "TeacherId": "127",
       "TeacherCode": "PALMER",
       "RoomCode": "C8"
+    },
+    {
+      "DayNumber": 9,
+      "Period": "P0",
+      "ClassCode": "11ISC1",
+      "EdvalClassCode": "11ISC 1",
+      "TeacherId": "618",
+      "TeacherCode": "BOURKE",
+      "RoomCode": "E2"
+    },
+    {
+      "DayNumber": 7,
+      "Period": "P4",
+      "ClassCode": "11ENXX1",
+      "EdvalClassCode": "11ENXX 1",
+      "TeacherId": "1029",
+      "TeacherCode": "WILLIAMS",
+      "RoomCode": "F5"
+    },
+    {
+      "DayNumber": 7,
+      "Period": "P5",
+      "ClassCode": "11ENXX1",
+      "EdvalClassCode": "11ENXX 1",
+      "TeacherId": "1029",
+      "TeacherCode": "WILLIAMS",
+      "RoomCode": "F5"
     },
     {
       "DayNumber": 6,
@@ -9765,15 +9810,6 @@
     {
       "DayNumber": 9,
       "Period": "P4",
-      "ClassCode": "11EMAT1",
-      "EdvalClassCode": "11EMAT 1",
-      "TeacherId": "729",
-      "TeacherCode": "PALEOLOGOS",
-      "RoomCode": "F9"
-    },
-    {
-      "DayNumber": 9,
-      "Period": "P4",
       "ClassCode": "11CHEM1",
       "EdvalClassCode": "11CHEM 1",
       "TeacherId": "182",
@@ -12001,7 +12037,7 @@
       "EdvalClassCode": "7&8_House_Sport 2",
       "TeacherId": "776",
       "TeacherCode": "CUGALY",
-      "RoomCode": "C2"
+      "RoomCode": "E1"
     },
     {
       "DayNumber": 7,
@@ -12154,7 +12190,7 @@
       "EdvalClassCode": "7&8_House_Sport 2",
       "TeacherId": "776",
       "TeacherCode": "CUGALY",
-      "RoomCode": "C2"
+      "RoomCode": "E1"
     },
     {
       "DayNumber": 7,
@@ -12632,6 +12668,33 @@
       "TeacherId": "158",
       "TeacherCode": "LIU",
       "RoomCode": ""
+    },
+    {
+      "DayNumber": 8,
+      "Period": "P0",
+      "ClassCode": "11MAXX1",
+      "EdvalClassCode": "11MAXX 1",
+      "TeacherId": "729",
+      "TeacherCode": "PALEOLOGOS",
+      "RoomCode": "F9"
+    },
+    {
+      "DayNumber": 9,
+      "Period": "P0",
+      "ClassCode": "11ENXX1",
+      "EdvalClassCode": "11ENXX 1",
+      "TeacherId": "1029",
+      "TeacherCode": "WILLIAMS",
+      "RoomCode": "F8"
+    },
+    {
+      "DayNumber": 9,
+      "Period": "P4",
+      "ClassCode": "11EMAX1",
+      "EdvalClassCode": "11EMAX 1",
+      "TeacherId": "729",
+      "TeacherCode": "PALEOLOGOS",
+      "RoomCode": "F9"
     }
   ]
 }
