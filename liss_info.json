@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-10-21T00:30:23.900258",
+    "generated_at": "2026-10-21T20:36:31.790630",
     "source": "sentral_api",
     "total_lessons": 1409,
     "date_range": "2026-10-21 to 2026-10-28",
@@ -2644,15 +2644,6 @@
       "RoomCode": "D6"
     },
     {
-      "DayNumber": 8,
-      "Period": "P5",
-      "ClassCode": "11EMAT1",
-      "EdvalClassCode": "11EMAT 1",
-      "TeacherId": "160",
-      "TeacherCode": "GOUZOULIS",
-      "RoomCode": "F11"
-    },
-    {
       "DayNumber": 9,
       "Period": "P2",
       "ClassCode": "11ITM1",
@@ -3370,7 +3361,7 @@
       "EdvalClassCode": "11EMAT 1",
       "TeacherId": "160",
       "TeacherCode": "GOUZOULIS",
-      "RoomCode": "F11"
+      "RoomCode": ""
     },
     {
       "DayNumber": 9,
@@ -10250,15 +10241,6 @@
     },
     {
       "DayNumber": 10,
-      "Period": "P0",
-      "ClassCode": "11EMAX1",
-      "EdvalClassCode": "11EMAX 1",
-      "TeacherId": "729",
-      "TeacherCode": "PALEOLOGOS",
-      "RoomCode": "F9"
-    },
-    {
-      "DayNumber": 10,
       "Period": "P1",
       "ClassCode": "8PDHP",
       "EdvalClassCode": "8PDH P",
@@ -12695,6 +12677,24 @@
       "TeacherId": "729",
       "TeacherCode": "PALEOLOGOS",
       "RoomCode": "F9"
+    },
+    {
+      "DayNumber": 8,
+      "Period": "P5",
+      "ClassCode": "11EMAX1",
+      "EdvalClassCode": "11EMAX 1",
+      "TeacherId": "729",
+      "TeacherCode": "PALEOLOGOS",
+      "RoomCode": ""
+    },
+    {
+      "DayNumber": 10,
+      "Period": "P0",
+      "ClassCode": "11MAXX1",
+      "EdvalClassCode": "11MAXX 1",
+      "TeacherId": "729",
+      "TeacherCode": "PALEOLOGOS",
+      "RoomCode": ""
     }
   ]
 }
