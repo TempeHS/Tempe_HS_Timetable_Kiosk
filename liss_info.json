@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-10-22T00:31:10.562650",
+    "generated_at": "2026-10-22T20:35:46.827944",
     "source": "sentral_api",
     "total_lessons": 1409,
     "date_range": "2026-10-22 to 2026-10-29",
@@ -3584,8 +3584,8 @@
       "Period": "P4",
       "ClassCode": "7MUS6",
       "EdvalClassCode": "7MUS 6",
-      "TeacherId": "735",
-      "TeacherCode": "CHAPMAN",
+      "TeacherId": "1387",
+      "TeacherCode": "O'LOUGHLIN",
       "RoomCode": "P5"
     },
     {
@@ -3890,8 +3890,8 @@
       "Period": "Lunch",
       "ClassCode": "Duty.SrToiletsL",
       "EdvalClassCode": "Duty.SrToiletsL ",
-      "TeacherId": "735",
-      "TeacherCode": "CHAPMAN",
+      "TeacherId": "1387",
+      "TeacherCode": "O'LOUGHLIN",
       "RoomCode": ""
     },
     {
@@ -4376,8 +4376,8 @@
       "Period": "P5",
       "ClassCode": "12MU11",
       "EdvalClassCode": "12MU1 1",
-      "TeacherId": "735",
-      "TeacherCode": "CHAPMAN",
+      "TeacherId": "187",
+      "TeacherCode": "UNKN",
       "RoomCode": ""
     },
     {
@@ -5654,8 +5654,8 @@
       "Period": "P2",
       "ClassCode": "7MUS9",
       "EdvalClassCode": "7MUS 9",
-      "TeacherId": "735",
-      "TeacherCode": "CHAPMAN",
+      "TeacherId": "1387",
+      "TeacherCode": "O'LOUGHLIN",
       "RoomCode": "P5"
     },
     {
@@ -5879,8 +5879,8 @@
       "Period": "P3",
       "ClassCode": "11ENT1",
       "EdvalClassCode": "11ENT 1",
-      "TeacherId": "735",
-      "TeacherCode": "CHAPMAN",
+      "TeacherId": "1387",
+      "TeacherCode": "O'LOUGHLIN",
       "RoomCode": "C7"
     },
     {
@@ -6590,8 +6590,8 @@
       "Period": "P6",
       "ClassCode": "10MU1",
       "EdvalClassCode": "10MU 1",
-      "TeacherId": "735",
-      "TeacherCode": "CHAPMAN",
+      "TeacherId": "1387",
+      "TeacherCode": "O'LOUGHLIN",
       "RoomCode": "C6"
     },
     {
@@ -6680,8 +6680,8 @@
       "Period": "P0",
       "ClassCode": "JazzCombo",
       "EdvalClassCode": "JazzComb o",
-      "TeacherId": "735",
-      "TeacherCode": "CHAPMAN",
+      "TeacherId": "734",
+      "TeacherCode": "UNKN",
       "RoomCode": "C7"
     },
     {
@@ -6905,8 +6905,8 @@
       "Period": "P2",
       "ClassCode": "7MUS9",
       "EdvalClassCode": "7MUS 9",
-      "TeacherId": "735",
-      "TeacherCode": "CHAPMAN",
+      "TeacherId": "1387",
+      "TeacherCode": "O'LOUGHLIN",
       "RoomCode": "P5"
     },
     {
@@ -7247,8 +7247,8 @@
       "Period": "P3",
       "ClassCode": "12MU11",
       "EdvalClassCode": "12MU1 1",
-      "TeacherId": "735",
-      "TeacherCode": "CHAPMAN",
+      "TeacherId": "182",
+      "TeacherCode": "UNKN",
       "RoomCode": ""
     },
     {
@@ -7598,8 +7598,8 @@
       "Period": "P2",
       "ClassCode": "11ENT1",
       "EdvalClassCode": "11ENT 1",
-      "TeacherId": "735",
-      "TeacherCode": "CHAPMAN",
+      "TeacherId": "1387",
+      "TeacherCode": "O'LOUGHLIN",
       "RoomCode": "GYM_2"
     },
     {
@@ -7895,8 +7895,8 @@
       "Period": "P3",
       "ClassCode": "12MU11",
       "EdvalClassCode": "12MU1 1",
-      "TeacherId": "735",
-      "TeacherCode": "CHAPMAN",
+      "TeacherId": "182",
+      "TeacherCode": "UNKN",
       "RoomCode": ""
     },
     {
@@ -8174,8 +8174,8 @@
       "Period": "P4",
       "ClassCode": "12MU11",
       "EdvalClassCode": "12MU1 1",
-      "TeacherId": "735",
-      "TeacherCode": "CHAPMAN",
+      "TeacherId": "182",
+      "TeacherCode": "UNKN",
       "RoomCode": ""
     },
     {
@@ -8588,8 +8588,8 @@
       "Period": "P6",
       "ClassCode": "7MUS6",
       "EdvalClassCode": "7MUS 6",
-      "TeacherId": "735",
-      "TeacherCode": "CHAPMAN",
+      "TeacherId": "1387",
+      "TeacherCode": "O'LOUGHLIN",
       "RoomCode": "P5"
     },
     {
@@ -9191,8 +9191,8 @@
       "Period": "P2",
       "ClassCode": "12MU11",
       "EdvalClassCode": "12MU1 1",
-      "TeacherId": "735",
-      "TeacherCode": "CHAPMAN",
+      "TeacherId": "182",
+      "TeacherCode": "UNKN",
       "RoomCode": ""
     },
     {
@@ -9407,8 +9407,8 @@
       "Period": "P3",
       "ClassCode": "11ENT1",
       "EdvalClassCode": "11ENT 1",
-      "TeacherId": "735",
-      "TeacherCode": "CHAPMAN",
+      "TeacherId": "1387",
+      "TeacherCode": "O'LOUGHLIN",
       "RoomCode": "GYM_1"
     },
     {
@@ -9695,8 +9695,8 @@
       "Period": "P4",
       "ClassCode": "7MUS9",
       "EdvalClassCode": "7MUS 9",
-      "TeacherId": "735",
-      "TeacherCode": "CHAPMAN",
+      "TeacherId": "1387",
+      "TeacherCode": "O'LOUGHLIN",
       "RoomCode": "P5"
     },
     {
@@ -9929,8 +9929,8 @@
       "Period": "P5",
       "ClassCode": "7MUS6",
       "EdvalClassCode": "7MUS 6",
-      "TeacherId": "735",
-      "TeacherCode": "CHAPMAN",
+      "TeacherId": "1387",
+      "TeacherCode": "O'LOUGHLIN",
       "RoomCode": "C9"
     },
     {
@@ -10235,8 +10235,8 @@
       "Period": "P7",
       "ClassCode": "Strings",
       "EdvalClassCode": "String s",
-      "TeacherId": "735",
-      "TeacherCode": "CHAPMAN",
+      "TeacherId": "628",
+      "TeacherCode": "UNKN",
       "RoomCode": "C7"
     },
     {
@@ -10361,8 +10361,8 @@
       "Period": "P1",
       "ClassCode": "10MU1",
       "EdvalClassCode": "10MU 1",
-      "TeacherId": "735",
-      "TeacherCode": "CHAPMAN",
+      "TeacherId": "1387",
+      "TeacherCode": "O'LOUGHLIN",
       "RoomCode": "C6"
     },
     {
@@ -10622,8 +10622,8 @@
       "Period": "P2",
       "ClassCode": "10MU1",
       "EdvalClassCode": "10MU 1",
-      "TeacherId": "735",
-      "TeacherCode": "CHAPMAN",
+      "TeacherId": "1387",
+      "TeacherCode": "O'LOUGHLIN",
       "RoomCode": "C6"
     },
     {
@@ -11216,8 +11216,8 @@
       "Period": "P5",
       "ClassCode": "11ENT1",
       "EdvalClassCode": "11ENT 1",
-      "TeacherId": "735",
-      "TeacherCode": "CHAPMAN",
+      "TeacherId": "1387",
+      "TeacherCode": "O'LOUGHLIN",
       "RoomCode": "C7"
     },
     {
@@ -11387,8 +11387,8 @@
       "Period": "P6",
       "ClassCode": "7MUS9",
       "EdvalClassCode": "7MUS 9",
-      "TeacherId": "735",
-      "TeacherCode": "CHAPMAN",
+      "TeacherId": "1387",
+      "TeacherCode": "O'LOUGHLIN",
       "RoomCode": "C9"
     },
     {
