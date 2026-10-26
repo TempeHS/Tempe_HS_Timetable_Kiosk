@@ -1,9 +1,9 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-10-26T00:32:42.302121",
+    "generated_at": "2026-10-26T23:26:35.284015",
     "source": "sentral_api",
-    "total_lessons": 1408,
+    "total_lessons": 1410,
     "date_range": "2026-10-26 to 2026-11-02",
     "days_covered": [
       1,
@@ -137,8 +137,8 @@
       "Period": "P3",
       "ClassCode": "12MAT1",
       "EdvalClassCode": "12MAT 1",
-      "TeacherId": "729",
-      "TeacherCode": "PALEOLOGOS",
+      "TeacherId": "160",
+      "TeacherCode": "UNKN",
       "RoomCode": ""
     },
     {
@@ -182,8 +182,8 @@
       "Period": "P5",
       "ClassCode": "12EMAX1",
       "EdvalClassCode": "12EMAX 1",
-      "TeacherId": "729",
-      "TeacherCode": "PALEOLOGOS",
+      "TeacherId": "158",
+      "TeacherCode": "UNKN",
       "RoomCode": ""
     },
     {
@@ -929,8 +929,8 @@
       "Period": "P2",
       "ClassCode": "12MAT1",
       "EdvalClassCode": "12MAT 1",
-      "TeacherId": "729",
-      "TeacherCode": "PALEOLOGOS",
+      "TeacherId": "160",
+      "TeacherCode": "UNKN",
       "RoomCode": ""
     },
     {
@@ -947,8 +947,8 @@
       "Period": "P0",
       "ClassCode": "12EMAX1",
       "EdvalClassCode": "12EMAX 1",
-      "TeacherId": "729",
-      "TeacherCode": "PALEOLOGOS",
+      "TeacherId": "866",
+      "TeacherCode": "UNKN",
       "RoomCode": ""
     },
     {
@@ -8921,8 +8921,8 @@
       "Period": "P5",
       "ClassCode": "12EMAX1",
       "EdvalClassCode": "12EMAX 1",
-      "TeacherId": "729",
-      "TeacherCode": "PALEOLOGOS",
+      "TeacherId": "158",
+      "TeacherCode": "UNKN",
       "RoomCode": ""
     },
     {
@@ -10487,8 +10487,8 @@
       "Period": "P1",
       "ClassCode": "12MAT1",
       "EdvalClassCode": "12MAT 1",
-      "TeacherId": "729",
-      "TeacherCode": "PALEOLOGOS",
+      "TeacherId": "653",
+      "TeacherCode": "UNKN",
       "RoomCode": ""
     },
     {
@@ -12686,6 +12686,24 @@
       "TeacherId": "1029",
       "TeacherCode": "WILLIAMS",
       "RoomCode": "F5"
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P6",
+      "ClassCode": "11MAXX1",
+      "EdvalClassCode": "11MAXX 1",
+      "TeacherId": "729",
+      "TeacherCode": "PALEOLOGOS",
+      "RoomCode": ""
+    },
+    {
+      "DayNumber": 2,
+      "Period": "P7",
+      "ClassCode": "11MAXX1",
+      "EdvalClassCode": "11MAXX 1",
+      "TeacherId": "729",
+      "TeacherCode": "PALEOLOGOS",
+      "RoomCode": ""
     }
   ]
 }
