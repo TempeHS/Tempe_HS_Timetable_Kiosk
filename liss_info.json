@@ -1,9 +1,9 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-10-27T02:34:33.875463",
+    "generated_at": "2026-10-27T20:31:52.624870",
     "source": "sentral_api",
-    "total_lessons": 1410,
+    "total_lessons": 1411,
     "date_range": "2026-10-27 to 2026-11-03",
     "days_covered": [
       1,
@@ -12704,6 +12704,15 @@
       "TeacherId": "729",
       "TeacherCode": "PALEOLOGOS",
       "RoomCode": ""
+    },
+    {
+      "DayNumber": 5,
+      "Period": "P4",
+      "ClassCode": "11SE_Study1",
+      "EdvalClassCode": "11SE_Study 1",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
+      "RoomCode": "C10"
     }
   ]
 }
