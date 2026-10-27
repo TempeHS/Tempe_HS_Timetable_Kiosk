@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-10-27T00:31:27.799074",
+    "generated_at": "2026-10-27T02:34:33.875463",
     "source": "sentral_api",
     "total_lessons": 1410,
     "date_range": "2026-10-27 to 2026-11-03",
@@ -6320,8 +6320,8 @@
       "Period": "P2",
       "ClassCode": "9ASSEP",
       "EdvalClassCode": "9ASSE P",
-      "TeacherId": "653",
-      "TeacherCode": "TILLETT",
+      "TeacherId": "1387",
+      "TeacherCode": "O'LOUGHLIN",
       "RoomCode": "C4"
     },
     {
@@ -11657,8 +11657,8 @@
       "Period": "P2",
       "ClassCode": "11ASSEENT",
       "EdvalClassCode": "11ASSE ENT",
-      "TeacherId": "1387",
-      "TeacherCode": "O'LOUGHLIN",
+      "TeacherId": "653",
+      "TeacherCode": "TILLETT",
       "RoomCode": "COLA_1"
     },
     {
