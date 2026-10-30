@@ -4,23 +4,37 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
+const { parseDocument, DomUtils } = require('htmlparser2');
 
 const ROOT = path.join(__dirname, '..', '..');
 const HTML = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
-const INLINE_SCRIPT_PATTERN = /<script>([\s\S]*?)<\/script>/i;
-const INLINE_SCRIPT = HTML.match(INLINE_SCRIPT_PATTERN)[1];
+const INLINE_SCRIPT = extractInlineScript(HTML);
 const CORE_SCRIPT = fs.readFileSync(path.join(ROOT, 'timetable-core.js'), 'utf8');
 
-it('extracts inline scripts regardless of tag case', () => {
+function extractInlineScript(html) {
+    const scripts = DomUtils.getElementsByTagName('script', parseDocument(html));
+    const script = scripts.find(element => !Object.hasOwn(element.attribs, 'src'));
+    assert.ok(script, 'Expected an inline script in the HTML');
+    return DomUtils.textContent(script);
+}
+
+it('extracts inline scripts using HTML parsing', () => {
     const source = '\nconsole.log("test");\n';
     for (const [opening, closing] of [
         ['script', 'script'],
         ['SCRIPT', 'SCRIPT'],
-        ['ScRiPt', 'sCrIpT']
+        ['ScRiPt', 'sCrIpT'],
+        ['script type="text/javascript"', 'script'],
+        ['script data-label="a > b"', 'script'],
+        ['script', 'script \t']
     ]) {
         const html = `<${opening}>${source}</${closing}>`;
-        assert.equal(html.match(INLINE_SCRIPT_PATTERN)?.[1], source);
+        assert.equal(extractInlineScript(html), source);
     }
+    assert.equal(extractInlineScript(
+        `<!-- <script>ignored();</script> --><script SRC="core.js"></script><script>${source}</script>`
+    ), source);
+    assert.throws(() => extractInlineScript('<script src="core.js"></script>'), /Expected an inline script/);
 });
 
 function fakeDateClass(fixedIso) {

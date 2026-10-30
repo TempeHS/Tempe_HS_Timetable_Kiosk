@@ -4,5 +4,8 @@
   "scripts": {
     "test": "node --test tests/js/",
     "test:py": "python3 -m unittest discover -s tests -p 'test_*.py' -v"
+  },
+  "devDependencies": {
+    "htmlparser2": "^12.0.0"
   }
 }
