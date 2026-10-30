@@ -12,6 +12,9 @@ on:
     # Run weekly on Monday at 6:00 AM UTC to check for outdated actions
     - cron: "0 6 * * 1"
 
+permissions:
+  contents: read
+
 jobs:
   validate:
     runs-on: ubuntu-latest

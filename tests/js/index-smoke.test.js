@@ -7,8 +7,21 @@ const vm = require('node:vm');
 
 const ROOT = path.join(__dirname, '..', '..');
 const HTML = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
-const INLINE_SCRIPT = HTML.match(/<script>([\s\S]*?)<\/script>/)[1];
+const INLINE_SCRIPT_PATTERN = /<script>([\s\S]*?)<\/script>/i;
+const INLINE_SCRIPT = HTML.match(INLINE_SCRIPT_PATTERN)[1];
 const CORE_SCRIPT = fs.readFileSync(path.join(ROOT, 'timetable-core.js'), 'utf8');
+
+it('extracts inline scripts regardless of tag case', () => {
+    const source = '\nconsole.log("test");\n';
+    for (const [opening, closing] of [
+        ['script', 'script'],
+        ['SCRIPT', 'SCRIPT'],
+        ['ScRiPt', 'sCrIpT']
+    ]) {
+        const html = `<${opening}>${source}</${closing}>`;
+        assert.equal(html.match(INLINE_SCRIPT_PATTERN)?.[1], source);
+    }
+});
 
 function fakeDateClass(fixedIso) {
     const fixed = new Date(fixedIso).getTime();

@@ -159,7 +159,7 @@ class LissBellTimesFetcher:
             "id": 1
         }
 
-        self.logger.debug("LISS request: %s", json.dumps(request, indent=2))
+        self.logger.debug("LISS request: liss.getBellTimes")
 
         try:
             response = requests.post(
