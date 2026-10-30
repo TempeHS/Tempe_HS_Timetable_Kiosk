@@ -13,6 +13,7 @@ import re
 from datetime import datetime, timedelta
 from typing import Dict, List, Any, Optional, Tuple
 from sentral_rest_client import SentralAPIClient
+from data_freshness import write_json_atomic
 
 
 def log_generation_run(response_code: int, start_date: str, end_date: str, validation_result: str, log_file: str = '.logs/liss_info_generation.log'):
@@ -32,7 +33,7 @@ def log_generation_run(response_code: int, start_date: str, end_date: str, valid
 
         # Ensure logs directory exists
         os.makedirs(os.path.dirname(log_file), exist_ok=True)
-        
+
         with open(log_file, 'a', encoding='utf-8') as f:
             f.write(log_entry)
     except Exception as e:
@@ -163,44 +164,10 @@ def generate_liss_info_json(days_limit: int = 7, output_file: str = 'liss_info.j
 
         print(f"📅 Target date range: {date_range}")
 
-        # Get calendar data to understand which days are active
-        print("📅 Fetching calendar data...")
-        calendar_data = client.get_timetable_calendar_dates(
-            **{'from': date_from, 'to': date_to})
-
-        active_day_numbers = set()
-        if calendar_data:
-            # Load calendar.json to get the proper day number mapping for the 7-day period
-            try:
-                with open('calendar.json', 'r', encoding='utf-8') as f:
-                    calendar_json = json.load(f)
-                    
-                for day_entry in calendar_json.get('calendar', []):
-                    if day_entry.get('is_school_day', False):
-                        day_number = day_entry.get('day_number', 0)
-                        if day_number > 0:
-                            active_day_numbers.add(day_number)
-                            
-                print(f"📋 Using calendar.json day numbers for 7-day period: {sorted(active_day_numbers)}")
-                            
-            except Exception as e:
-                print(f"Warning: Could not load calendar.json, using API data: {e}")
-                # Fallback to API data if calendar.json is not available
-                for day_info in calendar_data:
-                    attrs = day_info.get('attributes', {})
-                    if attrs.get('isDailyTimetable', False) and attrs.get('cycle'):
-                        # Try to extract day number from API if possible
-                        # This is less reliable but better than all days
-                        cycle = int(attrs.get('cycle', 0))
-                        if 1 <= cycle <= 10:
-                            active_day_numbers.add(cycle)
-
-        if not active_day_numbers:
-            # Only as last resort, limit to reasonable subset
-            active_day_numbers = set([5, 6, 7, 8, 9, 10])  # Current week pattern
-            print("📋 Using fallback day numbers for current week pattern")
-
-        print(f"📋 Active day numbers for period: {sorted(active_day_numbers)}")
+        # Always include the whole A/B cycle: the kiosk looks ahead into next week,
+        # which may be a different week of the cycle than this one.
+        active_day_numbers = set(range(1, 11))
+        print(f"📋 Active day numbers: {sorted(active_day_numbers)}")
 
         # Get staff code mapping
         staff_mapping = get_staff_code_mapping(client)
@@ -275,7 +242,7 @@ def generate_liss_info_json(days_limit: int = 7, output_file: str = 'liss_info.j
             print("❌ Failed to fetch timetable days - cannot continue")
             print("🔍 This is required for period-in-day mapping")
             return False, 404, date_range
-            
+
         print("⏰ Fetching timetable periods...")
         periods_response = client._make_request(
             'GET', 'timetables/timetable-period', {'limit': 50})
@@ -287,16 +254,17 @@ def generate_liss_info_json(days_limit: int = 7, output_file: str = 'liss_info.j
         # Validate response structure
         days_data = days_response.get('data', [])
         periods_data = periods_response.get('data', [])
-        
+
         if not days_data:
             print("⚠️  Warning: No timetable days found in response")
             print(f"🔍 Days response structure: {list(days_response.keys())}")
         else:
             print(f"✅ Found {len(days_data)} timetable days")
-            
+
         if not periods_data:
             print("⚠️  Warning: No timetable periods found in response")
-            print(f"🔍 Periods response structure: {list(periods_response.keys())}")
+            print(
+                f"🔍 Periods response structure: {list(periods_response.keys())}")
         else:
             print(f"✅ Found {len(periods_data)} timetable periods")
 
@@ -326,7 +294,11 @@ def generate_liss_info_json(days_limit: int = 7, output_file: str = 'liss_info.j
                     'ThuA': 4, 'ThuB': 9,
                     'FriA': 5, 'FriB': 10
                 }
-                day_number = day_number_map.get(day_name, 1)
+                day_number = day_number_map.get(day_name)
+                if day_number is None:
+                    print(
+                        f"⚠️  Skipping {period_name} on unknown timetable day '{day_name}'")
+                    continue
 
                 period_day_lookup[pid_id] = {
                     'day_name': day_name,
@@ -392,6 +364,7 @@ def generate_liss_info_json(days_limit: int = 7, output_file: str = 'liss_info.j
                     room_code = room_info.get('attributes', {}).get('name', '')
 
                     # Get teacher info from INCLUDED data (OPTIMIZED!)
+                    teacher_id = None
                     teacher_code = 'UNKN'
                     teacher_rel = rels.get(
                         'timetableTeachers', {}).get('data', [])
@@ -428,6 +401,11 @@ def generate_liss_info_json(days_limit: int = 7, output_file: str = 'liss_info.j
 
         print(f"✓ Processed {len(lessons_data)} class lessons")
 
+        validation_result = validate_liss_data(lessons_data)
+        if validation_result.startswith('FAILED'):
+            print(f"❌ Not writing {output_file}: {validation_result}")
+            return False, 204 if not lessons_data else 422, date_range
+
         # Create the complete JSON structure
         liss_json = {
             "metadata": {
@@ -436,7 +414,7 @@ def generate_liss_info_json(days_limit: int = 7, output_file: str = 'liss_info.j
                 "source": "sentral_api",
                 "total_lessons": len(lessons_data),
                 "date_range": date_range,
-                "days_covered": sorted(active_day_numbers),
+                "days_covered": sorted(set(item['DayNumber'] for item in lessons_data)),
                 "note": "Generated from Sentral API timetable endpoints for LISS integration"
             },
             "timetable_data": lessons_data
@@ -445,8 +423,7 @@ def generate_liss_info_json(days_limit: int = 7, output_file: str = 'liss_info.j
         # Write to JSON file
         print(
             f"💾 Writing {len(lessons_data)} LISS entries to {output_file}...")
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(liss_json, f, indent=2, ensure_ascii=False)
+        write_json_atomic(output_file, liss_json)
 
         print(f"✅ Successfully generated {output_file}")
         print(f"📊 Summary:")
@@ -475,16 +452,16 @@ def generate_liss_info_json(days_limit: int = 7, output_file: str = 'liss_info.j
         print(f"❌ Error generating LISS info JSON: {e}")
         print(f"🔍 Exception type: {type(e).__name__}")
         print(f"🔍 Exception details: {str(e)}")
-        
+
         # Print API statistics even on failure
         if 'client' in locals():
             client.print_request_stats()
-            
+
         # Import traceback for more detailed error info
         import traceback
         print(f"🐛 Full traceback:")
         traceback.print_exc()
-        
+
         return False, 500, "N/A"
 
 
@@ -497,12 +474,13 @@ def main():
     debug_mode = os.getenv('LISS_DEBUG', 'false').lower() == 'true'
     if len(sys.argv) > 1 and '--debug' in sys.argv:
         debug_mode = True
-        
+
     if debug_mode:
         print("🐛 Debug mode enabled")
 
     # Generate for 7 days as requested
-    success, response_code, date_range = generate_liss_info_json(days_limit=7, debug=debug_mode)
+    success, response_code, date_range = generate_liss_info_json(
+        days_limit=7, debug=debug_mode)
 
     # Validate generated data if successful
     validation_result = "FAILED - Generation failed"

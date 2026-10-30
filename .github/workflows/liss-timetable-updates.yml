@@ -200,35 +200,16 @@ jobs:
         if: steps.time_check.outputs.within_hours == 'true'
         id: changes
         run: |
-          echo "🔍 Checking for meaningful changes in LISS data..."
+          echo "🔍 Checking whether liss_info.json should be committed..."
+          git show HEAD:liss_info.json > /tmp/old_liss_info.json 2>/dev/null || rm -f /tmp/old_liss_info.json
 
-          # Check if liss_info.json exists in git
-          if git cat-file -e HEAD:liss_info.json 2>/dev/null; then
-            echo "📋 Previous liss_info.json found, comparing content..."
-            
-            # Get the current version from git and remove the generated_at line
-            git show HEAD:liss_info.json | grep -v '"generated_at"' > /tmp/old_liss_content.json
-            
-            # Remove the generated_at line from the new file for comparison
-            grep -v '"generated_at"' liss_info.json > /tmp/new_liss_content.json
-            
-            # Compare the files without the timestamp
-            if diff -q /tmp/old_liss_content.json /tmp/new_liss_content.json >/dev/null; then
-              echo "changes=false" >> $GITHUB_OUTPUT
-              echo "ℹ️ No meaningful changes detected (only timestamp updated)"
-              echo "⏭️ Skipping commit as only generated_at timestamp changed"
-            else
-              echo "changes=true" >> $GITHUB_OUTPUT
-              echo "✅ Meaningful changes detected in LISS data"
-              echo "📊 Changes found (excluding timestamp):"
-              diff /tmp/old_liss_content.json /tmp/new_liss_content.json || true
-            fi
-            
-            # Clean up temp files
-            rm -f /tmp/old_liss_content.json /tmp/new_liss_content.json
+          # Commit if lessons changed, or if unchanged but the saved timestamp is within a day of going stale.
+          decision=$(python3 data_freshness.py should-commit --old /tmp/old_liss_info.json --new liss_info.json --source liss_info --margin-days 1)
+          echo "changes=$decision" >> "$GITHUB_OUTPUT"
+          if [ "$decision" = "true" ]; then
+            echo "✅ liss_info.json will be committed"
           else
-            echo "changes=true" >> $GITHUB_OUTPUT
-            echo "✅ New liss_info.json file - will commit"
+            echo "⏭️ Lessons unchanged and timestamp still fresh - skipping commit"
           fi
 
           # Also check log file changes
@@ -290,7 +271,7 @@ jobs:
               if [ "${{ steps.changes.outputs.changes }}" == "true" ]; then
                 echo "✅ **Result:** LISS data updated and committed"
               else
-                echo "ℹ️ **Result:** No meaningful changes detected (only timestamp updated)"
+                echo "ℹ️ **Result:** Lessons unchanged and timestamp still fresh"
                 echo "⏭️ **Action:** Skipped commit to avoid unnecessary updates"
               fi
             else

@@ -4,7 +4,7 @@
     "description": "A web-based timetable display system for Tempe High School",
     "type": "web_application",
     "deployment": "github_pages",
-    "license": "GNU GPL v3.0",
+    "license": "MIT",
     "primary_files": {
       "entry_point": "index.html",
       "server": "server.py",
@@ -66,11 +66,11 @@
       },
       {
         "rule": "License Compliance",
-        "instruction": "This project is licensed under GNU GPL v3.0. Ensure all code contributions comply with GPL requirements and reference the license appropriately in documentation.",
+        "instruction": "This project is licensed under the MIT License. Ensure all code contributions and dependencies are compatible with MIT and reference the license appropriately in documentation.",
         "requirements": [
           "Include license header in significant code files",
           "Reference LICENSE file in documentation",
-          "Ensure compatibility with GPL for any dependencies"
+          "Ensure compatibility with MIT for any dependencies"
         ]
       }
     ],
@@ -78,7 +78,7 @@
       "root_files": [
         "index.html - Main application entry point (GitHub Pages compatible)",
         "server.py - Local development server",
-        "LICENSE - GNU GPL v3.0 license file",
+        "LICENSE - MIT license file",
         "requirements.txt - Python dependencies",
         "*.json - Configuration files"
       ],
@@ -100,7 +100,7 @@
       "github_pages": "Ensure index.html works directly when served from GitHub Pages",
       "configuration": "Always validate JSON configuration files and provide clear error messages for invalid configs",
       "documentation": "Keep documentation up-to-date in /docs folder when making changes",
-      "licensing": "Maintain GPL compliance and proper attribution",
+      "licensing": "Maintain MIT license attribution",
       "git_configuration": "This repository requires proper git configuration to be set up. Ensure git user.name and user.email are configured before making commits. Use 'git config --global user.name \"Your Name\"' and 'git config --global user.email \"your.email@example.com\"' to set up git configuration. Note: .gitconfig should not be included in the repository as it contains user-specific settings.",
       "line_endings": "Line endings are managed through .gitattributes file which ensures consistent LF line endings for text files across all platforms. This handles cross-platform development without requiring user-specific git configuration."
     },
@@ -109,12 +109,12 @@
         "style": "PEP 8",
         "type_hints": "required",
         "docstrings": "required",
-        "license_header": "Include GPL header for significant files"
+        "license_header": "Include MIT header for significant files"
       },
       "javascript": {
         "style": "ES6+",
         "comments": "JSDoc format",
-        "license_header": "Include GPL header for significant files"
+        "license_header": "Include MIT header for significant files"
       },
       "html": {
         "style": "semantic HTML5",

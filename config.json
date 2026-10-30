@@ -82,7 +82,7 @@
   "ui": {
     "refreshInterval": 60000,
     "cacheBusting": false,
-    "debug": true,
+    "debug": false,
     "responsive": {
       "breakpoints": {
         "large": 1700,
@@ -102,7 +102,8 @@
     "bell_times": {
       "json_file": "bell_times.json",
       "xml_file": "bell_times.xml",
-      "generation_script": "generate_bell_times.py"
+      "generation_script": "generate_bell_times.py",
+      "stale_days": 30
     },
     "liss_info": {
       "json_file": "liss_info.json",

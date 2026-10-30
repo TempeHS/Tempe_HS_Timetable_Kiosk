@@ -10,13 +10,28 @@ Usage:
     python generate_calendar.py
 """
 
-import json
 import sys
 import os
 import re
 from datetime import datetime, timedelta
 from typing import Optional, Dict, Any, List
 from sentral_rest_client import SentralAPIClient, load_config
+from data_freshness import write_json_atomic
+
+DEFAULT_DAYS_AHEAD = 30
+
+
+def get_days_ahead(config: Dict[str, Any]) -> int:
+    """dataSources.calendar.days_ahead, then api.calendar_source.days_ahead, then 30."""
+    candidates = [
+        ((config.get('dataSources') or {}).get(
+            'calendar') or {}).get('days_ahead'),
+        ((config.get('api') or {}).get('calendar_source') or {}).get('days_ahead'),
+    ]
+    for value in candidates:
+        if isinstance(value, int) and not isinstance(value, bool) and value > 0:
+            return value
+    return DEFAULT_DAYS_AHEAD
 
 
 def log_generation_run(response_code: int, start_date: str, end_date: str, validation_result: str, log_file: str = '.logs/calendar_generation.log'):
@@ -36,7 +51,7 @@ def log_generation_run(response_code: int, start_date: str, end_date: str, valid
 
         # Ensure logs directory exists
         os.makedirs(os.path.dirname(log_file), exist_ok=True)
-        
+
         with open(log_file, 'a', encoding='utf-8') as f:
             f.write(log_entry)
     except Exception as e:
@@ -95,22 +110,22 @@ def load_day_type_mapping() -> Dict[int, str]:
         day_types = []
         offset = 0
         limit = 50
-        
+
         while True:
             response = client._make_request(
                 'GET', 'timetables/timetable-day', params={'limit': limit, 'offset': offset})
             if not response or 'data' not in response:
                 break
-                
+
             batch = response.get('data', [])
             if not batch:
                 break
-                
+
             day_types.extend(batch)
             if len(batch) < limit:
                 break
             offset += limit
-        
+
         if day_types:
             mapping = {}
             for day_type in day_types:
@@ -277,19 +292,18 @@ def save_calendar_json(calendar_data: List[Dict[str, Any]], filename: str = 'cal
         filename (str): Output filename
     """
     try:
-        with open(filename, 'w', encoding='utf-8') as f:
-            json.dump({
-                'metadata': {
-                    'generated': datetime.now().isoformat(),
-                    'source': 'sentral_api',
-                    'total_days': len(calendar_data),
-                    'date_range': {
-                        'from': calendar_data[0]['date'] if calendar_data else None,
-                        'to': calendar_data[-1]['date'] if calendar_data else None
-                    }
-                },
-                'calendar': calendar_data
-            }, f, indent=2, ensure_ascii=False)
+        write_json_atomic(filename, {
+            'metadata': {
+                'generated': datetime.now().isoformat(),
+                'source': 'sentral_api',
+                'total_days': len(calendar_data),
+                'date_range': {
+                    'from': calendar_data[0]['date'] if calendar_data else None,
+                    'to': calendar_data[-1]['date'] if calendar_data else None
+                }
+            },
+            'calendar': calendar_data
+        })
 
         print(f"💾 Calendar data saved to {filename}")
         return True
@@ -311,8 +325,8 @@ def main():
         sys.exit(1)
 
     # Get calendar source settings
-    calendar_config = config.get('calendar_source', {})
-    days_ahead = calendar_config.get('days_ahead', 7)
+    calendar_config = (config.get('api') or {}).get('calendar_source', {})
+    days_ahead = get_days_ahead(config)
 
     print(f"⚙️  Configuration:")
     print(f"   Days ahead: {days_ahead}")

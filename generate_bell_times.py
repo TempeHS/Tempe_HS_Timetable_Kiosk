@@ -8,9 +8,10 @@ import sys
 import json
 import os
 import re
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, List, Any, Optional, Tuple
 from sentral_rest_client import SentralAPIClient
+from data_freshness import write_json_atomic
 
 
 def log_generation_run(response_code: int, start_date: str, end_date: str, validation_result: str, log_file: str = '.logs/bell_times_generation.log'):
@@ -30,7 +31,7 @@ def log_generation_run(response_code: int, start_date: str, end_date: str, valid
 
         # Ensure logs directory exists
         os.makedirs(os.path.dirname(log_file), exist_ok=True)
-        
+
         with open(log_file, 'a', encoding='utf-8') as f:
             f.write(log_entry)
     except Exception as e:
@@ -110,22 +111,22 @@ def generate_bell_times_json(output_file: str = 'bell_times.json') -> Tuple[bool
         days = []
         offset = 0
         limit = 100
-        
+
         while True:
             days_response = client._make_request(
                 'GET', 'timetables/timetable-day', {'limit': limit, 'offset': offset})
             if not days_response or 'data' not in days_response:
                 break
-                
+
             batch = days_response.get('data', [])
             if not batch:
                 break
-                
+
             days.extend(batch)
             if len(batch) < limit:
                 break
             offset += limit
-            
+
         print(f"✓ Found {len(days)} timetable days")
 
         # Get all periods with pagination
@@ -133,22 +134,22 @@ def generate_bell_times_json(output_file: str = 'bell_times.json') -> Tuple[bool
         periods = []
         offset = 0
         limit = 100
-        
+
         while True:
             periods_response = client._make_request(
                 'GET', 'timetables/timetable-period', {'limit': limit, 'offset': offset})
             if not periods_response or 'data' not in periods_response:
                 break
-                
+
             batch = periods_response.get('data', [])
             if not batch:
                 break
-                
+
             periods.extend(batch)
             if len(batch) < limit:
                 break
             offset += limit
-            
+
         print(f"✓ Found {len(periods)} timetable periods")
 
         # Get all period-in-day records with pagination
@@ -156,22 +157,22 @@ def generate_bell_times_json(output_file: str = 'bell_times.json') -> Tuple[bool
         period_in_days = []
         offset = 0
         limit = 200
-        
+
         while True:
             period_in_day_response = client._make_request(
                 'GET', 'timetables/timetable-period-in-day', {'limit': limit, 'offset': offset})
             if not period_in_day_response or 'data' not in period_in_day_response:
                 break
-                
+
             batch = period_in_day_response.get('data', [])
             if not batch:
                 break
-                
+
             period_in_days.extend(batch)
             if len(batch) < limit:
                 break
             offset += limit
-            
+
         print(f"✓ Found {len(period_in_days)} period-in-day mappings")
 
         # Create lookup dictionaries
@@ -234,7 +235,11 @@ def generate_bell_times_json(output_file: str = 'bell_times.json') -> Tuple[bool
                 'FriA': 5, 'FriB': 10
             }
 
-            day_number = day_number_map.get(day_name, 1)
+            day_number = day_number_map.get(day_name)
+            if day_number is None:
+                print(
+                    f"⚠️  Skipping {period_name} on unknown timetable day '{day_name}'")
+                continue
 
             # Determine period type based on period name and context
             period_type = 'T'  # Default to Teaching
@@ -262,11 +267,16 @@ def generate_bell_times_json(output_file: str = 'bell_times.json') -> Tuple[bool
 
             bell_times_data.append(bell_time_entry)
 
+        validation_result = validate_bell_times_data(bell_times_data)
+        if validation_result.startswith('FAILED'):
+            print(f"❌ Not writing {output_file}: {validation_result}")
+            return False, 204 if not bell_times_data else 422, date_range
+
         # Create the complete JSON structure
         bell_times_json = {
             "metadata": {
                 "source": "Sentral API",
-                "generated_at": "2024-01-01T00:00:00Z",
+                "generated_at": datetime.now(timezone.utc).isoformat(),
                 "total_periods": len(bell_times_data),
                 "note": "Generated from Sentral API timetable endpoints"
             },
@@ -276,8 +286,7 @@ def generate_bell_times_json(output_file: str = 'bell_times.json') -> Tuple[bool
         # Write to JSON file
         print(
             f"💾 Writing {len(bell_times_data)} bell time entries to {output_file}...")
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(bell_times_json, f, indent=2, ensure_ascii=False)
+        write_json_atomic(output_file, bell_times_json)
 
         print(f"✅ Successfully generated {output_file}")
         print(f"📊 Summary:")

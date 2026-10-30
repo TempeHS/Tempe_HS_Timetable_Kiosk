@@ -3,18 +3,7 @@
 Tempe High School Timetable Kiosk
 Copyright (C) 2025 TempeHS
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program. If not, see <https://www.gnu.org/licenses/>.
+Licensed under the MIT License. See the LICENSE file for details.
 -->
 <html>
 <head>
@@ -26,6 +15,28 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
     </style>
     <style>
         /* Base styles that don't depend on config */
+        #data-notices {
+            position: fixed;
+            right: 12px;
+            bottom: 12px;
+            max-width: min(60vw, 720px);
+            text-align: right;
+            z-index: 1000;
+        }
+        #data-notices:empty {
+            display: none;
+        }
+        .data-notice {
+            color: #c00000;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 0.95em;
+            background: rgba(255, 255, 255, 0.92);
+            border: 2px solid #c00000;
+            border-radius: 6px;
+            padding: 6px 10px;
+            margin-top: 6px;
+        }
     </style>
 </head>
 <body>
@@ -33,119 +44,38 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
     <div id="header"></div>
     <div id="timetable"></div>
     <div id="current-time"></div>
+    <div id="data-notices" role="status" aria-live="polite"></div>
+    <script src="timetable-core.js"></script>
     <script>
-        // Global configuration object
+        const Core = window.TimetableCore;
         let CONFIG = null;
         
         // --- CONFIGURATION LOADING ---
         async function loadConfig() {
+            let loaded = null;
             try {
                 const response = await fetch('config.json');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
-                CONFIG = await response.json();
-                
-                // Apply configuration to page
-                applyConfiguration();
-                
-                return CONFIG;
+                loaded = await response.json();
             } catch (error) {
-                console.error('Error loading configuration:', error);
-                // Fall back to default Tempe HS configuration
-                CONFIG = getDefaultConfig();
-                applyConfiguration();
-                return CONFIG;
+                console.error('Error loading configuration, using defaults:', error);
             }
-        }
-        
-        function getDefaultConfig() {
-            // Default configuration for Tempe HS (fallback)
-            return {
-                "school": {
-                    "name": "Tempe High School",
-                    "logo": {
-                        "url": "https://tempe-h.schools.nsw.gov.au/content/dam/doe/sws/schools/t/tempe-h/logo.png",
-                        "opacity": 0.15,
-                        "size": "auto 100vh"
-                    }
-                },
-                "colors": {
-                    "primary": "#AC0000",
-                    "background": "#f7f8fc",
-                    "overlay": "rgba(247, 248, 252, 0.3)",
-                    "tile": {
-                        "background": "#EDEDEE",
-                        "border": "#555",
-                        "shadow": "#b5b7b9",
-                        "hover": "#EDEDEE"
-                    },
-                    "text": {
-                        "primary": "#1a2325",
-                        "secondary": "#b5b7b9",
-                        "classCode": "#AC0000"
-                    }
-                },
-                "schedule": {
-                    "ignoredDays": [0, 6],
-                    "schoolDays": [1, 2, 3, 4, 5],
-                    "defaultShowMinutesBefore": 10,
-                    "periods": {
-                        "P0": {
-                            "showFromDay": 5,
-                            "showFromTime": "15:05",
-                            "showUntilStart": true,
-                            "description": "Period 0"
-                        },
-                        "P1": {
-                            "showFromTime": "08:20",
-                            "description": "Period 1"
-                        }
-                    }
-                },
-                "sportPeriods": {
-                    "tuesday": {
-                        "periods": ["P5", "P6"],
-                        "yearGroups": {
-                            "7": {
-                                "label": "Year 7 & 8 Sport",
-                                "includesYears": [7, 8],
-                                "excludeYears": [8]
-                            },
-                            "9": {
-                                "label": "Year 9 & 10 Sport", 
-                                "includesYears": [9, 10],
-                                "excludeYears": [10]
-                            }
-                        }
-                    }
-                },
-                "yearGroups": {
-                    "multiRowYears": [7, 9],
-                    "displayYears": [7, 8, 9, 10, 11, 12],
-                    "classCodePattern": "^(\\d+)"
-                },
-                "ui": {
-                    "refreshInterval": 60000,
-                    "cacheBusting": true
-                },
-                "files": {
-                    "bellTimes": "bell_times.xml",
-                    "lessons": "liss_info.xml",
-                    "calendar": "calendar.xml"
-                }
-            };
+            // Missing keys fall back to defaults so the renderer never reads undefined.
+            CONFIG = Core.mergeConfig(Core.DEFAULT_CONFIG, loaded);
+            applyConfiguration();
+            return CONFIG;
         }
         
         function applyConfiguration() {
             if (!CONFIG) return;
-            
-            // Set page title
-            document.getElementById('page-title').textContent = CONFIG.school.name;
-            
-            // Generate dynamic CSS
-            const css = generateDynamicCSS();
-            document.getElementById('dynamic-styles').innerHTML = css;
+            try {
+                document.getElementById('page-title').textContent = CONFIG.school.name;
+                document.getElementById('dynamic-styles').innerHTML = generateDynamicCSS();
+            } catch (error) {
+                console.error('Error applying configuration:', error);
+            }
         }
         
         function generateDynamicCSS() {
@@ -371,9 +301,9 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
         const USE_MANUAL_OVERRIDE = false;
         
         // Manual date/time settings (only used when USE_MANUAL_OVERRIDE is true)
-        const MANUAL_DATE = new Date(2025, 8, 25); // August 12, 2025 (month is 0-indexed)
-        const MANUAL_TIME_HOURS = 8; // 1 PM
-        const MANUAL_TIME_MINUTES = 20; // 25 minutes
+        const MANUAL_DATE = new Date(2025, 8, 25); // 25 September 2025 (month is 0-indexed)
+        const MANUAL_TIME_HOURS = 8; // 8 AM
+        const MANUAL_TIME_MINUTES = 20; // 20 minutes
         
         // Function to get current time (real or overridden)
         function getCurrentTime() {
@@ -387,47 +317,26 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
         
         // --- UTILS ---
         const pad2 = n => n < 10 ? '0' + n : n;
-        const auDate = date => `${pad2(date.getDate())}/${pad2(date.getMonth() + 1)}/${date.getFullYear()}`;
-        const longDay = date => date.toLocaleDateString('en-AU', { weekday: 'long' });
 
-        // Given a date, return the next school day (skips ignored days from config)
-        function getNextSchoolDay(date) {
-            if (!CONFIG) return date;
-            
-            let nextDate = new Date(date);
-            let dow = nextDate.getDay();
-            
-            // Keep incrementing until we find a school day
-            while (CONFIG.schedule.ignoredDays.includes(dow)) {
-                nextDate.setDate(nextDate.getDate() + 1);
-                dow = nextDate.getDay();
+        function debugLog(message, ...args) {
+            if (CONFIG && CONFIG.ui && CONFIG.ui.debug) {
+                console.log(message, ...args);
             }
-            
-            // If we're already on a school day, move to the next school day
-            if (CONFIG.schedule.schoolDays.includes(dow) && nextDate.toDateString() === date.toDateString()) {
-                nextDate.setDate(nextDate.getDate() + 1);
-                dow = nextDate.getDay();
-                
-                // Skip any ignored days again
-                while (CONFIG.schedule.ignoredDays.includes(dow)) {
-                    nextDate.setDate(nextDate.getDate() + 1);
-                    dow = nextDate.getDay();
-                }
+        }
+        
+        function debugWarn(message, ...args) {
+            if (CONFIG && CONFIG.ui && CONFIG.ui.debug) {
+                console.warn(message, ...args);
             }
-            
-            return nextDate;
+        }
+
+        function withCacheBuster(path) {
+            return CONFIG && CONFIG.ui.cacheBusting ? `${path}?t=${Date.now()}` : path;
         }
 
         // --- XML LOADING ---
         function loadXML(path) {
-            // Add cache busting timestamp if enabled in config
-            let urlWithCacheBuster = path;
-            if (CONFIG && CONFIG.ui.cacheBusting) {
-                const cacheBuster = `?t=${Date.now()}`;
-                urlWithCacheBuster = path + cacheBuster;
-            }
-            
-            return fetch(urlWithCacheBuster)
+            return fetch(withCacheBuster(path))
                 .then(response => {
                     if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
@@ -473,169 +382,73 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
             return null;
         }
 
-        // Helper function to check if JSON data is stale (older than 7 days)
-        function isDataStale(metadata, maxAgeDays = 7) {
-            if (!metadata) return true;
-            
-            // Try different metadata timestamp formats
-            const timestamp = metadata.generated_at || metadata.generated || metadata.timestamp;
-            if (!timestamp) {
-                debugWarn('⚠️  STALE CHECK: No timestamp found in metadata');
-                return true;
+        async function fetchJson(path) {
+            const response = await fetch(withCacheBuster(path));
+            if (!response.ok) {
+                throw new Error(`${path}: HTTP ${response.status}`);
             }
-            
-            try {
-                const generatedDate = new Date(timestamp);
-                const now = new Date();
-                const ageInDays = (now - generatedDate) / (1000 * 60 * 60 * 24);
-                
-                debugLog(`🕐 STALE CHECK: Data generated at ${timestamp}, age: ${ageInDays.toFixed(1)} days`);
-                
-                if (ageInDays > maxAgeDays) {
-                    debugWarn(`⚠️  STALE CHECK: Data is ${ageInDays.toFixed(1)} days old (exceeds ${maxAgeDays} day limit)`);
-                    return true;
-                }
-                
-                debugLog(`✅ STALE CHECK: Data is fresh (${ageInDays.toFixed(1)} days old)`);
-                return false;
-            } catch (error) {
-                debugError('❌ STALE CHECK: Error parsing timestamp:', error.message);
-                return true;
-            }
+            return response.json();
         }
 
-        // Load bell times data from JSON or XML based on configuration
-        async function loadBellTimesData() {
-            debugLog('🔧 BELL TIMES DEBUG: Starting bell times data loading...');
-            
-            if (!CONFIG) {
-                debugError('❌ BELL TIMES DEBUG: No CONFIG available');
-                return null;
-            }
-            
-            // Use centralized API configuration and data source specific settings
-            const apiConfig = CONFIG.api || {};
-            const bellTimesConfig = CONFIG.dataSources?.bell_times || {};
-            const useAPI = apiConfig.use_json !== false; // Default to true
-            const fallbackToXML = apiConfig.fallback_to_xml !== false; // Default to true
-            const apiFile = bellTimesConfig.json_file || 'bell_times.json';
-            const xmlFile = bellTimesConfig.xml_file || 'bell_times.xml';
-            const staleDataThreshold = apiConfig.sync_days || 7; // Use centralized sync_days
-            
-            // Debug configuration
-            debugLog('🔧 BELL TIMES DEBUG: Configuration:', {
-                'use_json': useAPI,
-                'fallback_to_xml': fallbackToXML,
-                'json_file': apiFile,
-                'xml_file': xmlFile,
-                'sync_days': staleDataThreshold,
-                'cache_busting': CONFIG.ui.cacheBusting
+        // Loads one data source: fresh JSON -> XML -> stale JSON (see Core.loadWithFallback).
+        async function loadSource(source, defaults, parseJson, parseXml) {
+            const api = CONFIG.api || {};
+            const files = (CONFIG.dataSources && CONFIG.dataSources[source]) || {};
+            const jsonFile = files.json_file || defaults.json;
+            const xmlFile = files.xml_file || defaults.xml;
+            const maxAgeDays = Core.getStaleDays(CONFIG, source);
+
+            const result = await Core.loadWithFallback({
+                useJson: api.use_json !== false,
+                fallbackToXml: api.fallback_to_xml !== false,
+                maxAgeDays,
+                loadJson: async () => {
+                    const json = await fetchJson(jsonFile);
+                    return { metadata: json.metadata, data: parseJson(json) };
+                },
+                loadXml: async () => parseXml(await loadXML(xmlFile))
             });
-            
-            // Try JSON API source first if enabled
-            if (useAPI) {
-                try {
-                    debugLog('⏰ BELL TIMES DEBUG: Attempting to load bell times from JSON API source...');
-                    debugLog(`📁 BELL TIMES DEBUG: Trying to fetch: ${apiFile}`);
-                    
-                    let urlWithCacheBuster = apiFile;
-                    if (CONFIG.ui.cacheBusting) {
-                        urlWithCacheBuster += `?t=${Date.now()}`;
-                        debugLog(`🔄 BELL TIMES DEBUG: Cache busting enabled, URL: ${urlWithCacheBuster}`);
-                    }
-                    
-                    const response = await fetch(urlWithCacheBuster);
-                    debugLog(`📊 BELL TIMES DEBUG: JSON fetch response status: ${response.status}`);
-                    
-                    if (response.ok) {
-                        const jsonData = await response.json();
-                        debugLog('✅ BELL TIMES DEBUG: Successfully loaded bell times from JSON API source');
-                        debugLog(`📈 BELL TIMES DEBUG: JSON contains ${jsonData.bell_times?.length || 0} bell time entries`);
-                        
-                        // Check if JSON data is stale using centralized sync_days
-                        if (isDataStale(jsonData.metadata, staleDataThreshold)) {
-                            debugWarn(`⚠️  BELL TIMES DEBUG: JSON data is stale (older than ${staleDataThreshold} days), falling back to XML`);
-                            throw new Error('JSON data is stale');
-                        }
-                        
-                        const result = parseBellTimesJSON(jsonData);
-                        debugLog('🎯 BELL TIMES DEBUG: Final decision - USING JSON BELL TIMES');
-                        return result;
-                    } else {
-                        debugWarn(`⚠️  BELL TIMES DEBUG: JSON bell times file ${apiFile} not found (${response.status})`);
-                    }
-                } catch (error) {
-                    debugWarn('⚠️  BELL TIMES DEBUG: Error loading JSON bell times:', error.message);
-                }
-            } else {
-                debugLog('🚫 BELL TIMES DEBUG: JSON API loading disabled in configuration');
+
+            debugLog(`🎯 ${source}: using ${result.source} (stale after ${maxAgeDays} days), ${result.data.length} entries`);
+            if (result.source === 'json-stale') {
+                console.warn(`${source}: JSON is older than ${maxAgeDays} days and XML failed to load; using stale JSON`);
             }
-            
-            // Fallback to XML if enabled and JSON failed or wasn't tried
-            if (fallbackToXML) {
-                try {
-                    debugLog('⏰ BELL TIMES DEBUG: Falling back to XML bell times source...');
-                    debugLog(`📁 BELL TIMES DEBUG: Trying to fetch XML: ${xmlFile}`);
-                    
-                    const bellTimesXML = await loadXML(xmlFile);
-                    debugLog('✅ BELL TIMES DEBUG: Successfully loaded bell times from XML fallback source');
-                    const result = parseBellTimesXML(bellTimesXML);
-                    debugLog('🎯 BELL TIMES DEBUG: Final decision - USING XML BELL TIMES');
-                    return result;
-                } catch (error) {
-                    debugError('❌ BELL TIMES DEBUG: Error loading XML bell times:', error.message);
-                    throw error;
-                }
-            } else {
-                debugLog('🚫 BELL TIMES DEBUG: XML fallback disabled in configuration');
-            }
-            
-            debugError('❌ BELL TIMES DEBUG: No bell times sources available or enabled');
-            throw new Error('No bell times sources available or enabled');
+            return result;
+        }
+
+        function loadBellTimesData() {
+            return loadSource('bell_times', { json: 'bell_times.json', xml: 'bell_times.xml' }, parseBellTimesJSON, parseBellTimesXML);
         }
         
         // Parse JSON bell times format (from Sentral API)
         function parseBellTimesJSON(jsonData) {
-            debugLog('🔧 BELL TIMES DEBUG: Starting JSON bell times parsing...');
-            
-            if (!jsonData || !jsonData.bell_times) {
-                debugError('❌ BELL TIMES DEBUG: Invalid JSON bell times format - missing bell_times array');
-                debugLog('🔍 BELL TIMES DEBUG: JSON data structure:', jsonData);
-                return [];
+            if (!jsonData || !Array.isArray(jsonData.bell_times)) {
+                throw new Error('Invalid bell times JSON - missing bell_times array');
             }
-            
-            debugLog(`📊 BELL TIMES DEBUG: JSON metadata:`, jsonData.metadata);
-            debugLog(`📋 BELL TIMES DEBUG: Processing ${jsonData.bell_times.length} JSON bell time entries`);
             
             const periods = [];
             for (const entry of jsonData.bell_times) {
-                if (entry.Period && entry.StartTime && entry.EndTime) {
+                if (entry && entry.Period && entry.StartTime && entry.EndTime) {
                     periods.push({
                         period: entry.Period,
-                        start: parseTime(entry.StartTime),
-                        end: parseTime(entry.EndTime),
+                        start: Core.parseTime(entry.StartTime),
+                        end: Core.parseTime(entry.EndTime),
                         dayName: entry.DayName,
                         dayNumber: entry.DayNumber,
                         type: entry.Type,
                         source: 'api'
                     });
                 } else {
-                    debugWarn('⚠️  BELL TIMES DEBUG: Skipping invalid JSON entry:', entry);
+                    debugWarn('⚠️  BELL TIMES: Skipping invalid JSON entry:', entry);
                 }
             }
-            
-            debugLog(`✅ BELL TIMES DEBUG: Successfully parsed ${periods.length} JSON bell time entries`);
-            debugLog('📋 BELL TIMES DEBUG: Sample entries:', periods.slice(0, 3));
             return periods;
         }
         
         // Parse XML bell times format (existing format)
         function parseBellTimesXML(xml) {
-            debugLog('🔧 BELL TIMES DEBUG: Starting XML bell times parsing...');
-            
             const periods = [];
             const nodes = xml.getElementsByTagName("struct");
-            debugLog(`📋 BELL TIMES DEBUG: Found ${nodes.length} XML struct nodes to process`);
             
             for(let i = 0; i < nodes.length; i++) {
                 const members = nodes[i].getElementsByTagName("member");
@@ -650,160 +463,44 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
                 if(periodName && startTime && endTime) {
                     periods.push({
                         period: periodName,
-                        start: parseTime(startTime),
-                        end: parseTime(endTime),
+                        start: Core.parseTime(startTime),
+                        end: Core.parseTime(endTime),
                         dayName: dayName,
                         dayNumber: dayNumber ? parseInt(dayNumber) : null,
                         type: type,
                         source: 'xml'
                     });
-                } else {
-                    debugWarn('⚠️  BELL TIMES DEBUG: Missing XML fields in entry:', {periodName, startTime, endTime});
                 }
             }
-            
-            debugLog(`✅ BELL TIMES DEBUG: Successfully parsed ${periods.length} XML bell time entries`);
-            debugLog('📋 BELL TIMES DEBUG: Sample entries:', periods.slice(0, 3));
             return periods;
-        }
-
-        // Legacy function for backward compatibility - now uses new loader
-        function parseBellTimes(xml) {
-            return parseBellTimesXML(xml);
-        }
-        
-        function parseTime(timeStr) {
-            if(!timeStr) return 0;
-            const [hours, minutes] = timeStr.split(":").map(Number);
-            return hours * 60 + minutes;
         }
         
         // --- CALENDAR DATA LOADING ---
-        // Debug logging function - only logs if debug is enabled in config
-        function debugLog(message, ...args) {
-            if (CONFIG && CONFIG.ui && CONFIG.ui.debug) {
-                console.log(message, ...args);
-            }
-        }
-        
-        function debugWarn(message, ...args) {
-            if (CONFIG && CONFIG.ui && CONFIG.ui.debug) {
-                console.warn(message, ...args);
-            }
-        }
-        
-        function debugError(message, ...args) {
-            if (CONFIG && CONFIG.ui && CONFIG.ui.debug) {
-                console.error(message, ...args);
-            }
-        }
-        
-        // Load calendar data from JSON or XML based on configuration
         async function loadCalendarData() {
-            debugLog('🔧 CALENDAR DEBUG: Starting calendar data loading...');
-            
-            if (!CONFIG) {
-                debugError('❌ CALENDAR DEBUG: No CONFIG available');
-                return null;
+            const result = await loadSource('calendar', { json: 'calendar.json', xml: 'calendar.xml' }, parseCalendarJSON, parseCalendarXML);
+            if (result.source === 'xml' || CONFIG.api.fallback_to_xml === false) {
+                return result;
             }
-            
-            // Use centralized API configuration and data source specific settings
-            const apiConfig = CONFIG.api || {};
-            const calendarConfig = CONFIG.dataSources?.calendar || {};
-            const useAPI = apiConfig.use_json !== false; // Default to true
-            const fallbackToXML = apiConfig.fallback_to_xml !== false; // Default to true
-            const apiFile = calendarConfig.json_file || 'calendar.json';
-            const xmlFile = calendarConfig.xml_file || 'calendar.xml';
-            const staleDataThreshold = apiConfig.sync_days || 7; // Use centralized sync_days
-            
-            // Debug configuration
-            debugLog('🔧 CALENDAR DEBUG: Configuration:', {
-                'use_json': useAPI,
-                'fallback_to_xml': fallbackToXML,
-                'json_file': apiFile,
-                'xml_file': xmlFile,
-                'sync_days': staleDataThreshold,
-                'cache_busting': CONFIG.ui.cacheBusting
-            });
-            
-            // Try JSON API source first if enabled
-            if (useAPI) {
-                try {
-                    debugLog('🗓️  CALENDAR DEBUG: Attempting to load calendar from JSON API source...');
-                    debugLog(`📁 CALENDAR DEBUG: Trying to fetch: ${apiFile}`);
-                    
-                    let urlWithCacheBuster = apiFile;
-                    if (CONFIG.ui.cacheBusting) {
-                        urlWithCacheBuster += `?t=${Date.now()}`;
-                        debugLog(`🔄 CALENDAR DEBUG: Cache busting enabled, URL: ${urlWithCacheBuster}`);
-                    }
-                    
-                    const response = await fetch(urlWithCacheBuster);
-                    debugLog(`📊 CALENDAR DEBUG: JSON fetch response status: ${response.status}`);
-                    
-                    if (response.ok) {
-                        const jsonData = await response.json();
-                        debugLog('✅ CALENDAR DEBUG: Successfully loaded calendar from JSON API source');
-                        debugLog(`📈 CALENDAR DEBUG: JSON contains ${jsonData.calendar?.length || 0} calendar entries`);
-                        
-                        // Check if JSON data is stale using centralized sync_days
-                        if (isDataStale(jsonData.metadata, staleDataThreshold)) {
-                            debugWarn(`⚠️  CALENDAR DEBUG: JSON data is stale (older than ${staleDataThreshold} days), falling back to XML`);
-                            throw new Error('JSON data is stale');
-                        }
-                        
-                        const result = parseCalendarJSON(jsonData);
-                        debugLog('🎯 CALENDAR DEBUG: Final decision - USING JSON CALENDAR');
-                        return result;
-                    } else {
-                        debugWarn(`⚠️  CALENDAR DEBUG: JSON calendar file ${apiFile} not found (${response.status})`);
-                    }
-                } catch (error) {
-                    debugWarn('⚠️  CALENDAR DEBUG: Error loading JSON calendar:', error.message);
-                }
-            } else {
-                debugLog('🚫 CALENDAR DEBUG: JSON API loading disabled in configuration');
+            // The JSON calendar only covers a few weeks; fill later dates from the full-year XML.
+            try {
+                const xmlFile = (CONFIG.dataSources.calendar && CONFIG.dataSources.calendar.xml_file) || 'calendar.xml';
+                const xmlCalendar = parseCalendarXML(await loadXML(xmlFile));
+                return { ...result, data: Core.mergeCalendars(result.data, xmlCalendar) };
+            } catch (error) {
+                debugWarn('⚠️  CALENDAR: Could not merge XML calendar:', error.message);
+                return result;
             }
-            
-            // Fallback to XML if enabled and JSON failed or wasn't tried
-            if (fallbackToXML) {
-                try {
-                    debugLog('🗓️  CALENDAR DEBUG: Falling back to XML calendar source...');
-                    debugLog(`📁 CALENDAR DEBUG: Trying to fetch XML: ${xmlFile}`);
-                    
-                    const calendarXML = await loadXML(xmlFile);
-                    debugLog('✅ CALENDAR DEBUG: Successfully loaded calendar from XML fallback source');
-                    const result = parseCalendarXML(calendarXML);
-                    debugLog('🎯 CALENDAR DEBUG: Final decision - USING XML CALENDAR');
-                    return result;
-                } catch (error) {
-                    debugError('❌ CALENDAR DEBUG: Error loading XML calendar:', error.message);
-                    throw error;
-                }
-            } else {
-                debugLog('🚫 CALENDAR DEBUG: XML fallback disabled in configuration');
-            }
-            
-            debugError('❌ CALENDAR DEBUG: No calendar sources available or enabled');
-            throw new Error('No calendar sources available or enabled');
         }
         
         // Parse JSON calendar format (from Sentral API)
         function parseCalendarJSON(jsonData) {
-            debugLog('🔧 CALENDAR DEBUG: Starting JSON calendar parsing...');
-            
-            if (!jsonData || !jsonData.calendar) {
-                debugError('❌ CALENDAR DEBUG: Invalid JSON calendar format - missing calendar array');
-                debugLog('🔍 CALENDAR DEBUG: JSON data structure:', jsonData);
-                return [];
+            if (!jsonData || !Array.isArray(jsonData.calendar)) {
+                throw new Error('Invalid calendar JSON - missing calendar array');
             }
-            
-            debugLog(`📊 CALENDAR DEBUG: JSON metadata:`, jsonData.metadata);
-            debugLog(`📋 CALENDAR DEBUG: Processing ${jsonData.calendar.length} JSON calendar entries`);
             
             const calendar = [];
             for (const entry of jsonData.calendar) {
-                if (entry.date && entry.day_name && entry.day_number !== undefined) {
+                if (entry && entry.date && entry.day_name && entry.day_number !== undefined) {
                     calendar.push({
                         date: new Date(entry.date + 'T00:00:00'), // Ensure proper date parsing
                         dayName: entry.day_name,
@@ -814,22 +511,16 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
                         source: 'api'
                     });
                 } else {
-                    debugWarn('⚠️  CALENDAR DEBUG: Skipping invalid JSON entry:', entry);
+                    debugWarn('⚠️  CALENDAR: Skipping invalid JSON entry:', entry);
                 }
             }
-            
-            debugLog(`✅ CALENDAR DEBUG: Successfully parsed ${calendar.length} JSON calendar entries`);
-            debugLog('📋 CALENDAR DEBUG: Sample entries:', calendar.slice(0, 3));
             return calendar;
         }
         
         // Parse XML calendar format (existing format)
         function parseCalendarXML(xml) {
-            debugLog('🔧 CALENDAR DEBUG: Starting XML calendar parsing...');
-            
             const calendar = [];
             const nodes = xml.getElementsByTagName("struct");
-            debugLog(`📋 CALENDAR DEBUG: Found ${nodes.length} XML struct nodes to process`);
             
             for(let i = 0; i < nodes.length; i++) {
                 const members = nodes[i].getElementsByTagName("member");
@@ -850,501 +541,107 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
                             dayType: dayName,
                             source: 'xml'
                         });
-                    } else {
-                        debugWarn('⚠️  CALENDAR DEBUG: Invalid XML date format:', dateStr);
                     }
-                } else {
-                    debugWarn('⚠️  CALENDAR DEBUG: Missing XML fields in entry:', {dateStr, dayName, dayNumber});
                 }
             }
-            
-            debugLog(`✅ CALENDAR DEBUG: Successfully parsed ${calendar.length} XML calendar entries`);
-            debugLog('📋 CALENDAR DEBUG: Sample entries:', calendar.slice(0, 3));
             return calendar;
-        }
-
-        function getDayNumber(calendarData, targetDate) {
-            const entry = calendarData.find(entry => {
-                const entryDate = new Date(entry.date);
-                return entryDate.toDateString() === targetDate.toDateString();
-            });
-            
-            return entry ? entry.dayNumber : null;
         }
         
         // --- LISS DATA LOADING (JSON/XML DUAL SOURCE) ---
-        async function loadLissData() {
-            debugLog('🔧 LISS DEBUG: Starting LISS data loading...');
-            
-            if (!CONFIG) {
-                debugError('❌ LISS DEBUG: No CONFIG available');
-                return null;
-            }
-            
-            // Use centralized API configuration and data source specific settings
-            const apiConfig = CONFIG.api || {};
-            const lissConfig = CONFIG.dataSources?.liss_info || {};
-            const useAPI = apiConfig.use_json !== false; // Default to true
-            const fallbackToXML = apiConfig.fallback_to_xml !== false; // Default to true
-            const apiFile = lissConfig.json_file || 'liss_info.json';
-            const xmlFile = lissConfig.xml_file || 'liss_info.xml';
-            const staleDataThreshold = apiConfig.sync_days || 7; // Use centralized sync_days
-            
-            // Debug configuration
-            debugLog('🔧 LISS DEBUG: Configuration:', {
-                'use_json': useAPI,
-                'fallback_to_xml': fallbackToXML,
-                'json_file': apiFile,
-                'xml_file': xmlFile,
-                'sync_days': staleDataThreshold,
-                'cache_busting': CONFIG.ui.cacheBusting
-            });
-            
-            // Try JSON API source first if enabled
-            if (useAPI) {
-                try {
-                    debugLog('📚 LISS DEBUG: Attempting to load LISS data from JSON API source...');
-                    debugLog(`📁 LISS DEBUG: Trying to fetch: ${apiFile}`);
-                    
-                    let urlWithCacheBuster = apiFile;
-                    if (CONFIG.ui.cacheBusting) {
-                        urlWithCacheBuster += `?t=${Date.now()}`;
-                        debugLog(`🔄 LISS DEBUG: Cache busting enabled, URL: ${urlWithCacheBuster}`);
-                    }
-                    
-                    const response = await fetch(urlWithCacheBuster);
-                    debugLog(`📊 LISS DEBUG: JSON fetch response status: ${response.status}`);
-                    
-                    if (response.ok) {
-                        const jsonData = await response.json();
-                        debugLog('✅ LISS DEBUG: Successfully loaded LISS data from JSON API source');
-                        debugLog(`📈 LISS DEBUG: JSON contains ${jsonData.timetable_data?.length || 0} LISS entries`);
-                        debugLog('📋 LISS DEBUG: JSON metadata:', jsonData.metadata);
-                        
-                        // Check if JSON data is stale using centralized sync_days
-                        if (isDataStale(jsonData.metadata, staleDataThreshold)) {
-                            debugWarn(`⚠️  LISS DEBUG: JSON data is stale (older than ${staleDataThreshold} days), falling back to XML`);
-                            throw new Error('JSON data is stale');
-                        }
-                        
-                        const result = await parseLissJSON(jsonData);
-                        debugLog('🎯 LISS DEBUG: Final decision - USING JSON LISS DATA');
-                        return result;
-                    } else {
-                        debugWarn(`⚠️  LISS DEBUG: JSON LISS file ${apiFile} not found (${response.status})`);
-                    }
-                } catch (error) {
-                    debugWarn('⚠️  LISS DEBUG: Error loading JSON LISS data:', error.message);
-                }
-            } else {
-                debugLog('🚫 LISS DEBUG: JSON API loading disabled in configuration');
-            }
-            
-            // Fallback to XML if enabled and JSON failed or wasn't tried
-            if (fallbackToXML) {
-                try {
-                    debugLog('📚 LISS DEBUG: Falling back to XML LISS source...');
-                    debugLog(`📁 LISS DEBUG: Trying to fetch XML: ${xmlFile}`);
-                    
-                    const lissXML = await loadXML(xmlFile);
-                    debugLog('✅ LISS DEBUG: Successfully loaded LISS data from XML fallback source');
-                    debugLog('🎯 LISS DEBUG: Final decision - USING XML LISS DATA');
-                    return lissXML;
-                } catch (error) {
-                    debugError('❌ LISS DEBUG: Error loading XML LISS data:', error.message);
-                    throw error;
-                }
-            } else {
-                debugLog('🚫 LISS DEBUG: XML fallback disabled in configuration');
-            }
-            
-            debugError('❌ LISS DEBUG: No LISS data sources available or enabled');
-            throw new Error('No LISS data sources available or enabled');
+        function loadLissData() {
+            return loadSource('liss_info', { json: 'liss_info.json', xml: 'liss_info.xml' }, parseLissJSON, parseLissXML);
         }
         
-        // Parse JSON LISS format (optimized Sentral API format)
-        async function parseLissJSON(jsonData) {
-            debugLog('🔧 LISS DEBUG: Starting JSON LISS parsing...');
-            
-            if (!jsonData || !jsonData.timetable_data) {
-                debugError('❌ LISS DEBUG: Invalid JSON LISS format - missing timetable_data array');
-                debugLog('🔍 LISS DEBUG: JSON data structure:', jsonData);
-                return null;
+        // Lessons from both sources are normalised to {DayNumber, Period, ClassCode, TeacherCode, RoomCode}.
+        function parseLissJSON(jsonData) {
+            if (!jsonData || !Array.isArray(jsonData.timetable_data)) {
+                throw new Error('Invalid LISS JSON - missing timetable_data array');
             }
-            
-            debugLog(`📊 LISS DEBUG: JSON metadata:`, jsonData.metadata);
-            debugLog(`📋 LISS DEBUG: Processing ${jsonData.timetable_data.length} JSON LISS entries`);
-            
-            // Convert JSON data to XML-like structure for compatibility with existing parseLessons function
-            const xmlDoc = document.implementation.createDocument(null, 'root', null);
-            const root = xmlDoc.documentElement;
-            
-            for (const entry of jsonData.timetable_data) {
-                const structElement = xmlDoc.createElement('struct');
-                
-                // Create member elements for each property
-                const members = [
-                    { name: 'DayNumber', value: entry.DayNumber, type: 'int' },
-                    { name: 'Period', value: entry.Period, type: 'string' },
-                    { name: 'ClassCode', value: entry.ClassCode, type: 'string' },
-                    { name: 'TeacherCode', value: entry.TeacherCode, type: 'string' },
-                    { name: 'RoomCode', value: entry.RoomCode, type: 'string' }
-                ];
-                
-                for (const member of members) {
-                    const memberElement = xmlDoc.createElement('member');
-                    const nameElement = xmlDoc.createElement('name');
-                    nameElement.textContent = member.name;
-                    
-                    const valueElement = xmlDoc.createElement('value');
-                    const typeElement = xmlDoc.createElement(member.type);
-                    typeElement.textContent = member.value;
-                    valueElement.appendChild(typeElement);
-                    
-                    memberElement.appendChild(nameElement);
-                    memberElement.appendChild(valueElement);
-                    structElement.appendChild(memberElement);
-                }
-                
-                root.appendChild(structElement);
-            }
-            
-            debugLog(`✅ LISS DEBUG: Successfully converted ${jsonData.timetable_data.length} JSON entries to XML structure`);
-            debugLog('📋 LISS DEBUG: Sample converted entries:', jsonData.timetable_data.slice(0, 3));
-            
-            // Add source metadata to the XML document
-            xmlDoc.lissSource = 'api';
-            xmlDoc.lissMetadata = jsonData.metadata;
-            
-            return xmlDoc;
+            return jsonData.timetable_data
+                .filter(entry => entry && entry.Period && entry.ClassCode)
+                .map(entry => ({
+                    DayNumber: entry.DayNumber,
+                    Period: entry.Period,
+                    ClassCode: entry.ClassCode,
+                    TeacherCode: entry.TeacherCode,
+                    RoomCode: entry.RoomCode
+                }));
         }
 
-        function parseLessons(xml, currentPeriod, calendarData, targetDate) {
-            const lessonsByYear = {};
+        function parseLissXML(xml) {
+            const lessons = [];
             const nodes = xml.getElementsByTagName("struct");
-            
-            // Get the day number for the current date from calendar
-            const dayNumber = getDayNumber(calendarData, targetDate);
-            
-            // Check if this is a sport period based on config
-            const isSportPeriod = isConfiguredSportPeriod(calendarData, targetDate, currentPeriod);
-            
-            for(let i = 0; i < nodes.length; i++) {
+            for (let i = 0; i < nodes.length; i++) {
                 const members = nodes[i].getElementsByTagName("member");
-                
-                const lessonDayNumber = parseInt(extractMemberValue(members, "DayNumber"));
                 const period = extractMemberValue(members, "Period");
                 const classCode = extractMemberValue(members, "ClassCode");
-                const teacherCode = extractMemberValue(members, "TeacherCode");
-                const roomCode = extractMemberValue(members, "RoomCode");
-                
-                // Only include lessons for the current day number AND current period
-                if(classCode && period === currentPeriod && lessonDayNumber === dayNumber) {
-                    // Extract year from class code using config pattern
-                    const classMatch = classCode.match(new RegExp(CONFIG.yearGroups.classCodePattern));
-                    if(classMatch) {
-                        const year = classMatch[1];
-                        
-                        // Skip years excluded during sport periods
-                        if(isSportPeriod && shouldExcludeYearFromSport(year, calendarData, targetDate, currentPeriod)) {
-                            continue;
-                        }
-                        
-                        if (!lessonsByYear[year]) lessonsByYear[year] = [];
-                        lessonsByYear[year].push({
-                            ClassCode: classCode,
-                            TeacherCode: teacherCode,
-                            RoomCode: roomCode
-                        });
-                    }
+                if (period && classCode) {
+                    lessons.push({
+                        DayNumber: extractMemberValue(members, "DayNumber"),
+                        Period: period,
+                        ClassCode: classCode,
+                        TeacherCode: extractMemberValue(members, "TeacherCode"),
+                        RoomCode: extractMemberValue(members, "RoomCode")
+                    });
                 }
             }
-            return lessonsByYear;
-        }
-        
-        // Check if current period is configured as a sport period
-        function isConfiguredSportPeriod(calendarData, targetDate, currentPeriod) {
-            if (!CONFIG || !CONFIG.sportPeriods) return false;
-            
-            const calendarEntry = calendarData.find(entry => {
-                const entryDate = new Date(entry.date);
-                return entryDate.toDateString() === targetDate.toDateString();
-            });
-            
-            if (!calendarEntry) return false;
-            
-            // Check each configured sport day
-            for (const [dayKey, sportConfig] of Object.entries(CONFIG.sportPeriods)) {
-                // Check if the calendar day name starts with the configured day key (e.g., 'TueB' starts with 'tue')
-                if (calendarEntry.dayName.toLowerCase().startsWith(dayKey.toLowerCase().substring(0, 3)) && 
-                    sportConfig.periods.includes(currentPeriod)) {
-                    return true;
-                }
-            }
-            
-            return false;
-        }
-        
-        // Check if a year should be excluded from sport periods
-        function shouldExcludeYearFromSport(year, calendarData, targetDate, currentPeriod) {
-            if (!CONFIG || !CONFIG.sportPeriods) return false;
-            
-            const calendarEntry = calendarData.find(entry => {
-                const entryDate = new Date(entry.date);
-                return entryDate.toDateString() === targetDate.toDateString();
-            });
-            
-            if (!calendarEntry) return false;
-            
-            // Check each configured sport day
-            for (const [dayKey, sportConfig] of Object.entries(CONFIG.sportPeriods)) {
-                if (calendarEntry.dayName.toLowerCase().startsWith(dayKey.toLowerCase().substring(0, 3)) && 
-                    sportConfig.periods.includes(currentPeriod)) {
-                    
-                    // Check if this year should be excluded
-                    for (const [groupYear, groupConfig] of Object.entries(sportConfig.yearGroups)) {
-                        if (groupConfig.excludeYears && groupConfig.excludeYears.includes(parseInt(year))) {
-                            return true;
-                        }
-                    }
-                }
-            }
-            
-            return false;
-        }
-
-        // --- PERIOD LOGIC ---
-        // Show periods based on configuration
-        function getCurrentPeriodOrNext(bellTimes, now) {
-            if (!CONFIG) return {period: "P0", date: now, forceNextDay: false};
-            
-            const currentMinutes = now.getHours()*60 + now.getMinutes();
-            const currentDay = now.getDay();
-            let period = null;
-            let foundPeriod = false;
-            
-            // Skip ignored days from config
-            if (CONFIG.schedule.ignoredDays.includes(currentDay)) {
-                let nextSchoolDay = getNextSchoolDay(now);
-                const firstPeriod = bellTimes.length ? bellTimes[0].period : "P0";
-                return {period: firstPeriod, date: nextSchoolDay, forceNextDay: true};
-            }
-            
-            // Sort bell times by start time to ensure proper order
-            const sortedBellTimes = bellTimes.slice().sort((a, b) => a.start - b.start);
-            
-            for (let i = 0; i < sortedBellTimes.length; i++) {
-                const p = sortedBellTimes[i];
-                let showFromTime;
-                
-                // Check if this period has special configuration
-                const periodConfig = CONFIG.schedule.periods[p.period];
-                
-                if (periodConfig) {
-                    if (periodConfig.showFromDay !== undefined && periodConfig.showFromTime) {
-                        // Special cross-day showing (like P0 showing from Friday)
-                        if (currentDay === periodConfig.showFromDay) {
-                            const [hours, minutes] = periodConfig.showFromTime.split(':').map(Number);
-                            showFromTime = hours * 60 + minutes;
-                            if (currentMinutes >= showFromTime) {
-                                // Show next school day's period
-                                let nextDate = getNextSchoolDay(now);
-                                return {period: p.period, date: nextDate, forceNextDay: true};
-                            }
-                        } else if (periodConfig.showUntilStart && CONFIG.schedule.schoolDays.includes(currentDay)) {
-                            // Show until the period starts on its actual day
-                            if (currentMinutes < p.start) {
-                                period = p.period;
-                                foundPeriod = true;
-                                break;
-                            }
-                        }
-                    } else if (periodConfig.showFromTime) {
-                        // Period shows from a specific time on the same day
-                        const [hours, minutes] = periodConfig.showFromTime.split(':').map(Number);
-                        showFromTime = hours * 60 + minutes;
-                        if (currentMinutes >= showFromTime && currentMinutes < p.end) {
-                            period = p.period;
-                            foundPeriod = true;
-                            break;
-                        }
-                    }
-                } else {
-                    // Default behavior: show period X minutes before start time
-                    showFromTime = p.start - CONFIG.schedule.defaultShowMinutesBefore;
-                    if (currentMinutes >= showFromTime && currentMinutes < p.end) {
-                        period = p.period;
-                        foundPeriod = true;
-                        break;
-                    }
-                }
-            }
-            
-            // If no current period found, determine what to show
-            if (!foundPeriod) {
-                // Find the last period end time
-                const lastPeriodEnd = Math.max(...sortedBellTimes.map(p => p.end));
-                
-                if (currentMinutes >= lastPeriodEnd) {
-                    // After last period: show first period for next school day
-                    let nextDate = getNextSchoolDay(now);
-                    const firstPeriod = sortedBellTimes.length ? sortedBellTimes[0].period : "P0";
-                    return {period: firstPeriod, date: nextDate, forceNextDay: true};
-                } else {
-                    // Before any period starts: show first period
-                    period = sortedBellTimes.length ? sortedBellTimes[0].period : "No Period";
-                }
-            }
-            
-            return {period, date: now, forceNextDay: false};
-        }
-
-        // Check if lessons contain any classes for configured display years
-        function hasClassesForYears7to12(lessonsByYear) {
-            if (!CONFIG || !CONFIG.yearGroups.displayYears) {
-                return ['7', '8', '9', '10', '11', '12'].some(year => 
-                    lessonsByYear[year] && lessonsByYear[year].length > 0
-                );
-            }
-            
-            return CONFIG.yearGroups.displayYears.some(year => 
-                lessonsByYear[year.toString()] && lessonsByYear[year.toString()].length > 0
-            );
-        }
-
-        // Get the next period in sequence
-        function getNextPeriod(bellTimes, currentPeriod, currentDate) {
-            const sortedBellTimes = bellTimes.slice().sort((a, b) => a.start - b.start);
-            
-            // Find current period index
-            let currentIndex = sortedBellTimes.findIndex(p => p.period === currentPeriod);
-            
-            if (currentIndex === -1) {
-                // Period not found, return first period of next day
-                let nextDate = getNextSchoolDay(currentDate);
-                return {
-                    period: sortedBellTimes[0].period,
-                    date: nextDate,
-                    forceNextDay: true
-                };
-            }
-            
-            // Find the next period with a DIFFERENT name
-            for (let i = currentIndex + 1; i < sortedBellTimes.length; i++) {
-                if (sortedBellTimes[i].period !== currentPeriod) {
-                    return {
-                        period: sortedBellTimes[i].period,
-                        date: currentDate,
-                        forceNextDay: false
-                    };
-                }
-            }
-            
-            // If we reach here, we're at the end or all remaining periods are the same
-            // Go to next day's first period
-            let nextDate = getNextSchoolDay(currentDate);
-            return {
-                period: sortedBellTimes[0].period,
-                date: nextDate,
-                forceNextDay: true
-            };
+            return lessons;
         }
 
         // --- RENDER ---
-        function renderHeader(period, dateObj, forceNextDay) {
-            // Convert period to display name using config
-            let periodLabel = period || "No Period";
-            if (CONFIG && CONFIG.schedule.periods[period] && CONFIG.schedule.periods[period].description) {
-                periodLabel = CONFIG.schedule.periods[period].description;
-            } else if (period && period.match(/^P\d+$/)) {
-                const periodNumber = period.substring(1); // Remove 'P' prefix
-                periodLabel = `Period ${periodNumber}`;
-            }
-            
-            const currentDay = dateObj.getDay();
-            
-            let datePrefix = "";
-            if (forceNextDay) {
-                // Use config to determine appropriate prefix
-                if (CONFIG && CONFIG.schedule.ignoredDays.includes(currentDay - 1)) {
-                    datePrefix = "Next: ";
-                } else {
-                    datePrefix = "Next: ";
-                }
-            }
-            
-            const dateLabel = datePrefix + longDay(dateObj) + " " + auDate(dateObj);
-            
-            document.getElementById('header').innerHTML = `<h2>${periodLabel} - ${dateLabel}</h2>`;
-            
-            // Update current time display
+        const esc = value => Core.escapeHtml(value);
+
+        function updateClock() {
             const now = getCurrentTime();
             const currentTime = `${pad2(now.getHours())}:${pad2(now.getMinutes())}`;
-            const timeLabel = USE_MANUAL_OVERRIDE ? `⚠️ MANUAL OVERRIDE: ${currentTime}` : `Current time: ${currentTime}`;
-            
             const timeElement = document.getElementById('current-time');
-            timeElement.innerHTML = timeLabel;
+            timeElement.textContent = USE_MANUAL_OVERRIDE ? `⚠️ MANUAL OVERRIDE: ${currentTime}` : `Current time: ${currentTime}`;
             timeElement.className = USE_MANUAL_OVERRIDE ? 'manual-override' : '';
         }
+
+        function renderHeader(period, dateObj, forceNextDay) {
+            let periodLabel = period || "No Period";
+            if (CONFIG.schedule.periods[period] && CONFIG.schedule.periods[period].description) {
+                periodLabel = CONFIG.schedule.periods[period].description;
+            } else if (period && period.match(/^P\d+$/)) {
+                periodLabel = `Period ${period.substring(1)}`;
+            }
+            
+            const datePrefix = forceNextDay ? "Next: " : "";
+            const dateLabel = datePrefix + Core.formatLongDay(dateObj) + " " + Core.formatAuDate(dateObj);
+            
+            document.getElementById('header').innerHTML = `<h2>${esc(periodLabel)} - ${esc(dateLabel)}</h2>`;
+            updateClock();
+        }
+
+        function renderMessage(message) {
+            document.getElementById('header').innerHTML = `<h2>${esc(message)}</h2>`;
+            document.getElementById('timetable').innerHTML = '';
+            updateClock();
+        }
         
-        function renderTimetable(lessonsByYear, currentPeriod, targetDate, calendarData) {
-            if (!CONFIG) return;
-            
-            // Check if this is a sport period using config
-            const isSportPeriod = isConfiguredSportPeriod(calendarData, targetDate, currentPeriod);
-            
+        function renderTimetable(lessonsByYear, currentPeriod, targetDate) {
             let html = "";
             
-            // Iterate through configured display years
             for (const yearNum of CONFIG.yearGroups.displayYears) {
                 const year = yearNum.toString();
-                
-                if (!lessonsByYear[year]) continue;
-                
-                // Check if this year should be hidden during sport periods
-                if (isSportPeriod && shouldExcludeYearFromSport(year, calendarData, targetDate, currentPeriod)) {
-                    continue;
-                }
+                const lessons = lessonsByYear[year];
+                if (!lessons) continue;
                 
                 const isMultiRowYear = CONFIG.yearGroups.multiRowYears.includes(yearNum);
                 const tilesClass = isMultiRowYear ? 'tiles multi-row' : 'tiles';
-                
-                // Determine the year label based on context
-                let yearLabel = `Year ${year}`;
-                
-                if (isSportPeriod) {
-                    // Check for sport period configurations
-                    const calendarEntry = calendarData.find(entry => {
-                        const entryDate = new Date(entry.date);
-                        return entryDate.toDateString() === targetDate.toDateString();
-                    });
-                    
-                    if (calendarEntry) {
-                        for (const [dayKey, sportConfig] of Object.entries(CONFIG.sportPeriods)) {
-                            if (calendarEntry.dayName.toLowerCase().includes(dayKey) && 
-                                sportConfig.periods.includes(currentPeriod)) {
-                                
-                                // Check if this year has a special sport label
-                                const sportGroup = sportConfig.yearGroups[year];
-                                if (sportGroup && sportGroup.label) {
-                                    yearLabel = sportGroup.label;
-                                }
-                            }
-                        }
-                    }
-                }
+                const yearLabel = Core.getYearLabel(year, calendarData, targetDate, currentPeriod, CONFIG);
                 
                 html += `<div class="year-section">
-                    <span class="year-label">${yearLabel}</span>
+                    <span class="year-label">${esc(yearLabel)}</span>
                     <div class="${tilesClass}">`;
                     
-                const lessons = lessonsByYear[year];
-                if (lessons && lessons.length > 0) {
+                if (lessons.length > 0) {
                     for (const lesson of lessons) {
                         html += `<div class="tile">
-                            <div class="classcode">${(lesson.ClassCode||"").substring(0,7)}</div>
-                            <div class="room">${lesson.RoomCode||""}</div>
-                            <div class="teacher">${lesson.TeacherCode||""}</div>
+                            <div class="classcode">${esc(String(lesson.ClassCode || "").substring(0, 7))}</div>
+                            <div class="room">${esc(lesson.RoomCode)}</div>
+                            <div class="teacher">${esc(lesson.TeacherCode)}</div>
                         </div>`;
                     }
                 } else {
@@ -1357,131 +654,110 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 
         // --- MAIN ---
         let bellTimes = [];
-        let lessonsXML = null;
+        let lessons = [];
         let calendarData = [];
+        let hasRendered = false;
+        let dataStatus = {};
+        
+        // Each source loads independently; a source that fails keeps its last good data.
+        async function loadAllData() {
+            const results = await Promise.allSettled([loadBellTimesData(), loadLissData(), loadCalendarData()]);
+            const previous = { bell_times: bellTimes, liss_info: lessons, calendar: calendarData };
+            const keys = ['bell_times', 'liss_info', 'calendar'];
+            const [bellResult, lissResult, calendarResult] = results;
+            if (bellResult.status === 'fulfilled') bellTimes = bellResult.value.data;
+            if (lissResult.status === 'fulfilled') lessons = lissResult.value.data;
+            if (calendarResult.status === 'fulfilled') calendarData = calendarResult.value.data;
+
+            dataStatus = {};
+            results.forEach((r, i) => {
+                dataStatus[keys[i]] = r.status === 'fulfilled'
+                    ? r.value
+                    : { failed: true, hasPreviousData: previous[keys[i]].length > 0, error: (r.reason && r.reason.message) || String(r.reason) };
+            });
+            
+            const failures = results.filter(r => r.status === 'rejected').map(r => r.reason);
+            failures.forEach(error => console.error('Error loading data:', error));
+            debugLog('📊 Data sources (bell times, lessons, calendar):', results.map(r => r.status === 'fulfilled' ? r.value.source : 'failed'));
+            return failures;
+        }
+
+        function renderNotices() {
+            try {
+                const notices = Core.getDataNotices(dataStatus, new Date());
+                document.getElementById('data-notices').innerHTML = notices
+                    .map(text => `<div class="data-notice">⚠️ ${esc(text)}</div>`)
+                    .join('');
+            } catch (error) {
+                console.error('Error rendering data notices:', error);
+            }
+        }
+
+        function render(failures = []) {
+            renderNotices();
+            try {
+                if (!bellTimes.length || !lessons.length || !calendarData.length) {
+                    renderLoadError(failures);
+                    return;
+                }
+                const view = Core.selectDisplay({ bellTimes, lessons, calendar: calendarData, now: getCurrentTime(), config: CONFIG });
+                if (!view.period) {
+                    renderMessage(view.message);
+                } else {
+                    renderHeader(view.period, view.date, view.forceNextDay);
+                    renderTimetable(view.lessonsByYear, view.period, view.date);
+                }
+                hasRendered = true;
+            } catch (error) {
+                console.error('Error rendering timetable:', error);
+                // Keep the last good screen on the kiosk rather than replacing it with an error.
+                if (!hasRendered) renderLoadError([error]);
+            }
+        }
         
         async function main() {
-            // Load configuration first
-            if (!CONFIG) {
-                await loadConfig();
+            const failures = await loadAllData();
+            render(failures);
+        }
+
+        function renderLoadError(failures) {
+            const messages = failures.map(e => (e && e.message) || String(e));
+            let helpText;
+            
+            if (messages.some(m => m.includes('CORS'))) {
+                helpText = `
+                    <div style="text-align: center; padding: 20px; color: #666; max-width: 600px; margin: 0 auto;">
+                        <p><strong>CORS Policy Error:</strong> Modern browsers block local file access for security reasons.</p>
+                        <p><strong>To run this application locally, you need to use a web server:</strong></p>
+                        <div style="text-align: left; background: #f5f5f5; padding: 15px; border-radius: 5px; margin: 20px 0;">
+                            <p><strong>Option 1 - Python (if installed):</strong></p>
+                            <code>python -m http.server 8000</code><br>
+                            <small>Then open: http://localhost:8000</small>
+                            
+                            <p style="margin-top: 15px;"><strong>Option 2 - Node.js (if installed):</strong></p>
+                            <code>npx http-server</code><br>
+                            <small>Then open the provided URL</small>
+                            
+                            <p style="margin-top: 15px;"><strong>Option 3 - PHP (if installed):</strong></p>
+                            <code>php -S localhost:8000</code><br>
+                            <small>Then open: http://localhost:8000</small>
+                            
+                            <p style="margin-top: 15px;"><strong>Option 4 - VS Code Live Server:</strong></p>
+                            <small>Install "Live Server" extension and right-click index.html → "Open with Live Server"</small>
+                        </div>
+                        <p>Make sure config.json and data files are in the same folder as index.html</p>
+                    </div>`;
+            } else {
+                helpText = `
+                    <div style="text-align: center; padding: 20px; color: #666;">
+                        <p>Unable to load timetable data.</p>
+                        <p>Please ensure config.json and the data files are in the same folder.</p>
+                        <p>Error: ${esc(messages.join('; ') || 'No data available')}</p>
+                    </div>`;
             }
             
-            const now = getCurrentTime();
-
-            if (bellTimes.length && lessonsXML && calendarData.length) {
-                let periodObj = getCurrentPeriodOrNext(bellTimes, now);
-
-                // Try to find a period with actual classes
-                let lessonsByYear = parseLessons(lessonsXML, periodObj.period, calendarData, periodObj.date);
-                let attempts = 0;
-                const maxAttempts = bellTimes.length;
-                
-                // Check if current period has any classes for configured display years
-                while (attempts < maxAttempts && !hasClassesForYears7to12(lessonsByYear)) {
-                    // Get the next period
-                    periodObj = getNextPeriod(bellTimes, periodObj.period, periodObj.date);
-                    lessonsByYear = parseLessons(lessonsXML, periodObj.period, calendarData, periodObj.date);
-                    attempts++;
-                }
-                
-                renderHeader(periodObj.period, periodObj.date, periodObj.forceNextDay);
-                renderTimetable(lessonsByYear, periodObj.period, periodObj.date, calendarData);
-            } else {
-                document.getElementById('header').innerHTML = "<h2>Loading data...</h2>";
-                
-                // Load configuration if not already loaded
-                if (!CONFIG) {
-                    await loadConfig();
-                }
-                
-                // Load data files
-                
-                // Load data files
-                Promise.all([
-                    loadBellTimesData(), // Use new dual-source bell times loader
-                    loadLissData(), // Use new dual-source LISS loader (JSON/XML)
-                    loadCalendarData() // Use dual-source calendar loader
-                ]).then(([bellTimesFromSource, lessonsXMLData, calendarDataFromSource]) => {
-                    debugLog('🔧 MAIN DEBUG: All data loading completed successfully');
-                    
-                    bellTimes = bellTimesFromSource;
-                    lessonsXML = lessonsXMLData;
-                    calendarData = calendarDataFromSource;
-                    
-                    debugLog(`📊 MAIN DEBUG: Loaded ${bellTimes.length} bell time periods`);
-                    debugLog(`📊 MAIN DEBUG: Loaded ${calendarData.length} calendar entries`);
-                    
-                    if(bellTimes.length === 0) {
-                        document.getElementById('header').innerHTML = "<h2>Error: No bell times found</h2>";
-                        return;
-                    }
-                    
-                    if(calendarData.length === 0) {
-                        document.getElementById('header').innerHTML = "<h2>Error: No calendar data found</h2>";
-                        return;
-                    }
-                    
-                    // Show source information with enhanced debugging
-                    const bellTimesSource = bellTimes[0]?.source || 'unknown';
-                    const bellTimesSourceLabel = bellTimesSource === 'api' ? 'JSON (Sentral API)' : bellTimesSource === 'xml' ? 'XML (bell_times.xml)' : bellTimesSource;
-                    
-                    const calendarSource = calendarData[0]?.source || 'unknown';
-                    const calendarSourceLabel = calendarSource === 'api' ? 'JSON (Sentral API)' : calendarSource === 'xml' ? 'XML (calendar.xml)' : calendarSource;
-                    
-                    const lissSource = lessonsXML?.lissSource || 'xml';
-                    const lissSourceLabel = lissSource === 'api' ? 'JSON (Sentral API)' : lissSource === 'xml' ? 'XML (liss_info.xml)' : lissSource;
-                    
-                    debugLog(`🎯 MAIN DEBUG: ===== DATA SOURCE DECISIONS =====`);
-                    debugLog(`⏰ MAIN DEBUG: Using bell times from: ${bellTimesSourceLabel}`);
-                    debugLog(`📅 MAIN DEBUG: Using calendar data from: ${calendarSourceLabel}`);
-                    debugLog(`📚 MAIN DEBUG: Using LISS data from: ${lissSourceLabel}`);
-                    debugLog(`📊 MAIN DEBUG: Bell times date range: First period - ${bellTimes[0]?.period}`);
-                    debugLog(`� MAIN DEBUG: Calendar date range: ${calendarData[0]?.date} to ${calendarData[calendarData.length-1]?.date}`);
-                    debugLog(`🎯 MAIN DEBUG: ===================================`);
-                    
-                    main();
-                }).catch(e=>{
-                    console.error("Error loading data:", e);
-                    
-                    let errorMessage = "<h2>Error loading XML files</h2>";
-                    let helpText = "";
-                    
-                    if (e.message.includes('CORS')) {
-                        helpText = `
-                            <div style="text-align: center; padding: 20px; color: #666; max-width: 600px; margin: 0 auto;">
-                                <p><strong>CORS Policy Error:</strong> Modern browsers block local file access for security reasons.</p>
-                                <p><strong>To run this application locally, you need to use a web server:</strong></p>
-                                <div style="text-align: left; background: #f5f5f5; padding: 15px; border-radius: 5px; margin: 20px 0;">
-                                    <p><strong>Option 1 - Python (if installed):</strong></p>
-                                    <code>python -m http.server 8000</code><br>
-                                    <small>Then open: http://localhost:8000</small>
-                                    
-                                    <p style="margin-top: 15px;"><strong>Option 2 - Node.js (if installed):</strong></p>
-                                    <code>npx http-server</code><br>
-                                    <small>Then open the provided URL</small>
-                                    
-                                    <p style="margin-top: 15px;"><strong>Option 3 - PHP (if installed):</strong></p>
-                                    <code>php -S localhost:8000</code><br>
-                                    <small>Then open: http://localhost:8000</small>
-                                    
-                                    <p style="margin-top: 15px;"><strong>Option 4 - VS Code Live Server:</strong></p>
-                                    <small>Install "Live Server" extension and right-click index.html → "Open with Live Server"</small>
-                                </div>
-                                <p>Make sure config.json and XML files are in the same folder as index.html</p>
-                            </div>`;
-                    } else {
-                        helpText = `
-                            <div style="text-align: center; padding: 20px; color: #666;">
-                                <p>Unable to load timetable data.</p>
-                                <p>Please ensure config.json and XML files are in the same folder.</p>
-                                <p>Error: ${e.message}</p>
-                            </div>`;
-                    }
-                    
-                    document.getElementById('header').innerHTML = errorMessage;
-                    document.getElementById('timetable').innerHTML = helpText;
-                });
-            }
+            document.getElementById('header').innerHTML = "<h2>Error loading timetable data</h2>";
+            document.getElementById('timetable').innerHTML = helpText;
         }
 
         // ---- AUTO-RELOAD ----
@@ -1536,12 +812,6 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
                     timeElement.classList.add('updating');
                 }
                 
-                // Reset data to force reload
-                bellTimes = [];
-                lessonsXML = null;
-                calendarData = [];
-                
-                // Re-run main function to refresh data
                 await main();
                 
                 // Remove update indicators
@@ -1556,15 +826,24 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
             }
         }
 
+        // A reload while the server is unreachable would leave the kiosk on a browser error page.
+        async function safeReload(reason) {
+            try {
+                const response = await fetch(`config.json?t=${Date.now()}`, { cache: 'no-store' });
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                debugLog(`🔄 RELOAD: ${reason}`);
+                location.replace(location.href);
+            } catch (error) {
+                console.warn(`Skipping ${reason}: server not reachable (${error.message})`);
+            }
+        }
+
         // Optional: Full page reload every hour to prevent memory leaks
         function setupHourlyReload() {
             const hourlyInterval = CONFIG?.ui?.hourlyReload !== false ? 3600000 : null; // 1 hour, can be disabled
             
             if (hourlyInterval) {
-                setInterval(() => {
-                    // Only do full page reload once per hour to clear any memory leaks
-                    location.replace(location.href);
-                }, hourlyInterval);
+                setInterval(() => safeReload('hourly reload'), hourlyInterval);
             }
         }
 
@@ -1583,28 +862,32 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
             
             debugLog(`🔄 DAILY RELOAD: Scheduled for ${target.toLocaleString()}`);
             
-            setTimeout(() => {
-                debugLog('🌅 DAILY RELOAD: Executing 7:30am fresh start');
-                location.replace(location.href);
-            }, timeUntilReload);
-            
-            // Also set up recurring daily reloads (every 24 hours)
-            setInterval(() => {
-                debugLog('🌅 DAILY RELOAD: Executing recurring 7:30am fresh start');
-                location.replace(location.href);
-            }, 24 * 60 * 60 * 1000); // 24 hours
+            setTimeout(() => safeReload('daily 7:30am reload'), timeUntilReload);
         }
+
+        window.addEventListener('error', event => {
+            console.error('Unhandled error:', event.error || event.message);
+        });
+        window.addEventListener('unhandledrejection', event => {
+            console.error('Unhandled promise rejection:', event.reason);
+            event.preventDefault();
+        });
 
         // Initialize the application
         async function init() {
+            if (!Core) {
+                document.getElementById('header').innerHTML = '<h2>Error: timetable-core.js failed to load</h2>';
+                return;
+            }
             await loadConfig();
             setupAutoReload();
             setupHourlyReload(); // Optional full page reload every hour
             setupDailyReload(); // Daily full page reload at 7:30am
-            main();
+            document.getElementById('header').innerHTML = '<h2>Loading data...</h2>';
+            await smoothDataRefresh();
         }
 
-        init();
+        init().catch(error => console.error('Initialisation failed:', error));
     </script>
 </body>
 </html>

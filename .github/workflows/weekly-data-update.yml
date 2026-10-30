@@ -116,15 +116,23 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          # Check if any data files were updated
-          if git diff --quiet HEAD -- bell_times.json calendar.json .logs/*.log; then
-            echo "changes=false" >> $GITHUB_OUTPUT
-            echo "ℹ️ No changes detected in data files"
-          else
-            echo "changes=true" >> $GITHUB_OUTPUT
-            echo "✅ Changes detected in data files"
-            git diff --name-only HEAD -- bell_times.json calendar.json .logs/*.log
-          fi
+          changes=false
+          for source in bell_times calendar; do
+            file="${source}.json"
+            old="/tmp/old_${file}"
+            git show "HEAD:${file}" > "$old" 2>/dev/null || rm -f "$old"
+
+            # Unchanged data is still committed if its timestamp would go stale before next week's run.
+            decision=$(python3 data_freshness.py should-commit --old "$old" --new "$file" --source "$source" --margin-days 7)
+            if [ "$decision" = "true" ]; then
+              changes=true
+              echo "✅ ${file} will be committed"
+            else
+              git checkout -- "$file"
+              echo "⏭️ ${file} unchanged and timestamp still fresh - not committing"
+            fi
+          done
+          echo "changes=$changes" >> "$GITHUB_OUTPUT"
 
       - name: Pull latest changes before commit
         if: steps.changes.outputs.changes == 'true'

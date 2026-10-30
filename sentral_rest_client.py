@@ -3,18 +3,7 @@
 Tempe High School Timetable Kiosk
 Copyright (C) 2025 TempeHS
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program. If not, see <https://www.gnu.org/licenses/>.
+Licensed under the MIT License. See the LICENSE file for details.
 
 Sentral REST API Client
 =======================
@@ -137,7 +126,8 @@ class SentralAPIClient:
 
         # Set up logging for debug mode
         if self.debug:
-            logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+            logging.basicConfig(
+                level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
             self.logger = logging.getLogger(__name__)
         else:
             self.logger = logging.getLogger(__name__)
@@ -153,7 +143,8 @@ class SentralAPIClient:
         })
 
         if self.debug:
-            self.logger.debug(f"Initialized SentralAPIClient with base_url: {base_url}, tenant: {tenant}")
+            self.logger.debug(
+                f"Initialized SentralAPIClient with base_url: {base_url}, tenant: {tenant}")
             self.logger.debug(f"API Key length: {len(api_key)} characters")
             self.logger.debug(f"Session headers: {dict(self.session.headers)}")
 
@@ -222,35 +213,41 @@ class SentralAPIClient:
         """
         url = f"{self.base_url}/restapi/v1/{endpoint.lstrip('/')}"
         self.request_count += 1
-        
+
         attempt = 0
         last_exception = None
-        
+
         while attempt <= retries:
             request_start_time = time.time()
-            
+
             try:
                 if attempt > 0:
                     wait_time = 2 ** attempt  # Exponential backoff: 2, 4, 8 seconds
-                    print(f"🔄 Retry attempt {attempt}/{retries} after {wait_time}s wait...")
+                    print(
+                        f"🔄 Retry attempt {attempt}/{retries} after {wait_time}s wait...")
                     if self.debug:
-                        self.logger.debug(f"Waiting {wait_time} seconds before retry attempt {attempt}")
+                        self.logger.debug(
+                            f"Waiting {wait_time} seconds before retry attempt {attempt}")
                     time.sleep(wait_time)
 
-                print(f"📡 [{self.request_count}] Making {method} request to: {url}")
+                print(
+                    f"📡 [{self.request_count}] Making {method} request to: {url}")
                 if self.debug:
-                    self.logger.debug(f"Request #{self.request_count} - {method} {url}")
-                    self.logger.debug(f"Timeout: {timeout}s, Attempt: {attempt + 1}/{retries + 1}")
-                
+                    self.logger.debug(
+                        f"Request #{self.request_count} - {method} {url}")
+                    self.logger.debug(
+                        f"Timeout: {timeout}s, Attempt: {attempt + 1}/{retries + 1}")
+
                 if params:
                     print(f"📋 Parameters: {params}")
                     if self.debug:
                         self.logger.debug(f"Query parameters: {params}")
-                
+
                 if data:
                     print(f"📄 Data: {json.dumps(data, indent=2)}")
                     if self.debug:
-                        self.logger.debug(f"Request body: {json.dumps(data, indent=2)}")
+                        self.logger.debug(
+                            f"Request body: {json.dumps(data, indent=2)}")
 
                 # Make the actual request
                 response = self.session.request(
@@ -262,55 +259,67 @@ class SentralAPIClient:
                 )
 
                 request_end_time = time.time()
-                request_duration = round(request_end_time - request_start_time, 2)
+                request_duration = round(
+                    request_end_time - request_start_time, 2)
                 self.total_request_time += request_duration
 
-                print(f"📊 Response Status: {response.status_code} (took {request_duration}s)")
-                
+                print(
+                    f"📊 Response Status: {response.status_code} (took {request_duration}s)")
+
                 if self.debug:
-                    self.logger.debug(f"Response headers: {dict(response.headers)}")
-                    self.logger.debug(f"Request completed in {request_duration}s")
-                    self.logger.debug(f"Total API time so far: {round(self.total_request_time, 2)}s across {self.request_count} requests")
+                    self.logger.debug(
+                        f"Response headers: {dict(response.headers)}")
+                    self.logger.debug(
+                        f"Request completed in {request_duration}s")
+                    self.logger.debug(
+                        f"Total API time so far: {round(self.total_request_time, 2)}s across {self.request_count} requests")
 
                 # Log response size for debugging
-                content_length = response.headers.get('content-length', 'unknown')
+                content_length = response.headers.get(
+                    'content-length', 'unknown')
                 print(f"📦 Response size: {content_length} bytes")
 
                 if response.status_code in [200, 201]:
                     try:
                         response_data = response.json()
-                        
+
                         # Log useful response metadata
                         if isinstance(response_data, dict):
                             if 'data' in response_data:
-                                data_count = len(response_data['data']) if isinstance(response_data['data'], list) else 1
-                                print(f"✅ Success: Retrieved {data_count} records")
+                                data_count = len(response_data['data']) if isinstance(
+                                    response_data['data'], list) else 1
+                                print(
+                                    f"✅ Success: Retrieved {data_count} records")
                                 if self.debug:
-                                    self.logger.debug(f"Response contains {data_count} data records")
-                            
+                                    self.logger.debug(
+                                        f"Response contains {data_count} data records")
+
                             if 'meta' in response_data:
                                 meta = response_data['meta']
                                 if 'total' in meta:
-                                    print(f"📈 Total available: {meta['total']} records")
+                                    print(
+                                        f"📈 Total available: {meta['total']} records")
                                 if 'page' in meta:
                                     print(f"📄 Page info: {meta['page']}")
-                        
+
                         return response_data
-                        
+
                     except json.JSONDecodeError as e:
                         print(f"❌ Response is not valid JSON: {e}")
-                        print(f"🔍 Response content preview: {response.text[:500]}...")
+                        print(
+                            f"🔍 Response content preview: {response.text[:500]}...")
                         if self.debug:
                             self.logger.error(f"JSON decode error: {e}")
                             self.logger.debug(f"Raw response: {response.text}")
                         return None
-                        
+
                 elif response.status_code == 429:  # Rate limiting
                     retry_after = response.headers.get('Retry-After', '60')
                     print(f"⏰ Rate limited! Retry after {retry_after} seconds")
                     if self.debug:
-                        self.logger.warning(f"Rate limited - Retry-After: {retry_after}")
-                    
+                        self.logger.warning(
+                            f"Rate limited - Retry-After: {retry_after}")
+
                     if attempt < retries:
                         time.sleep(int(retry_after))
                         attempt += 1
@@ -318,47 +327,58 @@ class SentralAPIClient:
                     else:
                         print(f"❌ Rate limit exceeded after {retries} retries")
                         return None
-                        
-                elif response.status_code in [500, 502, 503, 504]:  # Server errors - retry
-                    print(f"🔧 Server error {response.status_code} - will retry if attempts remaining")
+
+                # Server errors - retry
+                elif response.status_code in [500, 502, 503, 504]:
+                    print(
+                        f"🔧 Server error {response.status_code} - will retry if attempts remaining")
                     if self.debug:
-                        self.logger.warning(f"Server error {response.status_code}: {response.text[:200]}")
+                        self.logger.warning(
+                            f"Server error {response.status_code}: {response.text[:200]}")
                     last_exception = f"Server error: {response.status_code}"
-                    
+
                 else:  # Client errors - don't retry
-                    print(f"❌ Client error {response.status_code} - not retrying")
+                    print(
+                        f"❌ Client error {response.status_code} - not retrying")
                     print(f"🔍 Response: {response.text[:500]}...")
                     if self.debug:
-                        self.logger.error(f"Client error {response.status_code}: {response.text}")
+                        self.logger.error(
+                            f"Client error {response.status_code}: {response.text}")
                     return None
 
             except requests.exceptions.Timeout as e:
                 request_end_time = time.time()
-                request_duration = round(request_end_time - request_start_time, 2)
-                print(f"⏰ Request timeout after {request_duration}s (limit: {timeout}s)")
+                request_duration = round(
+                    request_end_time - request_start_time, 2)
+                print(
+                    f"⏰ Request timeout after {request_duration}s (limit: {timeout}s)")
                 if self.debug:
-                    self.logger.error(f"Timeout error after {request_duration}s: {e}")
+                    self.logger.error(
+                        f"Timeout error after {request_duration}s: {e}")
                 last_exception = f"Timeout after {request_duration}s"
-                
+
             except requests.exceptions.ConnectionError as e:
                 request_end_time = time.time()
-                request_duration = round(request_end_time - request_start_time, 2)
+                request_duration = round(
+                    request_end_time - request_start_time, 2)
                 print(f"🔌 Connection error after {request_duration}s: {e}")
                 if self.debug:
                     self.logger.error(f"Connection error: {e}")
                 last_exception = f"Connection error: {e}"
-                
+
             except requests.exceptions.RequestException as e:
                 request_end_time = time.time()
-                request_duration = round(request_end_time - request_start_time, 2)
+                request_duration = round(
+                    request_end_time - request_start_time, 2)
                 print(f"🚨 Request exception after {request_duration}s: {e}")
                 if self.debug:
                     self.logger.error(f"Request exception: {e}")
                 last_exception = f"Request exception: {e}"
-                
+
             except Exception as e:
                 request_end_time = time.time()
-                request_duration = round(request_end_time - request_start_time, 2)
+                request_duration = round(
+                    request_end_time - request_start_time, 2)
                 print(f"💥 Unexpected error after {request_duration}s: {e}")
                 if self.debug:
                     self.logger.error(f"Unexpected error: {e}")
@@ -367,10 +387,12 @@ class SentralAPIClient:
             attempt += 1
 
         # All retries exhausted
-        print(f"❌ Request failed after {retries + 1} attempts. Last error: {last_exception}")
+        print(
+            f"❌ Request failed after {retries + 1} attempts. Last error: {last_exception}")
         if self.debug:
-            self.logger.error(f"All {retries + 1} attempts failed. Final error: {last_exception}")
-        
+            self.logger.error(
+                f"All {retries + 1} attempts failed. Final error: {last_exception}")
+
         return None
 
     # Activity Vehicle Endpoints
@@ -535,7 +557,8 @@ class SentralAPIClient:
         Returns:
             Dictionary with request statistics
         """
-        avg_time = round(self.total_request_time / max(self.request_count, 1), 2)
+        avg_time = round(self.total_request_time /
+                         max(self.request_count, 1), 2)
         return {
             'total_requests': self.request_count,
             'total_time_seconds': round(self.total_request_time, 2),
