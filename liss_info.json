@@ -1,10 +1,10 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-11-01T23:08:29.498979",
+    "generated_at": "2026-11-02T20:31:30.741178",
     "source": "sentral_api",
     "total_lessons": 2821,
-    "date_range": "2026-11-01 to 2026-11-08",
+    "date_range": "2026-11-02 to 2026-11-09",
     "days_covered": [
       1,
       2,
@@ -250,8 +250,8 @@
       "Period": "Lunch",
       "ClassCode": "Duty.HTL",
       "EdvalClassCode": "Duty.HTL ",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": ""
     },
     {
@@ -259,8 +259,8 @@
       "Period": "Recess",
       "ClassCode": "Duty.HTR",
       "EdvalClassCode": "Duty.HTR ",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": ""
     },
     {
@@ -565,8 +565,8 @@
       "Period": "P4",
       "ClassCode": "11ENS2",
       "EdvalClassCode": "11ENS 2",
-      "TeacherId": "1327",
-      "TeacherCode": "LITTLE",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -592,8 +592,8 @@
       "Period": "P6",
       "ClassCode": "12ENA3",
       "EdvalClassCode": "12ENA 3",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": ""
     },
     {
@@ -880,8 +880,8 @@
       "Period": "P3",
       "ClassCode": "9MAT2",
       "EdvalClassCode": "9MAT 2",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F12"
     },
     {
@@ -1195,8 +1195,8 @@
       "Period": "P0",
       "ClassCode": "11ENX1",
       "EdvalClassCode": "11ENX 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -1294,8 +1294,8 @@
       "Period": "P2",
       "ClassCode": "7MATY",
       "EdvalClassCode": "7MAT Y",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F12"
     },
     {
@@ -1303,8 +1303,8 @@
       "Period": "P5",
       "ClassCode": "7MATY",
       "EdvalClassCode": "7MAT Y",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F12"
     },
     {
@@ -1474,8 +1474,8 @@
       "Period": "P1",
       "ClassCode": "9ENGR",
       "EdvalClassCode": "9ENG R",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -1501,8 +1501,8 @@
       "Period": "P6",
       "ClassCode": "9MAT2",
       "EdvalClassCode": "9MAT 2",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F11"
     },
     {
@@ -1735,8 +1735,8 @@
       "Period": "P3",
       "ClassCode": "11ENS2",
       "EdvalClassCode": "11ENS 2",
-      "TeacherId": "1327",
-      "TeacherCode": "LITTLE",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -1852,8 +1852,8 @@
       "Period": "P1",
       "ClassCode": "12ENA3",
       "EdvalClassCode": "12ENA 3",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": ""
     },
     {
@@ -2311,8 +2311,8 @@
       "Period": "P5",
       "ClassCode": "10ENGW",
       "EdvalClassCode": "10ENG W",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -2320,8 +2320,8 @@
       "Period": "P5",
       "ClassCode": "10ENGW",
       "EdvalClassCode": "10ENG W",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -2563,8 +2563,8 @@
       "Period": "P3",
       "ClassCode": "7ENGB",
       "EdvalClassCode": "7ENG B",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "F2"
     },
     {
@@ -2572,8 +2572,8 @@
       "Period": "P6",
       "ClassCode": "7ENGB",
       "EdvalClassCode": "7ENG B",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "P1"
     },
     {
@@ -2581,8 +2581,8 @@
       "Period": "P4",
       "ClassCode": "7ENGB",
       "EdvalClassCode": "7ENG B",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "F6"
     },
     {
@@ -2788,8 +2788,8 @@
       "Period": "P2",
       "ClassCode": "9MAT2",
       "EdvalClassCode": "9MAT 2",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F12"
     },
     {
@@ -2905,8 +2905,8 @@
       "Period": "P4",
       "ClassCode": "10MAT4",
       "EdvalClassCode": "10MAT 4",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "E1"
     },
     {
@@ -2914,8 +2914,8 @@
       "Period": "P4",
       "ClassCode": "10MAT4",
       "EdvalClassCode": "10MAT 4",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F12"
     },
     {
@@ -3040,8 +3040,8 @@
       "Period": "P4",
       "ClassCode": "9ENGR",
       "EdvalClassCode": "9ENG R",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -3112,8 +3112,8 @@
       "Period": "P4",
       "ClassCode": "10MAT4",
       "EdvalClassCode": "10MAT 4",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F12"
     },
     {
@@ -3337,8 +3337,8 @@
       "Period": "P3",
       "ClassCode": "7MATY",
       "EdvalClassCode": "7MAT Y",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F12"
     },
     {
@@ -3400,8 +3400,8 @@
       "Period": "P2",
       "ClassCode": "10ENGW",
       "EdvalClassCode": "10ENG W",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -3544,8 +3544,8 @@
       "Period": "P5",
       "ClassCode": "10MAT4",
       "EdvalClassCode": "10MAT 4",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F3"
     },
     {
@@ -3787,8 +3787,8 @@
       "Period": "P5",
       "ClassCode": "9ENGR",
       "EdvalClassCode": "9ENG R",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -3868,8 +3868,8 @@
       "Period": "P2",
       "ClassCode": "9MAT2",
       "EdvalClassCode": "9MAT 2",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F12"
     },
     {
@@ -3940,8 +3940,8 @@
       "Period": "Lunch",
       "ClassCode": "Duty.HTL",
       "EdvalClassCode": "Duty.HTL ",
-      "TeacherId": "971",
-      "TeacherCode": "GOUDIS",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": ""
     },
     {
@@ -4102,8 +4102,8 @@
       "Period": "P4",
       "ClassCode": "7MATY",
       "EdvalClassCode": "7MAT Y",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "GP"
     },
     {
@@ -4129,8 +4129,8 @@
       "Period": "Lunch",
       "ClassCode": "Duty.HTL",
       "EdvalClassCode": "Duty.HTL ",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "971",
+      "TeacherCode": "GOUDIS",
       "RoomCode": ""
     },
     {
@@ -4219,8 +4219,8 @@
       "Period": "P3",
       "ClassCode": "10ENGW",
       "EdvalClassCode": "10ENG W",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -5317,8 +5317,8 @@
       "Period": "P3",
       "ClassCode": "12ENA3",
       "EdvalClassCode": "12ENA 3",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": ""
     },
     {
@@ -5659,8 +5659,8 @@
       "Period": "P5",
       "ClassCode": "9ENGR",
       "EdvalClassCode": "9ENG R",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -6001,8 +6001,8 @@
       "Period": "P4",
       "ClassCode": "11ENS2",
       "EdvalClassCode": "11ENS 2",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -6010,8 +6010,8 @@
       "Period": "P6",
       "ClassCode": "11ENS2",
       "EdvalClassCode": "11ENS 2",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -6019,8 +6019,8 @@
       "Period": "P6",
       "ClassCode": "11ENS2",
       "EdvalClassCode": "11ENS 2",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -6307,8 +6307,8 @@
       "Period": "P1",
       "ClassCode": "7ENGB",
       "EdvalClassCode": "7ENG B",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "F7"
     },
     {
@@ -6604,8 +6604,8 @@
       "Period": "P4",
       "ClassCode": "10ENGW",
       "EdvalClassCode": "10ENG W",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -6613,8 +6613,8 @@
       "Period": "P1",
       "ClassCode": "10ENGW",
       "EdvalClassCode": "10ENG W",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -6748,8 +6748,8 @@
       "Period": "P6",
       "ClassCode": "10MAT4",
       "EdvalClassCode": "10MAT 4",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F12"
     },
     {
@@ -7342,8 +7342,8 @@
       "Period": "Recess",
       "ClassCode": "Duty.BBallR",
       "EdvalClassCode": "Duty.BBallR ",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": ""
     },
     {
@@ -7684,8 +7684,8 @@
       "Period": "Lunch",
       "ClassCode": "Duty.QuadL",
       "EdvalClassCode": "Duty.QuadL ",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": ""
     },
     {
@@ -7747,8 +7747,8 @@
       "Period": "Recess",
       "ClassCode": "Duty.QuadR",
       "EdvalClassCode": "Duty.QuadR ",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": ""
     },
     {
@@ -7864,8 +7864,8 @@
       "Period": "P1",
       "ClassCode": "7ENGB",
       "EdvalClassCode": "7ENG B",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "GP"
     },
     {
@@ -7936,8 +7936,8 @@
       "Period": "P1",
       "ClassCode": "7MATY",
       "EdvalClassCode": "7MAT Y",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F12"
     },
     {
@@ -8404,8 +8404,8 @@
       "Period": "P0",
       "ClassCode": "11ENX1",
       "EdvalClassCode": "11ENX 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -8413,8 +8413,8 @@
       "Period": "P0",
       "ClassCode": "11ENX1",
       "EdvalClassCode": "11ENX 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -8449,8 +8449,8 @@
       "Period": "P3",
       "ClassCode": "9ENGR",
       "EdvalClassCode": "9ENG R",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -8827,8 +8827,8 @@
       "Period": "P7",
       "ClassCode": "Duty.GatePM",
       "EdvalClassCode": "Duty.GatePM ",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": ""
     },
     {
@@ -9178,8 +9178,8 @@
       "Period": "Recess",
       "ClassCode": "Duty.VolleyR",
       "EdvalClassCode": "Duty.VolleyR ",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": ""
     },
     {
@@ -9394,8 +9394,8 @@
       "Period": "Recess",
       "ClassCode": "Duty.SrToiletsR",
       "EdvalClassCode": "Duty.SrToiletsR ",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": ""
     },
     {
@@ -9511,8 +9511,8 @@
       "Period": "Lunch",
       "ClassCode": "Duty.JrToiletsL",
       "EdvalClassCode": "Duty.JrToiletsL ",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": ""
     },
     {
@@ -9628,8 +9628,8 @@
       "Period": "Recess",
       "ClassCode": "Duty.JrToiletsR",
       "EdvalClassCode": "Duty.JrToiletsR ",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": ""
     },
     {
@@ -10303,8 +10303,8 @@
       "Period": "P5",
       "ClassCode": "12ENA3",
       "EdvalClassCode": "12ENA 3",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": ""
     },
     {
@@ -10393,8 +10393,8 @@
       "Period": "P3",
       "ClassCode": "10MAT4",
       "EdvalClassCode": "10MAT 4",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F12"
     },
     {
@@ -10528,8 +10528,8 @@
       "Period": "P2",
       "ClassCode": "12SE1",
       "EdvalClassCode": "12SE 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": ""
     },
     {
@@ -10663,8 +10663,8 @@
       "Period": "P1",
       "ClassCode": "10CT1",
       "EdvalClassCode": "10CT 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -10672,8 +10672,8 @@
       "Period": "P1",
       "ClassCode": "10CT1",
       "EdvalClassCode": "10CT 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -10843,8 +10843,8 @@
       "Period": "P5",
       "ClassCode": "11SE1",
       "EdvalClassCode": "11SE 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -10852,8 +10852,8 @@
       "Period": "P4",
       "ClassCode": "11SE1",
       "EdvalClassCode": "11SE 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -10924,8 +10924,8 @@
       "Period": "P3",
       "ClassCode": "9ENGR",
       "EdvalClassCode": "9ENG R",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -10969,8 +10969,8 @@
       "Period": "P4",
       "ClassCode": "9MAT2",
       "EdvalClassCode": "9MAT 2",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F12"
     },
     {
@@ -11320,8 +11320,8 @@
       "Period": "P2",
       "ClassCode": "9ASSEY",
       "EdvalClassCode": "9ASSE Y",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -11365,8 +11365,8 @@
       "Period": "P2",
       "ClassCode": "12ASSE3",
       "EdvalClassCode": "12ASSE 3",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": ""
     },
     {
@@ -11446,8 +11446,8 @@
       "Period": "P2",
       "ClassCode": "11ASSE5",
       "EdvalClassCode": "11ASSE 5",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F12"
     },
     {
@@ -11797,8 +11797,8 @@
       "Period": "P4",
       "ClassCode": "9&10_Walking4",
       "EdvalClassCode": "9&10_Walking 4",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F12"
     },
     {
@@ -11806,8 +11806,8 @@
       "Period": "P5",
       "ClassCode": "9&10_Walking4",
       "EdvalClassCode": "9&10_Walking 4",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F12"
     },
     {
@@ -11815,8 +11815,8 @@
       "Period": "P4",
       "ClassCode": "9&10_Walking4",
       "EdvalClassCode": "9&10_Walking 4",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F12"
     },
     {
@@ -11824,8 +11824,8 @@
       "Period": "P5",
       "ClassCode": "9&10_Walking4",
       "EdvalClassCode": "9&10_Walking 4",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F12"
     },
     {
@@ -12373,8 +12373,8 @@
       "Period": "P2",
       "ClassCode": "10ENGW",
       "EdvalClassCode": "10ENG W",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -12418,8 +12418,8 @@
       "Period": "P2",
       "ClassCode": "11SE1",
       "EdvalClassCode": "11SE 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -13228,8 +13228,8 @@
       "Period": "P1",
       "ClassCode": "11SE1",
       "EdvalClassCode": "11SE 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -13336,8 +13336,8 @@
       "Period": "P2",
       "ClassCode": "9CT1",
       "EdvalClassCode": "9CT 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -13471,8 +13471,8 @@
       "Period": "P3",
       "ClassCode": "12SE1",
       "EdvalClassCode": "12SE 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": ""
     },
     {
@@ -13516,8 +13516,8 @@
       "Period": "P3",
       "ClassCode": "10MAT4",
       "EdvalClassCode": "10MAT 4",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F3"
     },
     {
@@ -13633,8 +13633,8 @@
       "Period": "P4",
       "ClassCode": "11ENS2",
       "EdvalClassCode": "11ENS 2",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -14254,8 +14254,8 @@
       "Period": "P5",
       "ClassCode": "10ENGW",
       "EdvalClassCode": "10ENG W",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -14326,8 +14326,8 @@
       "Period": "P5",
       "ClassCode": "9CT1",
       "EdvalClassCode": "9CT 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -14470,8 +14470,8 @@
       "Period": "P6",
       "ClassCode": "12SE1",
       "EdvalClassCode": "12SE 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": ""
     },
     {
@@ -14659,8 +14659,8 @@
       "Period": "P1",
       "ClassCode": "12ENA3",
       "EdvalClassCode": "12ENA 3",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": ""
     },
     {
@@ -15163,8 +15163,8 @@
       "Period": "P3",
       "ClassCode": "9CT1",
       "EdvalClassCode": "9CT 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -15316,8 +15316,8 @@
       "Period": "P4",
       "ClassCode": "9CT1",
       "EdvalClassCode": "9CT 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -15541,8 +15541,8 @@
       "Period": "P5",
       "ClassCode": "11SE1",
       "EdvalClassCode": "11SE 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -16054,8 +16054,8 @@
       "Period": "P2",
       "ClassCode": "11ENS2",
       "EdvalClassCode": "11ENS 2",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -16216,8 +16216,8 @@
       "Period": "P3",
       "ClassCode": "11SE1",
       "EdvalClassCode": "11SE 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -16279,8 +16279,8 @@
       "Period": "P4",
       "ClassCode": "7MATY",
       "EdvalClassCode": "7MAT Y",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F12"
     },
     {
@@ -16531,8 +16531,8 @@
       "Period": "P5",
       "ClassCode": "12ENA3",
       "EdvalClassCode": "12ENA 3",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": ""
     },
     {
@@ -16801,8 +16801,8 @@
       "Period": "P6",
       "ClassCode": "7DT2",
       "EdvalClassCode": "7DT 2",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "D2"
     },
     {
@@ -17161,8 +17161,8 @@
       "Period": "P1",
       "ClassCode": "9MAT2",
       "EdvalClassCode": "9MAT 2",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "TP21"
     },
     {
@@ -17350,8 +17350,8 @@
       "Period": "P2",
       "ClassCode": "11SE1",
       "EdvalClassCode": "11SE 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -17548,8 +17548,8 @@
       "Period": "P3",
       "ClassCode": "10CT1",
       "EdvalClassCode": "10CT 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -17836,8 +17836,8 @@
       "Period": "P4",
       "ClassCode": "11ENS2",
       "EdvalClassCode": "11ENS 2",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -17980,8 +17980,8 @@
       "Period": "P5",
       "ClassCode": "12SE1",
       "EdvalClassCode": "12SE 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": ""
     },
     {
@@ -18709,8 +18709,8 @@
       "Period": "P2",
       "ClassCode": "9CT1",
       "EdvalClassCode": "9CT 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -18898,8 +18898,8 @@
       "Period": "P3",
       "ClassCode": "12SE1",
       "EdvalClassCode": "12SE 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": ""
     },
     {
@@ -19060,8 +19060,8 @@
       "Period": "P1",
       "ClassCode": "10CT1",
       "EdvalClassCode": "10CT 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -19213,8 +19213,8 @@
       "Period": "P2",
       "ClassCode": "12ENA3",
       "EdvalClassCode": "12ENA 3",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": ""
     },
     {
@@ -19294,8 +19294,8 @@
       "Period": "P2",
       "ClassCode": "10CT1",
       "EdvalClassCode": "10CT 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -19555,8 +19555,8 @@
       "Period": "P3",
       "ClassCode": "12SE1",
       "EdvalClassCode": "12SE 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": ""
     },
     {
@@ -19654,8 +19654,8 @@
       "Period": "P3",
       "ClassCode": "9MAT2",
       "EdvalClassCode": "9MAT 2",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F2"
     },
     {
@@ -19825,8 +19825,8 @@
       "Period": "P4",
       "ClassCode": "12SE1",
       "EdvalClassCode": "12SE 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": ""
     },
     {
@@ -20320,8 +20320,8 @@
       "Period": "P6",
       "ClassCode": "10MAT4",
       "EdvalClassCode": "10MAT 4",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F3"
     },
     {
@@ -20383,8 +20383,8 @@
       "Period": "P6",
       "ClassCode": "11ENS2",
       "EdvalClassCode": "11ENS 2",
-      "TeacherId": "1327",
-      "TeacherCode": "LITTLE",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -20644,8 +20644,8 @@
       "Period": "P1",
       "ClassCode": "9CT1",
       "EdvalClassCode": "9CT 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -20851,8 +20851,8 @@
       "Period": "P2",
       "ClassCode": "12SE1",
       "EdvalClassCode": "12SE 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": ""
     },
     {
@@ -21022,8 +21022,8 @@
       "Period": "P3",
       "ClassCode": "12ENA3",
       "EdvalClassCode": "12ENA 3",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": ""
     },
     {
@@ -21112,8 +21112,8 @@
       "Period": "P3",
       "ClassCode": "10CT1",
       "EdvalClassCode": "10CT 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -21265,8 +21265,8 @@
       "Period": "P4",
       "ClassCode": "7ENGB",
       "EdvalClassCode": "7ENG B",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "F7"
     },
     {
@@ -21634,8 +21634,8 @@
       "Period": "P5",
       "ClassCode": "11SE1",
       "EdvalClassCode": "11SE 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -22048,8 +22048,8 @@
       "Period": "P1",
       "ClassCode": "9ENGR",
       "EdvalClassCode": "9ENG R",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -22318,8 +22318,8 @@
       "Period": "P2",
       "ClassCode": "9ENGR",
       "EdvalClassCode": "9ENG R",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -22561,8 +22561,8 @@
       "Period": "P3",
       "ClassCode": "11SE1",
       "EdvalClassCode": "11SE 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -23155,8 +23155,8 @@
       "Period": "P6",
       "ClassCode": "9MAT2",
       "EdvalClassCode": "9MAT 2",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "F12"
     },
     {
@@ -23362,8 +23362,8 @@
       "Period": "P0",
       "ClassCode": "11ENX1",
       "EdvalClassCode": "11ENX 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": "TP20"
     },
     {
@@ -24685,8 +24685,8 @@
       "Period": "P5",
       "ClassCode": "12MAS11",
       "EdvalClassCode": "12MAS1 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": ""
     },
     {
@@ -24694,8 +24694,8 @@
       "Period": "P2",
       "ClassCode": "12MAS11",
       "EdvalClassCode": "12MAS1 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": ""
     },
     {
@@ -24703,8 +24703,8 @@
       "Period": "P3",
       "ClassCode": "12MAS11",
       "EdvalClassCode": "12MAS1 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": ""
     },
     {
@@ -24712,8 +24712,8 @@
       "Period": "P1",
       "ClassCode": "12MAS11",
       "EdvalClassCode": "12MAS1 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": ""
     },
     {
@@ -24721,8 +24721,8 @@
       "Period": "P2",
       "ClassCode": "12MAS11",
       "EdvalClassCode": "12MAS1 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": ""
     },
     {
@@ -24730,8 +24730,8 @@
       "Period": "P1",
       "ClassCode": "12MAS11",
       "EdvalClassCode": "12MAS1 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": ""
     },
     {
@@ -24739,8 +24739,8 @@
       "Period": "P1",
       "ClassCode": "12MAS11",
       "EdvalClassCode": "12MAS1 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": ""
     },
     {
@@ -24748,8 +24748,8 @@
       "Period": "P2",
       "ClassCode": "12MAS11",
       "EdvalClassCode": "12MAS1 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "682",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": ""
     },
     {
@@ -24856,8 +24856,8 @@
       "Period": "Recess",
       "ClassCode": "Duty.F8R",
       "EdvalClassCode": "Duty.F8R ",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "906",
+      "TeacherCode": "ROYAL",
       "RoomCode": ""
     },
     {
@@ -25396,8 +25396,8 @@
       "Period": "P4",
       "ClassCode": "11SE_Study1",
       "EdvalClassCode": "11SE_Study 1",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     },
     {
@@ -25405,8 +25405,8 @@
       "Period": "P2",
       "ClassCode": "11SE_Study2",
       "EdvalClassCode": "11SE_Study 2",
-      "TeacherId": null,
-      "TeacherCode": "UNKN",
+      "TeacherId": "904",
+      "TeacherCode": "JONES",
       "RoomCode": "C10"
     }
   ]
