@@ -193,18 +193,23 @@ Configure special periods like sport where year groups are combined:
 - **autoRefresh**: Enable/disable automatic data refresh (default: true)
 - **hourlyReload**: Enable/disable full page reload every hour to prevent memory leaks (default: true)
 
+On low-memory devices, refreshes never overlap: a timer tick is skipped if the
+previous refresh is still running. Each network request has a 15-second timeout,
+including downloading its response body. Failed sources retain their last good
+data, and unchanged header, timetable, and notice HTML is not replaced in the DOM.
+These safeguards also apply to the initial data load; configuration and reload
+connectivity checks use the same request timeout.
+
 #### Automatic Reload Schedule
 
 The kiosk has multiple reload strategies for optimal performance:
 
 1. **Data Refresh**: Every minute (configurable via `refreshInterval`)
-
    - Smooth data updates without page flash
    - Updates timetable content seamlessly
    - Controlled by `autoRefresh` setting
 
 2. **Hourly Reload**: Every hour (configurable via `hourlyReload`)
-
    - Full page reload to clear memory leaks
    - Can be disabled by setting `hourlyReload: false`
    - Helps maintain long-term stability

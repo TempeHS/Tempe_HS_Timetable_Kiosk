@@ -54,11 +54,7 @@ Licensed under the MIT License. See the LICENSE file for details.
         async function loadConfig() {
             let loaded = null;
             try {
-                const response = await fetch('config.json');
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                loaded = await response.json();
+                loaded = await fetchData('config.json');
             } catch (error) {
                 console.error('Error loading configuration, using defaults:', error);
             }
@@ -334,15 +330,21 @@ Licensed under the MIT License. See the LICENSE file for details.
             return CONFIG && CONFIG.ui.cacheBusting ? `${path}?t=${Date.now()}` : path;
         }
 
+        async function fetchData(path, format = 'json', options = {}) {
+            const controller = new AbortController();
+            const timeout = setTimeout(() => controller.abort(), 15000);
+            try {
+                const response = await fetch(path, { ...options, signal: controller.signal });
+                if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
+                return await response[format]();
+            } finally {
+                clearTimeout(timeout);
+            }
+        }
+
         // --- XML LOADING ---
         function loadXML(path) {
-            return fetch(withCacheBuster(path))
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    return response.text();
-                })
+            return fetchData(withCacheBuster(path), 'text')
                 .then(str => {
                     const parser = new window.DOMParser();
                     const xml = parser.parseFromString(str, "text/xml");
@@ -383,11 +385,7 @@ Licensed under the MIT License. See the LICENSE file for details.
         }
 
         async function fetchJson(path) {
-            const response = await fetch(withCacheBuster(path));
-            if (!response.ok) {
-                throw new Error(`${path}: HTTP ${response.status}`);
-            }
-            return response.json();
+            return fetchData(withCacheBuster(path));
         }
 
         // Loads one data source: fresh JSON -> XML -> stale JSON (see Core.loadWithFallback).
@@ -590,6 +588,13 @@ Licensed under the MIT License. See the LICENSE file for details.
 
         // --- RENDER ---
         const esc = value => Core.escapeHtml(value);
+        const renderedHTML = new Map();
+
+        function setHTMLIfChanged(id, html) {
+            if (renderedHTML.get(id) === html) return;
+            document.getElementById(id).innerHTML = html;
+            renderedHTML.set(id, html);
+        }
 
         function updateClock() {
             const now = getCurrentTime();
@@ -610,13 +615,13 @@ Licensed under the MIT License. See the LICENSE file for details.
             const datePrefix = forceNextDay ? "Next: " : "";
             const dateLabel = datePrefix + Core.formatLongDay(dateObj) + " " + Core.formatAuDate(dateObj);
             
-            document.getElementById('header').innerHTML = `<h2>${esc(periodLabel)} - ${esc(dateLabel)}</h2>`;
+            setHTMLIfChanged('header', `<h2>${esc(periodLabel)} - ${esc(dateLabel)}</h2>`);
             updateClock();
         }
 
         function renderMessage(message) {
-            document.getElementById('header').innerHTML = `<h2>${esc(message)}</h2>`;
-            document.getElementById('timetable').innerHTML = '';
+            setHTMLIfChanged('header', `<h2>${esc(message)}</h2>`);
+            setHTMLIfChanged('timetable', '');
             updateClock();
         }
         
@@ -649,7 +654,7 @@ Licensed under the MIT License. See the LICENSE file for details.
                 }
                 html += `</div></div>`;
             }
-            document.getElementById('timetable').innerHTML = html;
+            setHTMLIfChanged('timetable', html);
         }
 
         // --- MAIN ---
@@ -685,9 +690,9 @@ Licensed under the MIT License. See the LICENSE file for details.
         function renderNotices() {
             try {
                 const notices = Core.getDataNotices(dataStatus, new Date());
-                document.getElementById('data-notices').innerHTML = notices
+                setHTMLIfChanged('data-notices', notices
                     .map(text => `<div class="data-notice">⚠️ ${esc(text)}</div>`)
-                    .join('');
+                    .join(''));
             } catch (error) {
                 console.error('Error rendering data notices:', error);
             }
@@ -756,8 +761,8 @@ Licensed under the MIT License. See the LICENSE file for details.
                     </div>`;
             }
             
-            document.getElementById('header').innerHTML = "<h2>Error loading timetable data</h2>";
-            document.getElementById('timetable').innerHTML = helpText;
+            setHTMLIfChanged('header', "<h2>Error loading timetable data</h2>");
+            setHTMLIfChanged('timetable', helpText);
         }
 
         // ---- AUTO-RELOAD ----
@@ -801,36 +806,36 @@ Licensed under the MIT License. See the LICENSE file for details.
             }
         }
 
+        let refreshInProgress = false;
+
         // Perform a smooth data refresh with visual feedback
         async function smoothDataRefresh() {
+            if (refreshInProgress) return;
+            refreshInProgress = true;
+            const timeElement = document.getElementById('current-time');
             try {
                 showLoadingIndicator();
                 
                 // Add slight fade effect to indicate update
-                const timeElement = document.getElementById('current-time');
                 if (timeElement) {
                     timeElement.classList.add('updating');
                 }
                 
                 await main();
                 
-                // Remove update indicators
-                if (timeElement) {
-                    timeElement.classList.remove('updating');
-                }
-                
             } catch (error) {
                 console.error('Error during smooth refresh:', error);
             } finally {
+                if (timeElement) timeElement.classList.remove('updating');
                 hideLoadingIndicator();
+                refreshInProgress = false;
             }
         }
 
         // A reload while the server is unreachable would leave the kiosk on a browser error page.
         async function safeReload(reason) {
             try {
-                const response = await fetch(`config.json?t=${Date.now()}`, { cache: 'no-store' });
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                await fetchData(`config.json?t=${Date.now()}`, 'json', { cache: 'no-store' });
                 debugLog(`🔄 RELOAD: ${reason}`);
                 location.replace(location.href);
             } catch (error) {
