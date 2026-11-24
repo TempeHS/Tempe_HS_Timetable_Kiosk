@@ -1,0 +1,94 @@
+name: Weekly Health Check
+
+# Checks every Monday that the Sentral endpoints still return the data the kiosk expects and
+# that the workflow actions are on their latest major versions. Never commits anything.
+# On failure it opens (or comments on) a "Weekly health check failed" issue; it closes it once checks pass.
+on:
+  schedule:
+    - cron: "0 23 * * 0" # 23:00 UTC Sunday = 9:00 AM Monday Sydney (AEST) / 10:00 AM (AEDT)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sentral-api:
+    name: Sentral API returns expected data
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check Sentral endpoints
+        env:
+          REST_API_KEY: ${{ secrets.REST_API_KEY }}
+        run: python check_sentral_api.py
+
+  actions-up-to-date:
+    name: Workflow actions are up to date
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Compare action versions with latest major release
+        run: |
+          set -euo pipefail
+          outdated=0
+          for ref in $(grep -hoE 'uses: *[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+@v[0-9]+' .github/workflows/*.yml | sed -E 's/uses: *//' | sort -u); do
+            repo=${ref%@*}
+            current=${ref##*@v}
+            latest=$(git ls-remote --tags "https://github.com/$repo" | grep -oE 'refs/tags/v[0-9]+$' | sed 's#refs/tags/v##' | sort -n | tail -1)
+            if [ -n "$latest" ] && [ "$current" -lt "$latest" ]; then
+              echo "❌ $repo@v$current -> v$latest available"
+              echo "- ❌ \`$repo@v$current\` → \`v$latest\` available" >> "$GITHUB_STEP_SUMMARY"
+              outdated=1
+            else
+              echo "✅ $repo@v$current"
+            fi
+          done
+          exit $outdated
+
+  report:
+    name: Open or close health check issue
+    needs: [sentral-api, actions-up-to-date]
+    if: always() && github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Update issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          API_RESULT: ${{ needs.sentral-api.result }}
+          ACTIONS_RESULT: ${{ needs.actions-up-to-date.result }}
+        run: |
+          set -euo pipefail
+          title="Weekly health check failed"
+          existing=$(gh issue list --repo "$REPO" --state open --search "in:title \"$title\"" --json number,title \
+            --jq ".[] | select(.title == \"$title\") | .number" | head -1)
+          if [ "$API_RESULT" = "success" ] && [ "$ACTIONS_RESULT" = "success" ]; then
+            if [ -n "$existing" ]; then
+              gh issue close "$existing" --repo "$REPO" --comment "✅ Health check passed again: $RUN_URL"
+            fi
+            exit 0
+          fi
+          body="The weekly health check failed: $RUN_URL
+
+          - Sentral API returns expected data: **$API_RESULT**
+          - Workflow actions are up to date: **$ACTIONS_RESULT**
+
+          Open the run and check the job summaries for details."
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --repo "$REPO" --body "$body"
+          else
+            gh issue create --repo "$REPO" --title "$title" --body "$body"
+          fi

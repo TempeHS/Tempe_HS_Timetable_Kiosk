@@ -13,6 +13,7 @@ sys.path.insert(0, ROOT)
 import generate_bell_times  # noqa: E402
 import generate_calendar  # noqa: E402
 import generate_liss_info  # noqa: E402
+import check_sentral_api  # noqa: E402
 
 
 def _paged(items):
@@ -261,6 +262,39 @@ class CalendarGeneratorConfigTests(TempDirTestCase):
         with open(os.path.join(ROOT, 'config.json'), encoding='utf-8') as f:
             self.assertGreaterEqual(self.days_ahead_used(json.load(f)), 14)
 
+
+
+
+class SentralHealthCheckTests(unittest.TestCase):
+    CYCLE = [{'DayNumber': d, 'Period': 'P1', 'ClassCode': f'7A{d}', 'TeacherCode': 'SMITH'} for d in range(1, 11)]
+
+    @staticmethod
+    def record(change_type, name=None, period=True, has_class=False):
+        rels = {'period': {'data': {'id': 'p1'}} if period else {}}
+        if has_class:
+            rels['class'] = {'data': {'id': 'c1'}}
+        return {'attributes': {'type': change_type, 'date': '2026-11-24', 'name': name}, 'relationships': rels}
+
+    def test_liss_flags_school_days_without_daily_class_records(self):
+        doc = {'timetable_data': self.CYCLE, 'daily_changes': [{'Date': '2026-11-24', 'Type': 'Class'}]}
+        self.assertEqual(check_sentral_api.check_liss(doc, 10, ['2026-11-24']), [])
+        problems = check_sentral_api.check_liss(doc, 10, ['2026-11-24', '2026-11-25'])
+        self.assertEqual(len(problems), 1)
+        self.assertIn('2026-11-25', problems[0])
+
+    def test_liss_flags_missing_daily_changes_and_shrunk_cycle(self):
+        problems = check_sentral_api.check_liss({'timetable_data': self.CYCLE}, 20, [])
+        self.assertTrue(any('down from 20' in p for p in problems))
+        self.assertTrue(any('missing from generated file' in p for p in problems))
+
+    def test_daily_feed_flags_unknown_types_and_unrecognised_cancellations(self):
+        ok = [self.record('Class', has_class=True), self.record('Event'),
+              self.record('Cancellation', 'Year 12 Cancellation'), self.record('Cancellation', 'Odd', period=False)]
+        self.assertEqual(check_sentral_api.check_daily_feed(ok), [])
+        problems = check_sentral_api.check_daily_feed(ok + [self.record('Relief'), self.record('Cancellation', 'Staff PD Cancellation')])
+        self.assertEqual(len(problems), 2)
+        self.assertIn('Relief', problems[0])
+        self.assertIn('Staff PD Cancellation', problems[1])
 
 if __name__ == '__main__':
     unittest.main()

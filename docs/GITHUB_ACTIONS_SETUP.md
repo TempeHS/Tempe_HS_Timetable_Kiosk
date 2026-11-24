@@ -62,6 +62,9 @@ The following workflows are included:
 - **Weekly Data Update**: Updates bell times and calendar data weekly
 - **Generate LISS Info**: Updates timetable data (`generate_liss_info.py`)
 - **Cache Bust Core Script**: When a push changes `timetable-core.js`, sets `index.html`'s `<script src="timetable-core.js?v=...">` to that commit's short hash so kiosks don't keep running a stale cached copy
+- **Weekly Health Check** (Monday 9am Sydney): runs the generators into a temp folder (`check_sentral_api.py`, nothing is committed) and checks Sentral still returns the expected bell times, calendar, cycle lessons and daily changes, plus that workflow actions are on their latest major versions. On failure it opens a "Weekly health check failed" issue and closes it once checks pass again
+- **Validate Workflows**: lints workflow files with actionlint when they change
+- **Keep Alive**: weekly commit so GitHub doesn't disable the scheduled workflows during holidays
 
 ## 📅 Automation Schedule
 

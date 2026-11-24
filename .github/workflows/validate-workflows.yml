@@ -8,9 +8,6 @@ on:
     paths:
       - ".github/workflows/**"
   workflow_dispatch:
-  schedule:
-    # Run weekly on Monday at 6:00 AM UTC to check for outdated actions
-    - cron: "0 6 * * 1"
 
 permissions:
   contents: read
@@ -31,7 +28,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install PyYAML requests
+          pip install PyYAML
 
       - name: Install actionlint
         run: |
@@ -123,138 +120,6 @@ jobs:
           print("✅ All YAML files have valid syntax!")
           EOF
 
-      - name: Check for outdated GitHub Actions
-        id: outdated
-        run: |
-          echo "🔍 Checking for outdated GitHub Actions versions..."
-
-          python3 << 'EOF'
-          import yaml
-          import glob
-          import requests
-          import re
-          import sys
-
-          def get_latest_version(owner, repo):
-              """Fetch the latest release tag from GitHub API."""
-              try:
-                  # Try releases first
-                  url = f"https://api.github.com/repos/{owner}/{repo}/releases/latest"
-                  resp = requests.get(url, timeout=10)
-                  if resp.status_code == 200:
-                      tag = resp.json().get("tag_name", "")
-                      # Extract major version (e.g., v5.0.0 -> v5)
-                      match = re.match(r"v?(\d+)", tag)
-                      if match:
-                          return f"v{match.group(1)}"
-                  
-                  # Fallback to tags
-                  url = f"https://api.github.com/repos/{owner}/{repo}/tags"
-                  resp = requests.get(url, timeout=10)
-                  if resp.status_code == 200:
-                      tags = resp.json()
-                      if tags:
-                          tag = tags[0].get("name", "")
-                          match = re.match(r"v?(\d+)", tag)
-                          if match:
-                              return f"v{match.group(1)}"
-              except Exception as e:
-                  print(f"   ⚠️ Could not fetch version for {owner}/{repo}: {e}")
-              return None
-
-          def extract_actions(workflow_data, filepath):
-              """Extract all action references from a workflow."""
-              actions = []
-              
-              def find_uses(obj, path=""):
-                  if isinstance(obj, dict):
-                      if "uses" in obj:
-                          actions.append((obj["uses"], path))
-                      for k, v in obj.items():
-                          find_uses(v, f"{path}.{k}")
-                  elif isinstance(obj, list):
-                      for i, item in enumerate(obj):
-                          find_uses(item, f"{path}[{i}]")
-              
-              find_uses(workflow_data)
-              return actions
-
-          # Common actions to check (owner/repo -> current usage pattern)
-          checked_actions = {}
-          outdated = []
-
-          files = glob.glob(".github/workflows/*.yml") + glob.glob(".github/workflows/*.yaml")
-
-          for filepath in files:
-              print(f"\nScanning: {filepath}")
-              try:
-                  with open(filepath, 'r') as f:
-                      data = yaml.safe_load(f)
-                  
-                  actions = extract_actions(data, filepath)
-                  
-                  for action, path in actions:
-                      # Parse action reference (e.g., actions/checkout@v7)
-                      match = re.match(r"([^/]+)/([^@]+)@(v?\d+|[a-f0-9]+)", action)
-                      if not match:
-                          continue
-                      
-                      owner, repo, version = match.groups()
-                      action_key = f"{owner}/{repo}"
-                      
-                      # Skip if already checked
-                      if action_key in checked_actions:
-                          latest = checked_actions[action_key]
-                      else:
-                          latest = get_latest_version(owner, repo)
-                          checked_actions[action_key] = latest
-                      
-                      if latest:
-                          # Compare major versions
-                          current_major = re.match(r"v?(\d+)", version)
-                          latest_major = re.match(r"v?(\d+)", latest)
-                          
-                          if current_major and latest_major:
-                              current_v = int(current_major.group(1))
-                              latest_v = int(latest_major.group(1))
-                              
-                              if current_v < latest_v:
-                                  outdated.append({
-                                      "file": filepath,
-                                      "action": action_key,
-                                      "current": version,
-                                      "latest": latest
-                                  })
-                                  print(f"   ⚠️ {action_key}@{version} -> {latest} available")
-                              else:
-                                  print(f"   ✅ {action_key}@{version} (latest: {latest})")
-              except Exception as e:
-                  print(f"   Error processing {filepath}: {e}")
-
-          print()
-          if outdated:
-              print("="*60)
-              print("⚠️ OUTDATED ACTIONS FOUND:")
-              print("="*60)
-              for item in outdated:
-                  print(f"  {item['file']}:")
-                  print(f"    {item['action']}@{item['current']} -> {item['latest']}")
-              print()
-              print("Consider updating these actions to their latest major versions.")
-              # Don't fail the workflow, just warn
-              with open("outdated_actions.txt", "w") as f:
-                  for item in outdated:
-                      f.write(f"{item['file']}: {item['action']}@{item['current']} -> {item['latest']}\n")
-          else:
-              print("✅ All actions are up to date!")
-          EOF
-
-          if [ -f outdated_actions.txt ]; then
-            echo "outdated=true" >> $GITHUB_OUTPUT
-          else
-            echo "outdated=false" >> $GITHUB_OUTPUT
-          fi
-
       - name: Summary
         if: always()
         run: |
@@ -269,14 +134,4 @@ jobs:
           echo "**Tools Used:**" >> $GITHUB_STEP_SUMMARY
           echo "- [actionlint](https://github.com/rhysd/actionlint) - GitHub Actions workflow linter" >> $GITHUB_STEP_SUMMARY
           echo "- Python PyYAML - YAML parser" >> $GITHUB_STEP_SUMMARY
-          echo "- GitHub API - Action version checker" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-
-          if [ -f outdated_actions.txt ]; then
-            echo "**⚠️ Outdated Actions:**" >> $GITHUB_STEP_SUMMARY
-            echo '```' >> $GITHUB_STEP_SUMMARY
-            cat outdated_actions.txt >> $GITHUB_STEP_SUMMARY
-            echo '```' >> $GITHUB_STEP_SUMMARY
-          else
-            echo "**✅ All actions are up to date!**" >> $GITHUB_STEP_SUMMARY
-          fi
