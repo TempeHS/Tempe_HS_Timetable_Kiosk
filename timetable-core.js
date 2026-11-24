@@ -467,6 +467,17 @@
         ['liss_info', 'Timetable', 'LISS Timetable Updates']
     ];
 
+    // Formats a generated_at timestamp as local "DD/MM/YY HH:MM". Timestamps without a
+    // timezone come from the GitHub Actions runner, which runs in UTC.
+    function formatUpdatedAt(generatedAt) {
+        if (typeof generatedAt !== 'string' || !generatedAt) return null;
+        const hasZone = /(Z|[+-]\d{2}:?\d{2})$/i.test(generatedAt);
+        const d = toDate(hasZone || !generatedAt.includes('T') ? generatedAt : generatedAt + 'Z');
+        if (!d) return null;
+        const date = `${pad2(d.getDate())}/${pad2(d.getMonth() + 1)}/${pad2(d.getFullYear() % 100)}`;
+        return `${date} ${pad2(d.getHours())}:${pad2(d.getMinutes())}`;
+    }
+
     function describeAge(generatedAt, now) {
         const generated = generatedAt ? toDate(generatedAt) : null;
         if (!generated) return 'last updated: unknown';
@@ -504,6 +515,7 @@
         escapeHtml,
         parseTime,
         isDataStale,
+        formatUpdatedAt,
         toDateKey,
         formatAuDate,
         formatLongDay,

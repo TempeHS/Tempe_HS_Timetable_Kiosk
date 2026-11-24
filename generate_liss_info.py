@@ -10,7 +10,7 @@ import sys
 import json
 import os
 import re
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Any, Optional, Tuple
 from sentral_rest_client import SentralAPIClient
 from data_freshness import write_json_atomic
@@ -410,7 +410,7 @@ def generate_liss_info_json(days_limit: int = 7, output_file: str = 'liss_info.j
         liss_json = {
             "metadata": {
                 "school": "TEMPE",
-                "generated_at": datetime.now().isoformat(),
+                "generated_at": datetime.now(timezone.utc).isoformat(),
                 "source": "sentral_api",
                 "total_lessons": len(lessons_data),
                 "date_range": date_range,

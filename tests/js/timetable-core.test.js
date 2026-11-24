@@ -496,3 +496,18 @@ describe('getDataNotices (red on-screen warnings)', () => {
         assert.deepEqual(core.getDataNotices({ bell_times: null }, now), []);
     });
 });
+
+describe('formatUpdatedAt', () => {
+    it('shows the GitHub Action timestamp in local time, treating naive timestamps as UTC', () => {
+        const previousTz = process.env.TZ;
+        process.env.TZ = 'Australia/Sydney';
+        try {
+            assert.equal(core.formatUpdatedAt('2026-11-23T22:15:00+00:00'), '24/11/26 09:15');
+            assert.equal(core.formatUpdatedAt('2026-11-23T22:15:00.123456'), '24/11/26 09:15');
+            assert.equal(core.formatUpdatedAt('not-a-date'), null);
+            assert.equal(core.formatUpdatedAt(null), null);
+        } finally {
+            if (previousTz === undefined) delete process.env.TZ; else process.env.TZ = previousTz;
+        }
+    });
+});

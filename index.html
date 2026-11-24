@@ -167,6 +167,7 @@ Licensed under the MIT License. See the LICENSE file for details.
                     font-size: 0.9em;
                     color: ${c.text.primary};
                     margin: 20px 12px 10px 0;
+                    white-space: pre-line;
                     transition: opacity 0.3s ease;
                 }
                 #current-time.manual-override {
@@ -600,7 +601,9 @@ Licensed under the MIT License. See the LICENSE file for details.
             const now = getCurrentTime();
             const currentTime = `${pad2(now.getHours())}:${pad2(now.getMinutes())}`;
             const timeElement = document.getElementById('current-time');
-            timeElement.textContent = USE_MANUAL_OVERRIDE ? `⚠️ MANUAL OVERRIDE: ${currentTime}` : `Current time: ${currentTime}`;
+            const clockText = USE_MANUAL_OVERRIDE ? `⚠️ MANUAL OVERRIDE: ${currentTime}` : `Current time: ${currentTime}`;
+            const updatedText = Core.formatUpdatedAt(lissUpdatedAt);
+            timeElement.textContent = updatedText ? `${clockText}\nTimetable updated: ${updatedText}` : clockText;
             timeElement.className = USE_MANUAL_OVERRIDE ? 'manual-override' : '';
         }
 
@@ -663,6 +666,7 @@ Licensed under the MIT License. See the LICENSE file for details.
         let calendarData = [];
         let hasRendered = false;
         let dataStatus = {};
+        let lissUpdatedAt = null;
         
         // Each source loads independently; a source that fails keeps its last good data.
         async function loadAllData() {
@@ -671,7 +675,11 @@ Licensed under the MIT License. See the LICENSE file for details.
             const keys = ['bell_times', 'liss_info', 'calendar'];
             const [bellResult, lissResult, calendarResult] = results;
             if (bellResult.status === 'fulfilled') bellTimes = bellResult.value.data;
-            if (lissResult.status === 'fulfilled') lessons = lissResult.value.data;
+            if (lissResult.status === 'fulfilled') {
+                lessons = lissResult.value.data;
+                // XML has no generation timestamp, so only show one when the lessons came from JSON.
+                lissUpdatedAt = String(lissResult.value.source).startsWith('json') ? lissResult.value.generatedAt : null;
+            }
             if (calendarResult.status === 'fulfilled') calendarData = calendarResult.value.data;
 
             dataStatus = {};
