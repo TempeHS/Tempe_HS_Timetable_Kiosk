@@ -1,10 +1,10 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-11-24T03:10:00.625201+00:00",
+    "generated_at": "2026-11-24T20:31:57.929022+00:00",
     "source": "sentral_api",
     "total_lessons": 2821,
-    "date_range": "2026-11-24 to 2026-12-01",
+    "date_range": "2026-11-25 to 2026-12-02",
     "days_covered": [
       1,
       2,
@@ -17,7 +17,7 @@
       9,
       10
     ],
-    "total_daily_changes": 1210,
+    "total_daily_changes": 1257,
     "note": "Generated from Sentral API timetable endpoints for LISS integration"
   },
   "timetable_data": [
@@ -25413,1480 +25413,6 @@
   ],
   "daily_changes": [
     {
-      "Date": "2026-11-24",
-      "Type": "Cancellation",
-      "Period": "Lunch",
-      "Year": "11",
-      "Subject": "EMAT"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Cancellation",
-      "Period": "Lunch",
-      "Year": "12"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Cancellation",
-      "Period": "P0",
-      "Year": "11",
-      "Subject": "EMAT"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Cancellation",
-      "Period": "P0",
-      "Year": "12"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P0",
-      "ClassCode": "11ENX1",
-      "TeacherCode": "ROYAL",
-      "RoomCode": "F2"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P0",
-      "ClassCode": "JazzCombo",
-      "TeacherCode": "UNKN",
-      "RoomCode": "C7"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Cancellation",
-      "Period": "P1",
-      "Year": "11",
-      "Subject": "EMAT"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Cancellation",
-      "Period": "P1",
-      "Year": "12"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "11BIO1",
-      "TeacherCode": "MCCANN",
-      "RoomCode": "E2"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "11BST2",
-      "TeacherCode": "MEMIS",
-      "RoomCode": "D6"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "11HFB1",
-      "TeacherCode": "MC HALE",
-      "RoomCode": "D3"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "11MAS3",
-      "TeacherCode": "YE",
-      "RoomCode": "F11"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "11MU11",
-      "TeacherCode": "UNKN",
-      "RoomCode": "C6"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "11MU21",
-      "TeacherCode": "UNKN",
-      "RoomCode": "C5"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "11PHY1",
-      "TeacherCode": "MURPHY",
-      "RoomCode": "D10"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "11SE1",
-      "TeacherCode": "JONES",
-      "RoomCode": "C10"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "7DT7",
-      "TeacherCode": "TSERPES",
-      "RoomCode": "C3"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "7DT8",
-      "TeacherCode": "BLACK",
-      "RoomCode": "CTC"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "7ENGB",
-      "TeacherCode": "ROYAL",
-      "RoomCode": "GP"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "7ENGW",
-      "TeacherCode": "TAOUBE",
-      "RoomCode": "F5"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "7MATG",
-      "TeacherCode": "MOREIRA",
-      "RoomCode": "F9"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "7MUS9",
-      "TeacherCode": "O'LOUGHLIN",
-      "RoomCode": "P5"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "7SCIR",
-      "TeacherCode": "FULTON",
-      "RoomCode": "D12"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "8DT1",
-      "TeacherCode": "UNKN",
-      "RoomCode": "C1"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "8DT2",
-      "TeacherCode": "LEE",
-      "RoomCode": "C4"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "8DT3",
-      "TeacherCode": "FORISTAL",
-      "RoomCode": "D2"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "8ENGP",
-      "TeacherCode": "WILLIAMS",
-      "RoomCode": "F8"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "8HISG",
-      "TeacherCode": "SIDDIQUA",
-      "RoomCode": "D5"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "8HISY",
-      "TeacherCode": "MORRIS",
-      "RoomCode": "P2"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "8SCIW",
-      "TeacherCode": "RAY",
-      "RoomCode": "P3"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "9ENGG",
-      "TeacherCode": "UNKN",
-      "RoomCode": "TP22"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "9GEOP",
-      "TeacherCode": "TSOUNAKAS",
-      "RoomCode": "E3"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "9PDHB",
-      "TeacherCode": "TAYLOR",
-      "RoomCode": "F3"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "9SCIR",
-      "TeacherCode": "OWEN",
-      "RoomCode": "E1"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "9SCIW",
-      "TeacherCode": "SMITH",
-      "RoomCode": "D11"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "9SCIY",
-      "TeacherCode": "BATTERS",
-      "RoomCode": "TP20"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P1",
-      "ClassCode": "HUB",
-      "TeacherCode": "ZLOTKOWSKI",
-      "RoomCode": "HUB"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Cancellation",
-      "Period": "P2",
-      "Year": "11",
-      "Subject": "EMAT"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Cancellation",
-      "Period": "P2",
-      "Year": "12"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "11AH1",
-      "TeacherCode": "MORRIS",
-      "RoomCode": "P2"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "11CAFS1",
-      "TeacherCode": "O'LOUGHLIN",
-      "RoomCode": "A1"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "11CHEM2",
-      "TeacherCode": "OWEN",
-      "RoomCode": "D12"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "11DT1",
-      "TeacherCode": "UNKN",
-      "RoomCode": "C1"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "11ECO2",
-      "TeacherCode": "ALI SHAMIM",
-      "RoomCode": "D7"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "11HMS2",
-      "TeacherCode": "TSERPES",
-      "RoomCode": "F3"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "11MH1",
-      "TeacherCode": "TSOUNAKAS",
-      "RoomCode": "E3"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "11VA1",
-      "TeacherCode": "PALMER",
-      "RoomCode": "C9"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "7DRA8",
-      "TeacherCode": "HALL",
-      "RoomCode": "P4"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "7DT9",
-      "TeacherCode": "LEE",
-      "RoomCode": "CTC"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "7GEOB",
-      "TeacherCode": "EAGAN",
-      "RoomCode": "D6"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "7GEOR",
-      "TeacherCode": "MEMIS",
-      "RoomCode": "D9"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "7MATW",
-      "TeacherCode": "MOREIRA",
-      "RoomCode": "E2"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "7SCIG",
-      "TeacherCode": "FULTON",
-      "RoomCode": "D10"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "7VA7",
-      "TeacherCode": "BASSETT",
-      "RoomCode": "P6"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "8ENGG",
-      "TeacherCode": "LYONS",
-      "RoomCode": "F7"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "8ENGR",
-      "TeacherCode": "WILLIAMS",
-      "RoomCode": "F6"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "8ENGW",
-      "TeacherCode": "TAYLOR",
-      "RoomCode": "F5"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "8ENGY",
-      "TeacherCode": "UNKN",
-      "RoomCode": "F8"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "8SCIB",
-      "TeacherCode": "ABRAHAM",
-      "RoomCode": "E1"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "8SCIP",
-      "TeacherCode": "SMITH",
-      "RoomCode": "D11"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "9CHI1",
-      "TeacherCode": "LUO",
-      "RoomCode": "P3"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "9COM2",
-      "TeacherCode": "SIDDIQUA",
-      "RoomCode": "D5"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "9CT1",
-      "TeacherCode": "JONES",
-      "RoomCode": "C10"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "9DAN1",
-      "TeacherCode": "ESPEJEL",
-      "RoomCode": "D4"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "9FT2",
-      "TeacherCode": "WILLIAMS",
-      "RoomCode": "D2"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "9MU1",
-      "TeacherCode": "UNKN",
-      "RoomCode": "C6"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "9PSY2",
-      "TeacherCode": "MC HALE",
-      "RoomCode": "GP"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "9TT1",
-      "TeacherCode": "BLACK",
-      "RoomCode": "C5"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P2",
-      "ClassCode": "HUB",
-      "TeacherCode": "DJAVADKHAN",
-      "RoomCode": "HUB"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Cancellation",
-      "Period": "P3",
-      "Year": "11",
-      "Subject": "EMAT"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Cancellation",
-      "Period": "P3",
-      "Year": "12"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "10EMA1",
-      "TeacherCode": "GOUZOULIS",
-      "RoomCode": "F11"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "10MAT1",
-      "TeacherCode": "KIM",
-      "RoomCode": "F7"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "10MAT2",
-      "TeacherCode": "ZHAO",
-      "RoomCode": "F9"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "10MAT3",
-      "TeacherCode": "SELLIS",
-      "RoomCode": "D8"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "10MAT4",
-      "TeacherCode": "BARZOVSKI",
-      "RoomCode": "F3"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "10MAT5",
-      "TeacherCode": "BANSAL",
-      "RoomCode": "GP"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "10MAT6",
-      "TeacherCode": "YE",
-      "RoomCode": "F12"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "11BST1",
-      "TeacherCode": "TSOUNAKAS",
-      "RoomCode": "E3"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "11ECO1",
-      "TeacherCode": "EAGAN",
-      "RoomCode": "D6"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "11ES1",
-      "TeacherCode": "TSERPES",
-      "RoomCode": "CTC"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "11ITM1",
-      "TeacherCode": "TABUTEAU",
-      "RoomCode": "C4"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "11LS2",
-      "TeacherCode": "SIDDIQUA",
-      "RoomCode": "D5"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "11MH2",
-      "TeacherCode": "CAMBRIDGE",
-      "RoomCode": "P1"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "11SLR1",
-      "TeacherCode": "HAMILTON",
-      "RoomCode": "COLA_1"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "7ENGG",
-      "TeacherCode": "OWEN",
-      "RoomCode": "F6"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "7GEOY",
-      "TeacherCode": "GEORGES",
-      "RoomCode": "D9"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "7MUS1",
-      "TeacherCode": "HOLLAND",
-      "RoomCode": "D7"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "7MUS2",
-      "TeacherCode": "UNKN",
-      "RoomCode": "C6"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "7MUS3",
-      "TeacherCode": "O'LOUGHLIN",
-      "RoomCode": "P3"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "7SCIP",
-      "TeacherCode": "CUGALY",
-      "RoomCode": "E1"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "7SCIW",
-      "TeacherCode": "RAY",
-      "RoomCode": "D10"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "8DT4",
-      "TeacherCode": "MC HALE",
-      "RoomCode": "C3"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "8DT7",
-      "TeacherCode": "FORISTAL",
-      "RoomCode": "D2"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "8DT8",
-      "TeacherCode": "LEE",
-      "RoomCode": "C5"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "8DT9",
-      "TeacherCode": "BLACK",
-      "RoomCode": "C10"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "8MATB",
-      "TeacherCode": "LIU",
-      "RoomCode": "F10"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "8SCIR",
-      "TeacherCode": "MOREIRA",
-      "RoomCode": "E2"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "8VA5",
-      "TeacherCode": "PALMER",
-      "RoomCode": "C8"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "8VA6",
-      "TeacherCode": "ESPEJEL",
-      "RoomCode": "C9"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "9ENGP",
-      "TeacherCode": "TAYLOR",
-      "RoomCode": "F5"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "9ENGR",
-      "TeacherCode": "ROYAL",
-      "RoomCode": "F2"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "9ENGW",
-      "TeacherCode": "UNKN",
-      "RoomCode": "TP22"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "9PDHY",
-      "TeacherCode": "MCGUINNESS",
-      "RoomCode": "GYM_1"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "9SCIB",
-      "TeacherCode": "MCCANN",
-      "RoomCode": "BBLAB"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "9SCIG",
-      "TeacherCode": "SMITH",
-      "RoomCode": "D11"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P3",
-      "ClassCode": "HUB",
-      "TeacherCode": "ZLOTKOWSKI",
-      "RoomCode": "HUB"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Cancellation",
-      "Period": "P4",
-      "Year": "11",
-      "Subject": "EMAT"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Cancellation",
-      "Period": "P4",
-      "Year": "12"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "11ENA1",
-      "TeacherCode": "LYONS",
-      "RoomCode": "F7"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "11ENA2",
-      "TeacherCode": "KEITH COLE",
-      "RoomCode": "TP19"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "11ENA3",
-      "TeacherCode": "WILLIAMS",
-      "RoomCode": "F8"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "11ENS1",
-      "TeacherCode": "HOLLAND",
-      "RoomCode": "TP21"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "11ENS2",
-      "TeacherCode": "ROYAL",
-      "RoomCode": "TP20"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "11ENS3",
-      "TeacherCode": "FULTON",
-      "RoomCode": "F6"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "11ENST1",
-      "TeacherCode": "TAYLOR",
-      "RoomCode": "F5"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "7&8_Basketball_Girls1",
-      "TeacherCode": "ROBINSON",
-      "RoomCode": "A1"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "7&8_Canoeing1",
-      "TeacherCode": "UNKN",
-      "RoomCode": "CTC"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "7&8_Cricket_Boys1",
-      "TeacherCode": "MCCANN",
-      "RoomCode": "D11"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "7&8_House_Sport1",
-      "TeacherCode": "MCGUINNESS",
-      "RoomCode": "C3"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "7&8_House_Sport2",
-      "TeacherCode": "CUGALY",
-      "RoomCode": "E1"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "7&8_House_Sport3",
-      "TeacherCode": "BANSAL",
-      "RoomCode": "C1"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "7&8_House_Sport4",
-      "TeacherCode": "HALL",
-      "RoomCode": "P4"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "7&8_Oztag_Boys1",
-      "TeacherCode": "MORRIS",
-      "RoomCode": "F2"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "7&8_Oztag_Boys2",
-      "TeacherCode": "GOUZOULIS",
-      "RoomCode": "F10"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "7&8_Oztag_Girls1",
-      "TeacherCode": "ESPEJEL",
-      "RoomCode": "P3"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "7&8_RockClimbing1",
-      "TeacherCode": "LUO",
-      "RoomCode": "D9"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "7&8_RockClimbing2",
-      "TeacherCode": "TSOUNAKAS",
-      "RoomCode": "D7"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "7&8_RockClimbing3",
-      "TeacherCode": "STOJA-AYHA",
-      "RoomCode": "D8"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "7&8_Tennis1",
-      "TeacherCode": "ZHAO",
-      "RoomCode": "P5"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "7&8_Volleyball_Boys1",
-      "TeacherCode": "IBRAHIM",
-      "RoomCode": "D6"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "9&10_Basketball_Recreation1",
-      "TeacherCode": "O'LOUGHLIN",
-      "RoomCode": "BBLAB"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "9&10_Basketball_Recreation2",
-      "TeacherCode": "MOREIRA",
-      "RoomCode": "D5"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "9&10_Gym&Weights1",
-      "TeacherCode": "BATTERS",
-      "RoomCode": "GP"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "9&10_Iceskating1",
-      "TeacherCode": "PALMER",
-      "RoomCode": "C8"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "9&10_Pickleball1",
-      "TeacherCode": "KIM",
-      "RoomCode": "TP22"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "9&10_TableTennis1",
-      "TeacherCode": "BASSETT",
-      "RoomCode": "C9"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "9&10_Touch_Football_Girls1",
-      "TeacherCode": "NEWTON-GRE",
-      "RoomCode": "F3"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "9&10_Walking1",
-      "TeacherCode": "SELLIS",
-      "RoomCode": "F11"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "9&10_Walking2",
-      "TeacherCode": "CAMBRIDGE",
-      "RoomCode": "P2"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "9&10_Walking3",
-      "TeacherCode": "UNKN",
-      "RoomCode": "P1"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "9&10_Walking4",
-      "TeacherCode": "BARZOVSKI",
-      "RoomCode": "F12"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "9&10_Walking5",
-      "TeacherCode": "MEMIS",
-      "RoomCode": "D4"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "HUB",
-      "TeacherCode": "UNKN",
-      "RoomCode": "HUB"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P4",
-      "ClassCode": "SportDetention",
-      "TeacherCode": "TSERPES",
-      "RoomCode": "E3"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Cancellation",
-      "Period": "P5",
-      "Year": "11",
-      "Subject": "EMAT"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Cancellation",
-      "Period": "P5",
-      "Year": "12"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "11ENXX1",
-      "TeacherCode": "WILLIAMS",
-      "RoomCode": "F5"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "11ISC1",
-      "TeacherCode": "BOURKE",
-      "RoomCode": "E2"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "11SE1",
-      "TeacherCode": "JONES",
-      "RoomCode": "C10"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "7&8_Basketball_Girls1",
-      "TeacherCode": "ROBINSON",
-      "RoomCode": "A1"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "7&8_Canoeing1",
-      "TeacherCode": "UNKN",
-      "RoomCode": "CTC"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "7&8_Cricket_Boys1",
-      "TeacherCode": "MCCANN",
-      "RoomCode": "D11"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "7&8_House_Sport1",
-      "TeacherCode": "MCGUINNESS",
-      "RoomCode": "C3"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "7&8_House_Sport2",
-      "TeacherCode": "CUGALY",
-      "RoomCode": "E1"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "7&8_House_Sport3",
-      "TeacherCode": "UNKN",
-      "RoomCode": "C1"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "7&8_House_Sport4",
-      "TeacherCode": "HALL",
-      "RoomCode": "P4"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "7&8_Oztag_Boys1",
-      "TeacherCode": "MORRIS",
-      "RoomCode": "F2"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "7&8_Oztag_Boys2",
-      "TeacherCode": "GOUZOULIS",
-      "RoomCode": "F10"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "7&8_Oztag_Girls1",
-      "TeacherCode": "ESPEJEL",
-      "RoomCode": "P3"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "7&8_RockClimbing1",
-      "TeacherCode": "LUO",
-      "RoomCode": "D9"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "7&8_RockClimbing2",
-      "TeacherCode": "TSOUNAKAS",
-      "RoomCode": "D7"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "7&8_RockClimbing3",
-      "TeacherCode": "STOJA-AYHA",
-      "RoomCode": "D8"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "7&8_Tennis1",
-      "TeacherCode": "ZHAO",
-      "RoomCode": "P5"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "7&8_Volleyball_Boys1",
-      "TeacherCode": "IBRAHIM",
-      "RoomCode": "D6"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "9&10_Basketball_Recreation1",
-      "TeacherCode": "O'LOUGHLIN",
-      "RoomCode": "BBLAB"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "9&10_Basketball_Recreation2",
-      "TeacherCode": "MOREIRA",
-      "RoomCode": "D5"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "9&10_Gym&Weights1",
-      "TeacherCode": "BATTERS",
-      "RoomCode": "GP"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "9&10_Iceskating1",
-      "TeacherCode": "PALMER",
-      "RoomCode": "C8"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "9&10_Pickleball1",
-      "TeacherCode": "KIM",
-      "RoomCode": "TP22"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "9&10_TableTennis1",
-      "TeacherCode": "BASSETT",
-      "RoomCode": "C9"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "9&10_Touch_Football_Girls1",
-      "TeacherCode": "NEWTON-GRE",
-      "RoomCode": "F3"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "9&10_Walking1",
-      "TeacherCode": "SELLIS",
-      "RoomCode": "F11"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "9&10_Walking2",
-      "TeacherCode": "CAMBRIDGE",
-      "RoomCode": "P2"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "9&10_Walking3",
-      "TeacherCode": "UNKN",
-      "RoomCode": "P1"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "9&10_Walking4",
-      "TeacherCode": "BARZOVSKI",
-      "RoomCode": "F12"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "9&10_Walking5",
-      "TeacherCode": "MEMIS",
-      "RoomCode": "D4"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "HUB",
-      "TeacherCode": "UNKN",
-      "RoomCode": "HUB"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P5",
-      "ClassCode": "SportDetention",
-      "TeacherCode": "TSERPES",
-      "RoomCode": "E3"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Cancellation",
-      "Period": "P6",
-      "Year": "11",
-      "Subject": "EMAT"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Cancellation",
-      "Period": "P6",
-      "Year": "12"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P6",
-      "ClassCode": "11MAXX1",
-      "TeacherCode": "PALEOLOGOS",
-      "RoomCode": ""
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P6",
-      "ClassCode": "HW",
-      "TeacherCode": "ZLOTKOWSKI",
-      "RoomCode": "D10"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Cancellation",
-      "Period": "P7",
-      "Year": "11",
-      "Subject": "EMAT"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Cancellation",
-      "Period": "P7",
-      "Year": "12"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Class",
-      "Period": "P7",
-      "ClassCode": "11MAXX1",
-      "TeacherCode": "PALEOLOGOS",
-      "RoomCode": ""
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Cancellation",
-      "Period": "Recess",
-      "Year": "11",
-      "Subject": "EMAT"
-    },
-    {
-      "Date": "2026-11-24",
-      "Type": "Cancellation",
-      "Period": "Recess",
-      "Year": "12"
-    },
-    {
       "Date": "2026-11-25",
       "Type": "Cancellation",
       "Period": "Lunch",
@@ -26946,7 +25472,7 @@
       "Type": "Class",
       "Period": "P1",
       "ClassCode": "10HISM",
-      "TeacherCode": "JACKSON",
+      "TeacherCode": "BYROM",
       "RoomCode": "P2"
     },
     {
@@ -27018,7 +25544,7 @@
       "Type": "Class",
       "Period": "P1",
       "ClassCode": "11ENT1",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "MORRIS",
       "RoomCode": "C7"
     },
     {
@@ -27210,7 +25736,7 @@
       "Type": "Class",
       "Period": "P1",
       "ClassCode": "9GEOR",
-      "TeacherCode": "KAPPAS",
+      "TeacherCode": "SALLIS",
       "RoomCode": "D6"
     },
     {
@@ -27303,7 +25829,7 @@
       "Type": "Class",
       "Period": "P2",
       "ClassCode": "10ASSEW",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "BYRNES",
       "RoomCode": "P2"
     },
     {
@@ -27423,7 +25949,7 @@
       "Type": "Class",
       "Period": "P2",
       "ClassCode": "8ASSEB",
-      "TeacherCode": "YIN",
+      "TeacherCode": "SALLIS",
       "RoomCode": "E2"
     },
     {
@@ -27431,7 +25957,7 @@
       "Type": "Class",
       "Period": "P2",
       "ClassCode": "8ASSEG",
-      "TeacherCode": "JACKSON",
+      "TeacherCode": "HOLLAND",
       "RoomCode": "D6"
     },
     {
@@ -27439,7 +25965,7 @@
       "Type": "Class",
       "Period": "P2",
       "ClassCode": "8ASSEP",
-      "TeacherCode": "STOJA-AYHA",
+      "TeacherCode": "LYONS",
       "RoomCode": "E1"
     },
     {
@@ -27540,7 +26066,7 @@
       "Type": "Class",
       "Period": "P3",
       "ClassCode": "10HISM",
-      "TeacherCode": "JACKSON",
+      "TeacherCode": "PALMER",
       "RoomCode": "P2"
     },
     {
@@ -27548,7 +26074,7 @@
       "Type": "Class",
       "Period": "P3",
       "ClassCode": "10HISP",
-      "TeacherCode": "KAPPAS",
+      "TeacherCode": "SALLIS",
       "RoomCode": "D6"
     },
     {
@@ -27833,7 +26359,7 @@
       "Type": "Class",
       "Period": "P4",
       "ClassCode": "10EMA1",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "ROBINSON",
       "RoomCode": "F11"
     },
     {
@@ -28166,7 +26692,7 @@
       "Type": "Class",
       "Period": "P5",
       "ClassCode": "10HISP",
-      "TeacherCode": "KAPPAS",
+      "TeacherCode": "SALLIS",
       "RoomCode": "D4"
     },
     {
@@ -28174,7 +26700,7 @@
       "Type": "Class",
       "Period": "P5",
       "ClassCode": "10HISY",
-      "TeacherCode": "JACKSON",
+      "TeacherCode": "KEITH COLE",
       "RoomCode": "P2"
     },
     {
@@ -28270,7 +26796,7 @@
       "Type": "Class",
       "Period": "P5",
       "ClassCode": "7SCIB",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "VITANOV",
       "RoomCode": "D10"
     },
     {
@@ -28374,7 +26900,7 @@
       "Type": "Class",
       "Period": "P5",
       "ClassCode": "9FT2",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "MOREIRA",
       "RoomCode": "D2"
     },
     {
@@ -28451,7 +26977,7 @@
       "Type": "Class",
       "Period": "P6",
       "ClassCode": "10PDHP",
-      "TeacherCode": "MCGUINNESS",
+      "TeacherCode": "JONES",
       "RoomCode": "GYM_1"
     },
     {
@@ -28483,7 +27009,7 @@
       "Type": "Class",
       "Period": "P6",
       "ClassCode": "11BST1",
-      "TeacherCode": "KAPPAS",
+      "TeacherCode": "SALLIS",
       "RoomCode": "TP21"
     },
     {
@@ -28500,7 +27026,7 @@
       "Period": "P6",
       "ClassCode": "11ES1",
       "TeacherCode": "TSERPES",
-      "RoomCode": "CTC"
+      "RoomCode": "C1"
     },
     {
       "Date": "2026-11-25",
@@ -28571,7 +27097,7 @@
       "Type": "Class",
       "Period": "P6",
       "ClassCode": "7PDHB",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "MORRIS",
       "RoomCode": "F2"
     },
     {
@@ -28853,7 +27379,7 @@
       "Period": "P1",
       "ClassCode": "11MATX1",
       "TeacherCode": "PALEOLOGOS",
-      "RoomCode": "F9"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -28885,7 +27411,7 @@
       "Period": "P1",
       "ClassCode": "7ENGY",
       "TeacherCode": "UNKN",
-      "RoomCode": "F5"
+      "RoomCode": "F2"
     },
     {
       "Date": "2026-11-26",
@@ -28909,7 +27435,7 @@
       "Period": "P1",
       "ClassCode": "7MUS4",
       "TeacherCode": "UNKN",
-      "RoomCode": "E3"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -28925,7 +27451,7 @@
       "Period": "P1",
       "ClassCode": "8CHIP",
       "TeacherCode": "LUO",
-      "RoomCode": "P3"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -28933,7 +27459,7 @@
       "Period": "P1",
       "ClassCode": "8HISB",
       "TeacherCode": "CAMBRIDGE",
-      "RoomCode": "P1"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -28989,7 +27515,7 @@
       "Period": "P1",
       "ClassCode": "9EMA1",
       "TeacherCode": "ZHAO",
-      "RoomCode": "F10"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29090,7 +27616,7 @@
       "Period": "P2",
       "ClassCode": "11MH2",
       "TeacherCode": "CAMBRIDGE",
-      "RoomCode": "P1"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29106,7 +27632,7 @@
       "Period": "P2",
       "ClassCode": "7ENGR",
       "TeacherCode": "SMITH",
-      "RoomCode": "F8"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29114,7 +27640,7 @@
       "Period": "P2",
       "ClassCode": "7ENGW",
       "TeacherCode": "TAOUBE",
-      "RoomCode": "F5"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29122,7 +27648,7 @@
       "Period": "P2",
       "ClassCode": "7GEOG",
       "TeacherCode": "UNKN",
-      "RoomCode": "E3"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29178,7 +27704,7 @@
       "Period": "P2",
       "ClassCode": "8ENGR",
       "TeacherCode": "UNKN",
-      "RoomCode": "F6"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29186,7 +27712,7 @@
       "Period": "P2",
       "ClassCode": "8MATB",
       "TeacherCode": "HALL",
-      "RoomCode": "F9"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29218,7 +27744,7 @@
       "Period": "P2",
       "ClassCode": "9MAT1",
       "TeacherCode": "YE",
-      "RoomCode": "F7"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29287,7 +27813,7 @@
       "Period": "P3",
       "ClassCode": "11AH1",
       "TeacherCode": "JACKSON",
-      "RoomCode": "P2"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29335,7 +27861,7 @@
       "Period": "P3",
       "ClassCode": "11MH1",
       "TeacherCode": "UNKN",
-      "RoomCode": "E3"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29367,7 +27893,7 @@
       "Period": "P3",
       "ClassCode": "7MATP",
       "TeacherCode": "HALL",
-      "RoomCode": "F6"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29399,7 +27925,7 @@
       "Period": "P3",
       "ClassCode": "8ENGG",
       "TeacherCode": "LYONS",
-      "RoomCode": "F7"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29407,7 +27933,7 @@
       "Period": "P3",
       "ClassCode": "8LITB",
       "TeacherCode": "WILLIAMS",
-      "RoomCode": "F8"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29447,7 +27973,7 @@
       "Period": "P3",
       "ClassCode": "9CHI1",
       "TeacherCode": "LUO",
-      "RoomCode": "P3"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29495,7 +28021,7 @@
       "Period": "P3",
       "ClassCode": "9PSY2",
       "TeacherCode": "MCGUINNESS",
-      "RoomCode": "F5"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29532,14 +28058,14 @@
       "Period": "P4",
       "ClassCode": "11ENA1",
       "TeacherCode": "LYONS",
-      "RoomCode": "F7"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
       "Type": "Class",
       "Period": "P4",
       "ClassCode": "11ENA2",
-      "TeacherCode": "KEITH COLE",
+      "TeacherCode": "UNKN",
       "RoomCode": "TP19"
     },
     {
@@ -29548,7 +28074,7 @@
       "Period": "P4",
       "ClassCode": "11ENA3",
       "TeacherCode": "WILLIAMS",
-      "RoomCode": "F8"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29572,7 +28098,7 @@
       "Period": "P4",
       "ClassCode": "11ENS3",
       "TeacherCode": "UNKN",
-      "RoomCode": "F6"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29596,7 +28122,7 @@
       "Period": "P4",
       "ClassCode": "7ENGP",
       "TeacherCode": "UNKN",
-      "RoomCode": "F5"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29604,7 +28130,7 @@
       "Period": "P4",
       "ClassCode": "7MATW",
       "TeacherCode": "HALL",
-      "RoomCode": "F9"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29652,7 +28178,7 @@
       "Period": "P4",
       "ClassCode": "8HISW",
       "TeacherCode": "CAMBRIDGE",
-      "RoomCode": "P1"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29660,7 +28186,7 @@
       "Period": "P4",
       "ClassCode": "8HISY",
       "TeacherCode": "JACKSON",
-      "RoomCode": "P2"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29692,7 +28218,7 @@
       "Period": "P4",
       "ClassCode": "9CHI1",
       "TeacherCode": "LUO",
-      "RoomCode": "P3"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29785,7 +28311,7 @@
       "Period": "P5",
       "ClassCode": "11BST2",
       "TeacherCode": "UNKN",
-      "RoomCode": "E3"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29857,7 +28383,7 @@
       "Period": "P5",
       "ClassCode": "7MATP",
       "TeacherCode": "SMITH",
-      "RoomCode": "F9"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29865,7 +28391,7 @@
       "Period": "P5",
       "ClassCode": "7MATR",
       "TeacherCode": "ZHAO",
-      "RoomCode": "F10"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29897,7 +28423,7 @@
       "Period": "P5",
       "ClassCode": "8CHIG",
       "TeacherCode": "LUO",
-      "RoomCode": "P3"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -29921,7 +28447,7 @@
       "Period": "P5",
       "ClassCode": "8ENGY",
       "TeacherCode": "BYROM",
-      "RoomCode": "F6"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -30030,7 +28556,7 @@
       "Period": "P6",
       "ClassCode": "11EMAX1",
       "TeacherCode": "PALEOLOGOS",
-      "RoomCode": "F9"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -30086,7 +28612,7 @@
       "Period": "P6",
       "ClassCode": "7ENGB",
       "TeacherCode": "ROYAL",
-      "RoomCode": "P1"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -30094,7 +28620,7 @@
       "Period": "P6",
       "ClassCode": "7ENGG",
       "TeacherCode": "UNKN",
-      "RoomCode": "F6"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -30102,7 +28628,7 @@
       "Period": "P6",
       "ClassCode": "7MATR",
       "TeacherCode": "ZHAO",
-      "RoomCode": "F10"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -30142,7 +28668,7 @@
       "Period": "P6",
       "ClassCode": "8ENGP",
       "TeacherCode": "WILLIAMS",
-      "RoomCode": "F8"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -30182,7 +28708,7 @@
       "Period": "P6",
       "ClassCode": "9ENGB",
       "TeacherCode": "LYONS",
-      "RoomCode": "F7"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -30190,7 +28716,7 @@
       "Period": "P6",
       "ClassCode": "9ENGP",
       "TeacherCode": "UNKN",
-      "RoomCode": "F5"
+      "RoomCode": ""
     },
     {
       "Date": "2026-11-26",
@@ -30205,7 +28731,7 @@
       "Type": "Class",
       "Period": "P6",
       "ClassCode": "9ENGY",
-      "TeacherCode": "KEITH COLE",
+      "TeacherCode": "UNKN",
       "RoomCode": "TP19"
     },
     {
@@ -33904,7 +32430,7 @@
       "Period": "P2",
       "ClassCode": "7VA7",
       "TeacherCode": "BASSETT",
-      "RoomCode": "TP24"
+      "RoomCode": "P6"
     },
     {
       "Date": "2026-12-01",
@@ -34908,6 +33434,1856 @@
     },
     {
       "Date": "2026-12-01",
+      "Type": "Cancellation",
+      "Period": "Recess",
+      "Year": "12"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Cancellation",
+      "Period": "Lunch",
+      "Year": "11",
+      "Subject": "EMAT"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Cancellation",
+      "Period": "Lunch",
+      "Year": "12"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Cancellation",
+      "Period": "P0",
+      "Year": "11",
+      "Subject": "EMAT"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Cancellation",
+      "Period": "P0",
+      "Year": "12"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P0",
+      "ClassCode": "11MAXX1",
+      "TeacherCode": "PALEOLOGOS",
+      "RoomCode": "F9"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P0",
+      "ClassCode": "Choir",
+      "TeacherCode": "TILLETT",
+      "RoomCode": "C6"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Cancellation",
+      "Period": "P1",
+      "Year": "11",
+      "Subject": "EMAT"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Cancellation",
+      "Period": "P1",
+      "Year": "12"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "10COM2",
+      "TeacherCode": "GEORGES",
+      "RoomCode": "D9"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "10CT1",
+      "TeacherCode": "JONES",
+      "RoomCode": "C10"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "10DRA1",
+      "TeacherCode": "BYRNES",
+      "RoomCode": "P4"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "10DT1",
+      "TeacherCode": "LEE",
+      "RoomCode": "C3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "10OHS1",
+      "TeacherCode": "WHITE",
+      "RoomCode": "LIB_OHS"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "10PASS1",
+      "TeacherCode": "ROBINSON",
+      "RoomCode": "GYM_1"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "10PDM1",
+      "TeacherCode": "BASSETT",
+      "RoomCode": "C9"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "10PSY2",
+      "TeacherCode": "NEWTON-GRE",
+      "RoomCode": "F3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "10iSTEM2",
+      "TeacherCode": "GREENE",
+      "RoomCode": "C1"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "11BIO1",
+      "TeacherCode": "TSOUNAKAS",
+      "RoomCode": "D12"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "11BST2",
+      "TeacherCode": "MEMIS",
+      "RoomCode": "P1"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "11HFB1",
+      "TeacherCode": "MC HALE",
+      "RoomCode": "D3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "11MAS3",
+      "TeacherCode": "YE",
+      "RoomCode": "F11"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "11MU11",
+      "TeacherCode": "BOMBARDIER",
+      "RoomCode": "C6"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "11MU21",
+      "TeacherCode": "TILLETT",
+      "RoomCode": "C7"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "11PHY1",
+      "TeacherCode": "SMITH",
+      "RoomCode": "D6"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "7ENGP",
+      "TeacherCode": "LITTLE",
+      "RoomCode": "F6"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "7MATB",
+      "TeacherCode": "SELLIS",
+      "RoomCode": "D8"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "7MATG",
+      "TeacherCode": "HALL",
+      "RoomCode": "F5"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "7MATY",
+      "TeacherCode": "BARZOVSKI",
+      "RoomCode": "F12"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "7SCIR",
+      "TeacherCode": "FULTON",
+      "RoomCode": "E2"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "7SCIW",
+      "TeacherCode": "RAY",
+      "RoomCode": "D10"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "8CHIG",
+      "TeacherCode": "LUO",
+      "RoomCode": "P3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "8HISP",
+      "TeacherCode": "SIDDIQUA",
+      "RoomCode": "D5"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "8HISR",
+      "TeacherCode": "HOLLAND",
+      "RoomCode": "D7"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "8JPNW",
+      "TeacherCode": "YIN",
+      "RoomCode": "GP"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "8LITY",
+      "TeacherCode": "WILLIAMS",
+      "RoomCode": "F8"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "8SCIB",
+      "TeacherCode": "ABRAHAM",
+      "RoomCode": "D11"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "9ENGB",
+      "TeacherCode": "LYONS",
+      "RoomCode": "F7"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "9ENGG",
+      "TeacherCode": "BYROM",
+      "RoomCode": "TP22"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "9GEOP",
+      "TeacherCode": "WHITE",
+      "RoomCode": "D4"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "9GEOW",
+      "TeacherCode": "KAPPAS",
+      "RoomCode": "E3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "9SCIR",
+      "TeacherCode": "CUGALY",
+      "RoomCode": "P2"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "9SCIY",
+      "TeacherCode": "UNKN",
+      "RoomCode": "BBLAB"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "HUB",
+      "TeacherCode": "ZLOTKOWSKI",
+      "RoomCode": "HUB"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Cancellation",
+      "Period": "P2",
+      "Year": "11",
+      "Subject": "EMAT"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Cancellation",
+      "Period": "P2",
+      "Year": "12"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "10COM2",
+      "TeacherCode": "GEORGES",
+      "RoomCode": "D9"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "10CT1",
+      "TeacherCode": "JONES",
+      "RoomCode": "C10"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "10DRA1",
+      "TeacherCode": "BYRNES",
+      "RoomCode": "P4"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "10DT1",
+      "TeacherCode": "LEE",
+      "RoomCode": "C3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "10OHS1",
+      "TeacherCode": "SALISBURY",
+      "RoomCode": "LIB_OHS"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "10PASS1",
+      "TeacherCode": "ROBINSON",
+      "RoomCode": "F11"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "10PDM1",
+      "TeacherCode": "PALMER",
+      "RoomCode": "C4"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "10PSY2",
+      "TeacherCode": "NEWTON-GRE",
+      "RoomCode": "F3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "10iSTEM2",
+      "TeacherCode": "GREENE",
+      "RoomCode": "C1"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "11BIO2",
+      "TeacherCode": "OWEN",
+      "RoomCode": "TP23"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "11BST3",
+      "TeacherCode": "GOUDIS",
+      "RoomCode": "D4"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "11ENT1",
+      "TeacherCode": "TILLETT",
+      "RoomCode": "GYM_2"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "11MAS1",
+      "TeacherCode": "SELLIS",
+      "RoomCode": "D8"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "11MAS2",
+      "TeacherCode": "BANSAL",
+      "RoomCode": "C2"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "11MAT1",
+      "TeacherCode": "LIU",
+      "RoomCode": "F10"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "11MAT2",
+      "TeacherCode": "KIM",
+      "RoomCode": "F12"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "11MATX1",
+      "TeacherCode": "PALEOLOGOS",
+      "RoomCode": "F9"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "7DT9",
+      "TeacherCode": "FORISTAL",
+      "RoomCode": "C5"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "7MUS7",
+      "TeacherCode": "BOMBARDIER",
+      "RoomCode": "C6"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "7MUS8",
+      "TeacherCode": "O'LOUGHLIN",
+      "RoomCode": "P5"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "7PDHG",
+      "TeacherCode": "MCGUINNESS",
+      "RoomCode": "A1"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "7PDHW",
+      "TeacherCode": "BOLTON",
+      "RoomCode": "F2"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "7SCIB",
+      "TeacherCode": "TSOUNAKAS",
+      "RoomCode": "D12"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "7SCIR",
+      "TeacherCode": "FULTON",
+      "RoomCode": "E2"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "8CHIG",
+      "TeacherCode": "LUO",
+      "RoomCode": "P3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "8HISB",
+      "TeacherCode": "CAMBRIDGE",
+      "RoomCode": "P1"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "8HISP",
+      "TeacherCode": "SIDDIQUA",
+      "RoomCode": "D5"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "8HISR",
+      "TeacherCode": "ALI SHAMIM",
+      "RoomCode": "D7"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "8JPNW",
+      "TeacherCode": "YIN",
+      "RoomCode": "GP"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "8SCIY",
+      "TeacherCode": "ABRAHAM",
+      "RoomCode": "D11"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "9GEOG",
+      "TeacherCode": "MEMIS",
+      "RoomCode": "P2"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "9GEOR",
+      "TeacherCode": "KAPPAS",
+      "RoomCode": "E3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "9SCIB",
+      "TeacherCode": "HALL",
+      "RoomCode": "D6"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "9SCIP",
+      "TeacherCode": "CUGALY",
+      "RoomCode": "D10"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "9SCIW",
+      "TeacherCode": "MOREIRA",
+      "RoomCode": "E1"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "9SCIY",
+      "TeacherCode": "VITANOV",
+      "RoomCode": "BBLAB"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P2",
+      "ClassCode": "HUB",
+      "TeacherCode": "ZLOTKOWSKI",
+      "RoomCode": "HUB"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Cancellation",
+      "Period": "P3",
+      "Year": "11",
+      "Subject": "EMAT"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Cancellation",
+      "Period": "P3",
+      "Year": "12"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "10ENGW",
+      "TeacherCode": "ROYAL",
+      "RoomCode": "TP20"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "10HISR",
+      "TeacherCode": "WHITE",
+      "RoomCode": "E3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "10PDHB",
+      "TeacherCode": "IBRAHIM",
+      "RoomCode": "GYM_2"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "10PDHP",
+      "TeacherCode": "MCGUINNESS",
+      "RoomCode": "GYM_1"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "10SCIG",
+      "TeacherCode": "TSOUNAKAS",
+      "RoomCode": "E2"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "10SCIM",
+      "TeacherCode": "MOREIRA",
+      "RoomCode": "TP19"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "10SCIY",
+      "TeacherCode": "FULTON",
+      "RoomCode": "D12"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "11BST1",
+      "TeacherCode": "KAPPAS",
+      "RoomCode": "TP23"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "11ECO1",
+      "TeacherCode": "EAGAN",
+      "RoomCode": "D6"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "11ES1",
+      "TeacherCode": "TSERPES",
+      "RoomCode": "CTC"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "11ITM1",
+      "TeacherCode": "TABUTEAU",
+      "RoomCode": "C4"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "11LS2",
+      "TeacherCode": "SIDDIQUA",
+      "RoomCode": "D5"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "11MH2",
+      "TeacherCode": "CAMBRIDGE",
+      "RoomCode": "P1"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "11SLR1",
+      "TeacherCode": "HAMILTON",
+      "RoomCode": "A1"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "7ENGB",
+      "TeacherCode": "TAYLOR",
+      "RoomCode": "F8"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "7ENGW",
+      "TeacherCode": "TAOUBE",
+      "RoomCode": "F5"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "7GEOG",
+      "TeacherCode": "MEMIS",
+      "RoomCode": "D7"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "7GEOY",
+      "TeacherCode": "GEORGES",
+      "RoomCode": "D9"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "7MATR",
+      "TeacherCode": "ZHAO",
+      "RoomCode": "F11"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "7SCIP",
+      "TeacherCode": "VITANOV",
+      "RoomCode": "D10"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "8DT8",
+      "TeacherCode": "LEE",
+      "RoomCode": "C5"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "8DT9",
+      "TeacherCode": "BLACK",
+      "RoomCode": "C10"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "8ENGG",
+      "TeacherCode": "LYONS",
+      "RoomCode": "F7"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "8ENGR",
+      "TeacherCode": "LAANANI",
+      "RoomCode": "F6"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "8MATB",
+      "TeacherCode": "HALL",
+      "RoomCode": "F12"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "8SCIW",
+      "TeacherCode": "RAY",
+      "RoomCode": "D11"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "8VA7",
+      "TeacherCode": "PALMER",
+      "RoomCode": "C8"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "9MAT1",
+      "TeacherCode": "YE",
+      "RoomCode": "GP"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "9MAT2",
+      "TeacherCode": "BARZOVSKI",
+      "RoomCode": "F2"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "9MAT3",
+      "TeacherCode": "BANSAL",
+      "RoomCode": "F3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "9MAT4",
+      "TeacherCode": "LIU",
+      "RoomCode": "E1"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "9MAT5",
+      "TeacherCode": "KIM",
+      "RoomCode": "F9"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "9MAT6",
+      "TeacherCode": "SELLIS",
+      "RoomCode": "D8"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P3",
+      "ClassCode": "HUB",
+      "TeacherCode": "ZLOTKOWSKI",
+      "RoomCode": "HUB"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Cancellation",
+      "Period": "P4",
+      "Year": "11",
+      "Subject": "EMAT"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Cancellation",
+      "Period": "P4",
+      "Year": "12"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "10ENGB",
+      "TeacherCode": "WILLIAMS",
+      "RoomCode": "F8"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "10ENGM",
+      "TeacherCode": "TAYLOR",
+      "RoomCode": "F5"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "10ENGP",
+      "TeacherCode": "HOLLAND",
+      "RoomCode": "TP21"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "10ENGW",
+      "TeacherCode": "ROYAL",
+      "RoomCode": "TP20"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "10HISR",
+      "TeacherCode": "WHITE",
+      "RoomCode": "E3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "10SCIG",
+      "TeacherCode": "TSOUNAKAS",
+      "RoomCode": "E2"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "10SCIY",
+      "TeacherCode": "FULTON",
+      "RoomCode": "D12"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "11BST1",
+      "TeacherCode": "KAPPAS",
+      "RoomCode": "TP23"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "11ECO1",
+      "TeacherCode": "EAGAN",
+      "RoomCode": "D6"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "11ES1",
+      "TeacherCode": "TSERPES",
+      "RoomCode": "CTC"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "11ITM1",
+      "TeacherCode": "TABUTEAU",
+      "RoomCode": "C4"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "11LS2",
+      "TeacherCode": "SIDDIQUA",
+      "RoomCode": "D5"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "11MH2",
+      "TeacherCode": "CAMBRIDGE",
+      "RoomCode": "P1"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "11SLR1",
+      "TeacherCode": "HAMILTON",
+      "RoomCode": "A1"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "7DRA6",
+      "TeacherCode": "BYRNES",
+      "RoomCode": "P4"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "7DT5",
+      "TeacherCode": "FORISTAL",
+      "RoomCode": "C3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "7GEOR",
+      "TeacherCode": "MEMIS",
+      "RoomCode": "D9"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "7MUS4",
+      "TeacherCode": "BOMBARDIER",
+      "RoomCode": "P5"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "7PDHB",
+      "TeacherCode": "BOLTON",
+      "RoomCode": "F2"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "7SCIP",
+      "TeacherCode": "VITANOV",
+      "RoomCode": "D10"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "7SCIY",
+      "TeacherCode": "RAY",
+      "RoomCode": "D8"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "8DT4",
+      "TeacherCode": "MC HALE",
+      "RoomCode": "C1"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "8DT5",
+      "TeacherCode": "LEE",
+      "RoomCode": "C5"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "8DT6",
+      "TeacherCode": "BLACK",
+      "RoomCode": "C10"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "8MATB",
+      "TeacherCode": "HALL",
+      "RoomCode": "F12"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "8MATP",
+      "TeacherCode": "ZHAO",
+      "RoomCode": "F11"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "8MATR",
+      "TeacherCode": "LIU",
+      "RoomCode": "F10"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "8MATY",
+      "TeacherCode": "YE",
+      "RoomCode": "F9"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "9ENGW",
+      "TeacherCode": "BYROM",
+      "RoomCode": "TP22"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "9GEOY",
+      "TeacherCode": "LUO",
+      "RoomCode": "P3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "9PDHB",
+      "TeacherCode": "ROBINSON",
+      "RoomCode": "GYM_2"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "9PDHP",
+      "TeacherCode": "IBRAHIM",
+      "RoomCode": "F3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "9PDHR",
+      "TeacherCode": "MCGUINNESS",
+      "RoomCode": "GP"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "9SCIG",
+      "TeacherCode": "MOREIRA",
+      "RoomCode": "D11"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P4",
+      "ClassCode": "HUB",
+      "TeacherCode": "DJAVADKHAN",
+      "RoomCode": "HUB"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Cancellation",
+      "Period": "P5",
+      "Year": "11",
+      "Subject": "EMAT"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Cancellation",
+      "Period": "P5",
+      "Year": "12"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "10ENGG",
+      "TeacherCode": "HOLLAND",
+      "RoomCode": "TP21"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "10HISM",
+      "TeacherCode": "JACKSON",
+      "RoomCode": "P2"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "10HISP",
+      "TeacherCode": "KAPPAS",
+      "RoomCode": "D8"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "10HISW",
+      "TeacherCode": "CAMBRIDGE",
+      "RoomCode": "P1"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "10PDHY",
+      "TeacherCode": "MCGUINNESS",
+      "RoomCode": "F2"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "10SCIB",
+      "TeacherCode": "VITANOV",
+      "RoomCode": "D12"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "10SCIR",
+      "TeacherCode": "RAY",
+      "RoomCode": "E2"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "11CHEM1",
+      "TeacherCode": "ABRAHAM",
+      "RoomCode": "E1"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "11EMAX1",
+      "TeacherCode": "PALEOLOGOS",
+      "RoomCode": ""
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "11HFB2",
+      "TeacherCode": "MC HALE",
+      "RoomCode": "D3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "11HMS1",
+      "TeacherCode": "IBRAHIM",
+      "RoomCode": "A1"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "11LS1",
+      "TeacherCode": "GEORGES",
+      "RoomCode": "D9"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "11PHY2",
+      "TeacherCode": "SMITH",
+      "RoomCode": "D11"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "11PVDI1",
+      "TeacherCode": "BASSETT",
+      "RoomCode": "C9"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "7DT2",
+      "TeacherCode": "FORISTAL",
+      "RoomCode": "D2"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "7DT3",
+      "TeacherCode": "TSERPES",
+      "RoomCode": "C3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "7ENGG",
+      "TeacherCode": "LAANANI",
+      "RoomCode": "F6"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "7ENGY",
+      "TeacherCode": "LITTLE",
+      "RoomCode": "E3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "7GEOP",
+      "TeacherCode": "ZLOTKOWSKI",
+      "RoomCode": "D7"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "7GEOW",
+      "TeacherCode": "GOUDIS",
+      "RoomCode": "D4"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "7MUS1",
+      "TeacherCode": "O'LOUGHLIN",
+      "RoomCode": "C6"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "8CHIR",
+      "TeacherCode": "LUO",
+      "RoomCode": "P3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "8ENGP",
+      "TeacherCode": "WILLIAMS",
+      "RoomCode": "F8"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "8JPNB",
+      "TeacherCode": "YIN",
+      "RoomCode": "GP"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "8MATG",
+      "TeacherCode": "BANSAL",
+      "RoomCode": "D5"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "8MATW",
+      "TeacherCode": "KIM",
+      "RoomCode": "F10"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "8MATY",
+      "TeacherCode": "YE",
+      "RoomCode": "F12"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "9ENGB",
+      "TeacherCode": "LYONS",
+      "RoomCode": "F7"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "9ENGG",
+      "TeacherCode": "BYROM",
+      "RoomCode": "TP22"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "9ENGP",
+      "TeacherCode": "TAYLOR",
+      "RoomCode": "F5"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "9ENGR",
+      "TeacherCode": "ROYAL",
+      "RoomCode": "D6"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "9ENGY",
+      "TeacherCode": "KEITH COLE",
+      "RoomCode": "TP19"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "9PDHW",
+      "TeacherCode": "HAMILTON",
+      "RoomCode": "F3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P5",
+      "ClassCode": "HUB",
+      "TeacherCode": "DJAVADKHAN",
+      "RoomCode": "HUB"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Cancellation",
+      "Period": "P6",
+      "Year": "11",
+      "Subject": "EMAT"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Cancellation",
+      "Period": "P6",
+      "Year": "12"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "10EMA1",
+      "TeacherCode": "GOUZOULIS",
+      "RoomCode": "F11"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "10MAT1",
+      "TeacherCode": "KIM",
+      "RoomCode": "F10"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "10MAT2",
+      "TeacherCode": "ZHAO",
+      "RoomCode": "F12"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "10MAT3",
+      "TeacherCode": "SELLIS",
+      "RoomCode": "D8"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "10MAT4",
+      "TeacherCode": "BARZOVSKI",
+      "RoomCode": "F3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "10MAT5",
+      "TeacherCode": "BANSAL",
+      "RoomCode": "E3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "10MAT6",
+      "TeacherCode": "YE",
+      "RoomCode": "GP"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "11ENA1",
+      "TeacherCode": "LYONS",
+      "RoomCode": "F7"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "11ENA2",
+      "TeacherCode": "KEITH COLE",
+      "RoomCode": "TP19"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "11ENA3",
+      "TeacherCode": "WILLIAMS",
+      "RoomCode": "F8"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "11ENS1",
+      "TeacherCode": "HOLLAND",
+      "RoomCode": "TP21"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "11ENS2",
+      "TeacherCode": "ROYAL",
+      "RoomCode": "TP20"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "11ENS3",
+      "TeacherCode": "LAANANI",
+      "RoomCode": "F6"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "11ENST1",
+      "TeacherCode": "TAYLOR",
+      "RoomCode": "F5"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "7DT4",
+      "TeacherCode": "BLACK",
+      "RoomCode": "C5"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "7ENGR",
+      "TeacherCode": "BYROM",
+      "RoomCode": "D5"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "7GEOB",
+      "TeacherCode": "EAGAN",
+      "RoomCode": "D6"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "7MATP",
+      "TeacherCode": "HALL",
+      "RoomCode": "E2"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "7MUS5",
+      "TeacherCode": "TILLETT",
+      "RoomCode": "C6"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "7MUS6",
+      "TeacherCode": "O'LOUGHLIN",
+      "RoomCode": "P5"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "7PDHY",
+      "TeacherCode": "IBRAHIM",
+      "RoomCode": "GYM_1"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "8DT2",
+      "TeacherCode": "LEE",
+      "RoomCode": "CTC"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "8HISW",
+      "TeacherCode": "CAMBRIDGE",
+      "RoomCode": "P1"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "8HISY",
+      "TeacherCode": "JACKSON",
+      "RoomCode": "P2"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "8SCIG",
+      "TeacherCode": "TSOUNAKAS",
+      "RoomCode": "D12"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "8SCIP",
+      "TeacherCode": "MOREIRA",
+      "RoomCode": "D11"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "8VA1",
+      "TeacherCode": "BASSETT",
+      "RoomCode": "C9"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "8VA3",
+      "TeacherCode": "BOMBARDIER",
+      "RoomCode": "TP24"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "9COM1",
+      "TeacherCode": "ALI SHAMIM",
+      "RoomCode": "D7"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "9DRA1",
+      "TeacherCode": "BYRNES",
+      "RoomCode": "P4"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "9DT1",
+      "TeacherCode": "FORISTAL",
+      "RoomCode": "C3"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "9ITT1",
+      "TeacherCode": "TSERPES",
+      "RoomCode": "C2"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "9JPN1",
+      "TeacherCode": "YIN",
+      "RoomCode": "TP23"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "9PASS2",
+      "TeacherCode": "HAMILTON",
+      "RoomCode": "BBLAB"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "9PSY1",
+      "TeacherCode": "NEWTON-GRE",
+      "RoomCode": "F2"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "9iSTEM1",
+      "TeacherCode": "GREENE",
+      "RoomCode": "C1"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P6",
+      "ClassCode": "HUB",
+      "TeacherCode": "STOJA-AYHA",
+      "RoomCode": "HUB"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Cancellation",
+      "Period": "P7",
+      "Year": "11",
+      "Subject": "EMAT"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Cancellation",
+      "Period": "P7",
+      "Year": "12"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Class",
+      "Period": "P7",
+      "ClassCode": "Rovers",
+      "TeacherCode": "BOMBARDIER",
+      "RoomCode": "P5"
+    },
+    {
+      "Date": "2026-12-02",
+      "Type": "Cancellation",
+      "Period": "Recess",
+      "Year": "11",
+      "Subject": "EMAT"
+    },
+    {
+      "Date": "2026-12-02",
       "Type": "Cancellation",
       "Period": "Recess",
       "Year": "12"
