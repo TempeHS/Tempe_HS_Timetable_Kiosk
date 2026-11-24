@@ -81,7 +81,7 @@
   },
   "ui": {
     "refreshInterval": 60000,
-    "cacheBusting": false,
+    "cacheBusting": true,
     "debug": false,
     "responsive": {
       "breakpoints": {
