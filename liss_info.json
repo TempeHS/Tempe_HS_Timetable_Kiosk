@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-11-24T21:10:40.480922+00:00",
+    "generated_at": "2026-11-24T21:20:16.014095+00:00",
     "source": "sentral_api",
     "total_lessons": 2821,
     "date_range": "2026-11-25 to 2026-12-02",
@@ -27379,7 +27379,7 @@
       "Period": "P1",
       "ClassCode": "11MATX1",
       "TeacherCode": "PALEOLOGOS",
-      "RoomCode": ""
+      "RoomCode": "F3"
     },
     {
       "Date": "2026-11-26",
@@ -27435,7 +27435,7 @@
       "Period": "P1",
       "ClassCode": "7MUS4",
       "TeacherCode": "UNKN",
-      "RoomCode": ""
+      "RoomCode": "P4"
     },
     {
       "Date": "2026-11-26",
@@ -27451,7 +27451,7 @@
       "Period": "P1",
       "ClassCode": "8CHIP",
       "TeacherCode": "LUO",
-      "RoomCode": ""
+      "RoomCode": "D11"
     },
     {
       "Date": "2026-11-26",
@@ -27459,14 +27459,14 @@
       "Period": "P1",
       "ClassCode": "8HISB",
       "TeacherCode": "CAMBRIDGE",
-      "RoomCode": ""
+      "RoomCode": "D9"
     },
     {
       "Date": "2026-11-26",
       "Type": "Class",
       "Period": "P1",
       "ClassCode": "8JPNY",
-      "TeacherCode": "YIN",
+      "TeacherCode": "UNKN",
       "RoomCode": "GP"
     },
     {
@@ -27515,7 +27515,7 @@
       "Period": "P1",
       "ClassCode": "9EMA1",
       "TeacherCode": "ZHAO",
-      "RoomCode": ""
+      "RoomCode": "F12"
     },
     {
       "Date": "2026-11-26",
@@ -27616,7 +27616,7 @@
       "Period": "P2",
       "ClassCode": "11MH2",
       "TeacherCode": "CAMBRIDGE",
-      "RoomCode": ""
+      "RoomCode": "D10"
     },
     {
       "Date": "2026-11-26",
@@ -27632,7 +27632,7 @@
       "Period": "P2",
       "ClassCode": "7ENGR",
       "TeacherCode": "SMITH",
-      "RoomCode": ""
+      "RoomCode": "A1"
     },
     {
       "Date": "2026-11-26",
@@ -27640,7 +27640,7 @@
       "Period": "P2",
       "ClassCode": "7ENGW",
       "TeacherCode": "TAOUBE",
-      "RoomCode": ""
+      "RoomCode": "E2"
     },
     {
       "Date": "2026-11-26",
@@ -27648,7 +27648,7 @@
       "Period": "P2",
       "ClassCode": "7GEOG",
       "TeacherCode": "UNKN",
-      "RoomCode": ""
+      "RoomCode": "D7"
     },
     {
       "Date": "2026-11-26",
@@ -27704,7 +27704,7 @@
       "Period": "P2",
       "ClassCode": "8ENGR",
       "TeacherCode": "UNKN",
-      "RoomCode": ""
+      "RoomCode": "D4"
     },
     {
       "Date": "2026-11-26",
@@ -27712,7 +27712,7 @@
       "Period": "P2",
       "ClassCode": "8MATB",
       "TeacherCode": "HALL",
-      "RoomCode": ""
+      "RoomCode": "F2"
     },
     {
       "Date": "2026-11-26",
@@ -27744,7 +27744,7 @@
       "Period": "P2",
       "ClassCode": "9MAT1",
       "TeacherCode": "YE",
-      "RoomCode": ""
+      "RoomCode": "BBLAB"
     },
     {
       "Date": "2026-11-26",
@@ -27812,8 +27812,8 @@
       "Type": "Class",
       "Period": "P3",
       "ClassCode": "11AH1",
-      "TeacherCode": "JACKSON",
-      "RoomCode": ""
+      "TeacherCode": "UNKN",
+      "RoomCode": "D9"
     },
     {
       "Date": "2026-11-26",
@@ -27861,7 +27861,7 @@
       "Period": "P3",
       "ClassCode": "11MH1",
       "TeacherCode": "UNKN",
-      "RoomCode": ""
+      "RoomCode": "TP20"
     },
     {
       "Date": "2026-11-26",
@@ -27893,7 +27893,7 @@
       "Period": "P3",
       "ClassCode": "7MATP",
       "TeacherCode": "HALL",
-      "RoomCode": ""
+      "RoomCode": "F11"
     },
     {
       "Date": "2026-11-26",
@@ -27925,7 +27925,7 @@
       "Period": "P3",
       "ClassCode": "8ENGG",
       "TeacherCode": "LYONS",
-      "RoomCode": ""
+      "RoomCode": "F12"
     },
     {
       "Date": "2026-11-26",
@@ -27933,7 +27933,7 @@
       "Period": "P3",
       "ClassCode": "8LITB",
       "TeacherCode": "WILLIAMS",
-      "RoomCode": ""
+      "RoomCode": "D8"
     },
     {
       "Date": "2026-11-26",
@@ -27973,7 +27973,7 @@
       "Period": "P3",
       "ClassCode": "9CHI1",
       "TeacherCode": "LUO",
-      "RoomCode": ""
+      "RoomCode": "TP22"
     },
     {
       "Date": "2026-11-26",
@@ -28021,7 +28021,7 @@
       "Period": "P3",
       "ClassCode": "9PSY2",
       "TeacherCode": "MCGUINNESS",
-      "RoomCode": ""
+      "RoomCode": "F2"
     },
     {
       "Date": "2026-11-26",
@@ -28058,7 +28058,7 @@
       "Period": "P4",
       "ClassCode": "11ENA1",
       "TeacherCode": "LYONS",
-      "RoomCode": ""
+      "RoomCode": "F12"
     },
     {
       "Date": "2026-11-26",
@@ -28074,7 +28074,7 @@
       "Period": "P4",
       "ClassCode": "11ENA3",
       "TeacherCode": "WILLIAMS",
-      "RoomCode": ""
+      "RoomCode": "D4"
     },
     {
       "Date": "2026-11-26",
@@ -28098,7 +28098,7 @@
       "Period": "P4",
       "ClassCode": "11ENS3",
       "TeacherCode": "UNKN",
-      "RoomCode": ""
+      "RoomCode": "E2"
     },
     {
       "Date": "2026-11-26",
@@ -28122,7 +28122,7 @@
       "Period": "P4",
       "ClassCode": "7ENGP",
       "TeacherCode": "UNKN",
-      "RoomCode": ""
+      "RoomCode": "GP"
     },
     {
       "Date": "2026-11-26",
@@ -28130,7 +28130,7 @@
       "Period": "P4",
       "ClassCode": "7MATW",
       "TeacherCode": "HALL",
-      "RoomCode": ""
+      "RoomCode": "F11"
     },
     {
       "Date": "2026-11-26",
@@ -28178,15 +28178,15 @@
       "Period": "P4",
       "ClassCode": "8HISW",
       "TeacherCode": "CAMBRIDGE",
-      "RoomCode": ""
+      "RoomCode": "D8"
     },
     {
       "Date": "2026-11-26",
       "Type": "Class",
       "Period": "P4",
       "ClassCode": "8HISY",
-      "TeacherCode": "JACKSON",
-      "RoomCode": ""
+      "TeacherCode": "UNKN",
+      "RoomCode": "D9"
     },
     {
       "Date": "2026-11-26",
@@ -28218,7 +28218,7 @@
       "Period": "P4",
       "ClassCode": "9CHI1",
       "TeacherCode": "LUO",
-      "RoomCode": ""
+      "RoomCode": "A1"
     },
     {
       "Date": "2026-11-26",
@@ -28311,7 +28311,7 @@
       "Period": "P5",
       "ClassCode": "11BST2",
       "TeacherCode": "UNKN",
-      "RoomCode": ""
+      "RoomCode": "D4"
     },
     {
       "Date": "2026-11-26",
@@ -28383,7 +28383,7 @@
       "Period": "P5",
       "ClassCode": "7MATP",
       "TeacherCode": "SMITH",
-      "RoomCode": ""
+      "RoomCode": "D6"
     },
     {
       "Date": "2026-11-26",
@@ -28391,7 +28391,7 @@
       "Period": "P5",
       "ClassCode": "7MATR",
       "TeacherCode": "ZHAO",
-      "RoomCode": ""
+      "RoomCode": "F3"
     },
     {
       "Date": "2026-11-26",
@@ -28423,7 +28423,7 @@
       "Period": "P5",
       "ClassCode": "8CHIG",
       "TeacherCode": "LUO",
-      "RoomCode": ""
+      "RoomCode": "F2"
     },
     {
       "Date": "2026-11-26",
@@ -28447,7 +28447,7 @@
       "Period": "P5",
       "ClassCode": "8ENGY",
       "TeacherCode": "BYROM",
-      "RoomCode": ""
+      "RoomCode": "D9"
     },
     {
       "Date": "2026-11-26",
@@ -28556,7 +28556,7 @@
       "Period": "P6",
       "ClassCode": "11EMAX1",
       "TeacherCode": "PALEOLOGOS",
-      "RoomCode": ""
+      "RoomCode": "BBLAB"
     },
     {
       "Date": "2026-11-26",
@@ -28612,7 +28612,7 @@
       "Period": "P6",
       "ClassCode": "7ENGB",
       "TeacherCode": "ROYAL",
-      "RoomCode": ""
+      "RoomCode": "D5"
     },
     {
       "Date": "2026-11-26",
@@ -28620,7 +28620,7 @@
       "Period": "P6",
       "ClassCode": "7ENGG",
       "TeacherCode": "UNKN",
-      "RoomCode": ""
+      "RoomCode": "D6"
     },
     {
       "Date": "2026-11-26",
@@ -28628,7 +28628,7 @@
       "Period": "P6",
       "ClassCode": "7MATR",
       "TeacherCode": "ZHAO",
-      "RoomCode": ""
+      "RoomCode": "F3"
     },
     {
       "Date": "2026-11-26",
@@ -28668,7 +28668,7 @@
       "Period": "P6",
       "ClassCode": "8ENGP",
       "TeacherCode": "WILLIAMS",
-      "RoomCode": ""
+      "RoomCode": "D8"
     },
     {
       "Date": "2026-11-26",
@@ -28708,7 +28708,7 @@
       "Period": "P6",
       "ClassCode": "9ENGB",
       "TeacherCode": "LYONS",
-      "RoomCode": ""
+      "RoomCode": "TP21"
     },
     {
       "Date": "2026-11-26",
@@ -28716,7 +28716,7 @@
       "Period": "P6",
       "ClassCode": "9ENGP",
       "TeacherCode": "UNKN",
-      "RoomCode": ""
+      "RoomCode": "TP20"
     },
     {
       "Date": "2026-11-26",
@@ -28860,8 +28860,8 @@
       "Type": "Class",
       "Period": "P1",
       "ClassCode": "11AH1",
-      "TeacherCode": "JACKSON",
-      "RoomCode": "P2"
+      "TeacherCode": "UNKN",
+      "RoomCode": "D11"
     },
     {
       "Date": "2026-11-27",
@@ -28909,7 +28909,7 @@
       "Period": "P1",
       "ClassCode": "11MH1",
       "TeacherCode": "UNKN",
-      "RoomCode": "E3"
+      "RoomCode": "D8"
     },
     {
       "Date": "2026-11-27",
@@ -28981,7 +28981,7 @@
       "Period": "P1",
       "ClassCode": "8CHIP",
       "TeacherCode": "LUO",
-      "RoomCode": "P3"
+      "RoomCode": "E1"
     },
     {
       "Date": "2026-11-27",
@@ -28989,7 +28989,7 @@
       "Period": "P1",
       "ClassCode": "8ENGB",
       "TeacherCode": "UNKN",
-      "RoomCode": "F5"
+      "RoomCode": "F2"
     },
     {
       "Date": "2026-11-27",
@@ -28997,7 +28997,7 @@
       "Period": "P1",
       "ClassCode": "8ENGG",
       "TeacherCode": "LYONS",
-      "RoomCode": "F7"
+      "RoomCode": "D6"
     },
     {
       "Date": "2026-11-27",
@@ -29005,7 +29005,7 @@
       "Period": "P1",
       "ClassCode": "8ENGR",
       "TeacherCode": "UNKN",
-      "RoomCode": "F6"
+      "RoomCode": "F11"
     },
     {
       "Date": "2026-11-27",
@@ -29013,7 +29013,7 @@
       "Period": "P1",
       "ClassCode": "8HISW",
       "TeacherCode": "CAMBRIDGE",
-      "RoomCode": "P1"
+      "RoomCode": "D5"
     },
     {
       "Date": "2026-11-27",
@@ -29074,7 +29074,7 @@
       "Period": "P2",
       "ClassCode": "11ENA1",
       "TeacherCode": "LYONS",
-      "RoomCode": "F7"
+      "RoomCode": "D4"
     },
     {
       "Date": "2026-11-27",
@@ -29090,7 +29090,7 @@
       "Period": "P2",
       "ClassCode": "11ENA3",
       "TeacherCode": "WILLIAMS",
-      "RoomCode": "F8"
+      "RoomCode": "D9"
     },
     {
       "Date": "2026-11-27",
@@ -29114,7 +29114,7 @@
       "Period": "P2",
       "ClassCode": "11ENS3",
       "TeacherCode": "UNKN",
-      "RoomCode": "F6"
+      "RoomCode": "A1"
     },
     {
       "Date": "2026-11-27",
@@ -29138,7 +29138,7 @@
       "Period": "P2",
       "ClassCode": "7ENGY",
       "TeacherCode": "UNKN",
-      "RoomCode": "F5"
+      "RoomCode": "D6"
     },
     {
       "Date": "2026-11-27",
@@ -29210,7 +29210,7 @@
       "Period": "P2",
       "ClassCode": "8MATW",
       "TeacherCode": "YE",
-      "RoomCode": "F10"
+      "RoomCode": "E1"
     },
     {
       "Date": "2026-11-27",
@@ -29335,7 +29335,7 @@
       "Period": "P3",
       "ClassCode": "7ENGP",
       "TeacherCode": "UNKN",
-      "RoomCode": "F6"
+      "RoomCode": "D6"
     },
     {
       "Date": "2026-11-27",
@@ -29375,7 +29375,7 @@
       "Period": "P3",
       "ClassCode": "8ENGP",
       "TeacherCode": "WILLIAMS",
-      "RoomCode": "F8"
+      "RoomCode": "D7"
     },
     {
       "Date": "2026-11-27",
@@ -29383,7 +29383,7 @@
       "Period": "P3",
       "ClassCode": "8ENGW",
       "TeacherCode": "UNKN",
-      "RoomCode": "F5"
+      "RoomCode": "E1"
     },
     {
       "Date": "2026-11-27",
@@ -29391,7 +29391,7 @@
       "Period": "P3",
       "ClassCode": "8MATB",
       "TeacherCode": "LIU",
-      "RoomCode": "F9"
+      "RoomCode": "F2"
     },
     {
       "Date": "2026-11-27",
@@ -29476,7 +29476,7 @@
       "Period": "P4",
       "ClassCode": "11EMAX1",
       "TeacherCode": "PALEOLOGOS",
-      "RoomCode": "F9"
+      "RoomCode": "D8"
     },
     {
       "Date": "2026-11-27",
@@ -29540,7 +29540,7 @@
       "Period": "P4",
       "ClassCode": "7ENGB",
       "TeacherCode": "ROYAL",
-      "RoomCode": "F6"
+      "RoomCode": "D4"
     },
     {
       "Date": "2026-11-27",
@@ -29548,7 +29548,7 @@
       "Period": "P4",
       "ClassCode": "7MATR",
       "TeacherCode": "ZHAO",
-      "RoomCode": "F10"
+      "RoomCode": "F2"
     },
     {
       "Date": "2026-11-27",
@@ -29580,7 +29580,7 @@
       "Period": "P4",
       "ClassCode": "7PDHP",
       "TeacherCode": "DOUGLAS",
-      "RoomCode": ""
+      "RoomCode": "COLA_2"
     },
     {
       "Date": "2026-11-27",
@@ -29588,7 +29588,7 @@
       "Period": "P4",
       "ClassCode": "8ENGP",
       "TeacherCode": "WILLIAMS",
-      "RoomCode": "F8"
+      "RoomCode": "D7"
     },
     {
       "Date": "2026-11-27",
@@ -29636,7 +29636,7 @@
       "Period": "P4",
       "ClassCode": "9ENGB",
       "TeacherCode": "LYONS",
-      "RoomCode": "F7"
+      "RoomCode": "D6"
     },
     {
       "Date": "2026-11-27",
@@ -29652,7 +29652,7 @@
       "Period": "P4",
       "ClassCode": "9ENGP",
       "TeacherCode": "UNKN",
-      "RoomCode": "F5"
+      "RoomCode": "D5"
     },
     {
       "Date": "2026-11-27",
@@ -29729,7 +29729,7 @@
       "Period": "P5",
       "ClassCode": "11MAT2",
       "TeacherCode": "KIM",
-      "RoomCode": "F10"
+      "RoomCode": "TP20"
     },
     {
       "Date": "2026-11-27",
@@ -29737,7 +29737,7 @@
       "Period": "P5",
       "ClassCode": "11MATX1",
       "TeacherCode": "PALEOLOGOS",
-      "RoomCode": "F9"
+      "RoomCode": "F12"
     },
     {
       "Date": "2026-11-27",
@@ -29800,8 +29800,8 @@
       "Type": "Class",
       "Period": "P5",
       "ClassCode": "8HISB",
-      "TeacherCode": "JACKSON",
-      "RoomCode": "P2"
+      "TeacherCode": "UNKN",
+      "RoomCode": "F3"
     },
     {
       "Date": "2026-11-27",
@@ -29889,7 +29889,7 @@
       "Period": "P5",
       "ClassCode": "9PASS1",
       "TeacherCode": "IBRAHIM",
-      "RoomCode": "P1"
+      "RoomCode": "BBLAB"
     },
     {
       "Date": "2026-11-27",
@@ -29982,7 +29982,7 @@
       "Period": "P6",
       "ClassCode": "11MAT2",
       "TeacherCode": "KIM",
-      "RoomCode": "F10"
+      "RoomCode": "TP20"
     },
     {
       "Date": "2026-11-27",
@@ -29990,7 +29990,7 @@
       "Period": "P6",
       "ClassCode": "11MATX1",
       "TeacherCode": "PALEOLOGOS",
-      "RoomCode": "F9"
+      "RoomCode": "F12"
     },
     {
       "Date": "2026-11-27",
@@ -30022,7 +30022,7 @@
       "Period": "P6",
       "ClassCode": "7ENGW",
       "TeacherCode": "TAOUBE",
-      "RoomCode": "F5"
+      "RoomCode": "F2"
     },
     {
       "Date": "2026-11-27",
@@ -30070,7 +30070,7 @@
       "Period": "P6",
       "ClassCode": "8LITP",
       "TeacherCode": "BYROM",
-      "RoomCode": "F7"
+      "RoomCode": "F3"
     },
     {
       "Date": "2026-11-27",
@@ -30848,7 +30848,7 @@
       "Type": "Class",
       "Period": "P3",
       "ClassCode": "11BST3",
-      "TeacherCode": "WILLIAMS",
+      "TeacherCode": "GOUDIS",
       "RoomCode": "D4"
     },
     {
@@ -31070,7 +31070,7 @@
       "Period": "P4",
       "ClassCode": "10PDHB",
       "TeacherCode": "IBRAHIM",
-      "RoomCode": ""
+      "RoomCode": "COLA_2"
     },
     {
       "Date": "2026-11-30",
