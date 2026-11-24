@@ -296,5 +296,22 @@ class SentralHealthCheckTests(unittest.TestCase):
         self.assertIn('Relief', problems[0])
         self.assertIn('Staff PD Cancellation', problems[1])
 
+
+class CalendarClientPaginationTests(unittest.TestCase):
+    def test_fetches_every_page_and_fails_if_any_page_fails(self):
+        from sentral_rest_client import SentralAPIClient
+        client = SentralAPIClient('https://example.invalid', 'key', 'tenant')
+        days = [{'id': str(i)} for i in range(25)]
+        pages = lambda method, endpoint, params=None: {'data': days[params['offset']:params['offset'] + params['limit']]}
+        with mock.patch.object(client, '_make_request', side_effect=pages) as request:
+            self.assertEqual(client.get_timetable_calendar_dates(limit=10, **{'from': '2026-11-24'}), days)
+        self.assertEqual([c.kwargs['params']['offset'] for c in request.call_args_list], [0, 10, 20])
+        self.assertEqual(request.call_args_list[0].kwargs['params']['from'], '2026-11-24')
+
+        failing = lambda method, endpoint, params=None: None if params['offset'] else {'data': days[:10]}
+        with mock.patch.object(client, '_make_request', side_effect=failing):
+            self.assertIsNone(client.get_timetable_calendar_dates(limit=10))
+
+
 if __name__ == '__main__':
     unittest.main()

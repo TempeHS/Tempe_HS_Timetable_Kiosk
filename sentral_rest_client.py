@@ -496,12 +496,23 @@ class SentralAPIClient:
                 - academic_year (int): Filter by academic year
 
         Returns:
-            List of calendar date records with timetable information
+            List of calendar date records with timetable information, or None if any page fails
         """
+        # The endpoint pages its results (10 per page by default), so fetch every page.
         params = {k: v for k, v in filters.items() if v is not None}
-        response = self._make_request(
-            'GET', 'timetables/timetable-calendar-date', params=params)
-        return response.get('data', []) if response else None
+        limit = params.pop('limit', 100)
+        offset = params.pop('offset', 0)
+        records = []
+        while True:
+            response = self._make_request(
+                'GET', 'timetables/timetable-calendar-date', params={**params, 'limit': limit, 'offset': offset})
+            if not response:
+                return None
+            batch = response.get('data', [])
+            records.extend(batch)
+            if len(batch) < limit:
+                return records
+            offset += limit
 
     # Student Endpoints
     def get_students(self, **filters) -> Optional[List[Dict[str, Any]]]:
