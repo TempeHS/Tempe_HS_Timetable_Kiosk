@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-11-24T20:31:57.929022+00:00",
+    "generated_at": "2026-11-24T21:10:40.480922+00:00",
     "source": "sentral_api",
     "total_lessons": 2821,
     "date_range": "2026-11-25 to 2026-12-02",
@@ -26021,8 +26021,8 @@
       "Type": "Class",
       "Period": "P2",
       "ClassCode": "9ASSER",
-      "TeacherCode": "PALMER",
-      "RoomCode": "C3"
+      "TeacherCode": "BYRNES",
+      "RoomCode": "P2"
     },
     {
       "Date": "2026-11-25",
@@ -26066,7 +26066,7 @@
       "Type": "Class",
       "Period": "P3",
       "ClassCode": "10HISM",
-      "TeacherCode": "PALMER",
+      "TeacherCode": "JONES",
       "RoomCode": "P2"
     },
     {
@@ -26202,7 +26202,7 @@
       "Type": "Class",
       "Period": "P3",
       "ClassCode": "7MUS5",
-      "TeacherCode": "JONES",
+      "TeacherCode": "WHITE",
       "RoomCode": "C6"
     },
     {
