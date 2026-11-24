@@ -61,6 +61,7 @@ The following workflows are included:
 
 - **Weekly Data Update**: Updates bell times and calendar data weekly
 - **Generate LISS Info**: Updates timetable data (`generate_liss_info.py`)
+- **Cache Bust Core Script**: When a push changes `timetable-core.js`, sets `index.html`'s `<script src="timetable-core.js?v=...">` to that commit's short hash so kiosks don't keep running a stale cached copy
 
 ## 📅 Automation Schedule
 

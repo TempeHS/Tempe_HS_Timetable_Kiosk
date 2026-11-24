@@ -314,6 +314,38 @@ describe('groupLessonsByYear', () => {
         const byYear = core.groupLessonsByYear(lessons, 'P1', 1, calendar, day('2026-10-26'), badConfig);
         assert.equal(byYear['7'].length, 1);
     });
+
+    it('applies daily changes for that date only: replacements override, cancellations hide', () => {
+        const withChanges = lessons.concat([
+            { Date: '2026-10-26', Type: 'Class', Period: 'P1', ClassCode: '7P1D1', TeacherCode: 'JONES', RoomCode: 'LIB' },
+            { Date: '2026-10-26', Type: 'Cancellation', Period: 'P1', ClassCode: '8P1D1', TeacherCode: 'SMITH', RoomCode: 'R1' },
+            { Date: '2026-10-26', Type: 'Class', Period: 'P2', ClassCode: '9P1D1', TeacherCode: 'SMITH', RoomCode: 'R9' },
+            { Date: '2026-11-09', Type: 'Cancellation', Period: 'P1', ClassCode: '10P1D1', TeacherCode: 'SMITH', RoomCode: 'R1' }
+        ]);
+        const byYear = core.groupLessonsByYear(withChanges, 'P1', 1, calendar, day('2026-10-26'), CONFIG);
+        assert.deepEqual(byYear['7'], [{ ClassCode: '7P1D1', TeacherCode: 'JONES', RoomCode: 'LIB' }]);
+        assert.equal(byYear['8'], undefined);
+        assert.deepEqual(byYear['9'], [{ ClassCode: '9P1D1', TeacherCode: 'SMITH', RoomCode: 'R1' }]);
+        assert.equal(byYear['10'].length, 1);
+
+        const nextCycle = core.groupLessonsByYear(withChanges, 'P1', 1, calendar, day('2026-11-09'), CONFIG);
+        assert.equal(nextCycle['10'], undefined);
+        assert.deepEqual(nextCycle['7'], [{ ClassCode: '7P1D1', TeacherCode: 'SMITH', RoomCode: 'R1' }]);
+    });
+
+    it('applies cohort cancellations by year and optional subject prefix', () => {
+        const cancel = fields => ({ Date: '2026-10-26', Type: 'Cancellation', Period: 'P1', ...fields });
+        const withChanges = lessons.concat([
+            cancel({ Year: '12' }),
+            cancel({ Year: '11', Subject: 'P1' }),
+            cancel({ Year: '10', Subject: 'XYZ' }),
+            cancel({ Year: '1' }),
+            { Date: '2026-10-26', Type: 'Class', Period: 'P1', ClassCode: '12P1D1', TeacherCode: 'JONES', RoomCode: 'LIB' }
+        ]);
+        const byYear = core.groupLessonsByYear(withChanges, 'P1', 1, calendar, day('2026-10-26'), CONFIG);
+        assert.deepEqual(Object.keys(byYear).sort(), ['10', '7', '8', '9']);
+        assert.equal(core.groupLessonsByYear(withChanges, 'P2', 1, calendar, day('2026-10-26'), CONFIG)['12'].length, 1);
+    });
 });
 
 describe('selectDisplay (what the kiosk actually shows)', () => {

@@ -1,0 +1,57 @@
+name: Cache Bust Core Script
+
+# Stamps index.html with the commit hash that last changed timetable-core.js
+# (<script src="timetable-core.js?v=HASH">), so kiosks never pair a new index.html
+# with a stale cached copy of the script.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "timetable-core.js"
+  workflow_dispatch:
+
+concurrency:
+  group: cache-bust-core-script
+  cancel-in-progress: false
+
+jobs:
+  stamp:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Stamp script URL with commit hash
+        id: stamp
+        run: |
+          set -euo pipefail
+          hash=$(git log -1 --format=%h -- timetable-core.js)
+          echo "timetable-core.js last changed in $hash"
+          sed -i -E "s#src=\"timetable-core\.js(\?v=[^\"]*)?\"#src=\"timetable-core.js?v=${hash}\"#" index.html
+          grep -q "src=\"timetable-core.js?v=${hash}\"" index.html || { echo "❌ script tag not found in index.html"; exit 1; }
+          echo "hash=$hash" >> "$GITHUB_OUTPUT"
+
+      - name: Commit and push
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- index.html; then
+            echo "✅ index.html already references this version"
+            exit 0
+          fi
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git add index.html
+          git commit -m "🔖 Cache-bust timetable-core.js (v=${{ steps.stamp.outputs.hash }})"
+          # Data update workflows push to main too; rebase and retry if we lose the race.
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            echo "⚠️ Push attempt $attempt failed, retrying..."
+            sleep $((attempt * 5))
+          done
+          exit 1

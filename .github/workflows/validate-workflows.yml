@@ -22,10 +22,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.11"
 
@@ -80,7 +80,7 @@ jobs:
 
       - name: Upload actionlint output
         if: always() && steps.actionlint_check.outputs.exit_code != '0'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: actionlint-output
           path: actionlint-output.txt
@@ -194,7 +194,7 @@ jobs:
                   actions = extract_actions(data, filepath)
                   
                   for action, path in actions:
-                      # Parse action reference (e.g., actions/checkout@v4)
+                      # Parse action reference (e.g., actions/checkout@v7)
                       match = re.match(r"([^/]+)/([^@]+)@(v?\d+|[a-f0-9]+)", action)
                       if not match:
                           continue

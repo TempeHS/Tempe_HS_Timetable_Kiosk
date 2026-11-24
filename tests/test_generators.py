@@ -117,7 +117,7 @@ class BellTimesGeneratorTests(TempDirTestCase):
 
 
 class LissGeneratorTests(TempDirTestCase):
-    def endpoints(self, lessons):
+    def endpoints(self, lessons, daily=()):
         classes = [{'id': f'c{i}', 'attributes': {
             'name': f'7EN{i}', 'externalId': f'7EN {i}'}} for i in range(3)]
         teachers = [{'type': 'timetableTeacher', 'id': 't1',
@@ -131,6 +131,10 @@ class LissGeneratorTests(TempDirTestCase):
             'timetables/timetable-period': {'data': PERIODS},
             'timetables/timetable-class-lesson': lambda p: {
                 'data': lessons if p.get('offset', 0) == 0 else [],
+                'included': teachers,
+            },
+            'timetables/timetable-daily-lesson': lambda p: {
+                'data': list(daily) if p.get('offset', 0) == 0 else [],
                 'included': teachers,
             },
         }
@@ -147,13 +151,25 @@ class LissGeneratorTests(TempDirTestCase):
             },
         }
 
-    def run_generator(self, lessons):
+    @staticmethod
+    def daily(change_type, class_id='c0', date='2026-10-26', name=None):
+        rels = {
+            'period': {'data': {'id': 'p1'}},
+            'room': {'data': {'id': 'r1'}},
+            'timetableTeachers': {'data': [{'id': 't1'}]},
+        }
+        if class_id:
+            rels['class'] = {'data': {'id': class_id}}
+        return {'id': f'{change_type}-{class_id}-{name}', 'attributes': {'type': change_type, 'date': date, 'name': name},
+                'relationships': rels}
+
+    def run_generator(self, lessons, daily=(), endpoints=None):
         # calendar.json only covers week A, like the real 7-day file.
         self.write_json('calendar.json', {'calendar': [
             {'date': '2026-10-26', 'day_name': 'MonA',
                 'day_number': 1, 'is_school_day': True},
         ]})
-        client = FakeClient(self.endpoints(lessons),
+        client = FakeClient(endpoints or self.endpoints(lessons, daily),
                             calendar_dates=[{'attributes': {}}])
         with mock.patch.object(generate_liss_info.SentralAPIClient, 'from_config', return_value=client):
             return generate_liss_info.generate_liss_info_json(days_limit=7, output_file='liss_info.json')
@@ -190,6 +206,34 @@ class LissGeneratorTests(TempDirTestCase):
         self.assertFalse(success)
         self.assertEqual(self.read_json('liss_info.json')[
                          'timetable_data'], [{'keep': True}])
+
+
+    def test_daily_changes_keep_replacements_and_cancellations_only(self):
+        success, _, _ = self.run_generator([self.lesson('l1', 'c0', 'pid1')], daily=[
+            self.daily('Class', 'c1'), self.daily('Cover', 'c2'), self.daily('Cancellation', 'c0'),
+            self.daily('Event', None), self.daily('Duty', None), self.daily('StaffMeeting', None),
+            self.daily('Cancellation', None, name='Year 12 Cancellation'),
+            self.daily('Cancellation', None, name='Year 11 EMAT Cancellation'),
+            self.daily('Cancellation', None, name='Whole school assembly'),
+        ])
+        self.assertTrue(success)
+        changes = self.read_json('liss_info.json')['daily_changes']
+        base = {'Date': '2026-10-26', 'Type': 'Cancellation', 'Period': 'P1'}
+        self.assertEqual(changes[:3], [
+            {**base, 'Year': '11', 'Subject': 'EMAT'},
+            {**base, 'Year': '12'},
+            {**base, 'ClassCode': '7EN0'},
+        ])
+        self.assertEqual([(c['Type'], c['ClassCode'], c['TeacherCode'], c['RoomCode']) for c in changes[3:]],
+                         [('Class', '7EN1', 'SMITH', 'C8'), ('Class', '7EN2', 'SMITH', 'C8')])
+
+    def test_daily_changes_failure_fails_and_keeps_existing_file(self):
+        self.write_json('liss_info.json', {'metadata': {}, 'timetable_data': [{'keep': True}]})
+        endpoints = self.endpoints([self.lesson('l1', 'c0', 'pid1')])
+        del endpoints['timetables/timetable-daily-lesson']
+        success, _, _ = self.run_generator([], endpoints=endpoints)
+        self.assertFalse(success)
+        self.assertEqual(self.read_json('liss_info.json')['timetable_data'], [{'keep': True}])
 
 
 class CalendarGeneratorConfigTests(TempDirTestCase):

@@ -68,7 +68,7 @@ function makeElement() {
 }
 
 // files: map of filename -> string content, or null to return 404. Unlisted files are read from disk.
-async function runKiosk({ now, files = {} }) {
+async function runKiosk({ now, files = {}, coreScript = CORE_SCRIPT }) {
     const elements = {};
     const errors = [];
     const context = {
@@ -95,7 +95,7 @@ async function runKiosk({ now, files = {} }) {
     };
     context.window = context;
     vm.createContext(context);
-    vm.runInContext(CORE_SCRIPT, context);
+    vm.runInContext(coreScript, context);
     vm.runInContext(INLINE_SCRIPT, context);
 
     for (let i = 0; i < 50 && (!elements.header || /Loading/.test(elements.header.innerHTML || 'Loading')); i++) {
@@ -136,14 +136,42 @@ function buildKioskFiles() {
     };
 }
 
-function runFixtureKiosk({ now = '2026-10-26T12:55:00', files = {} } = {}) {
+function runFixtureKiosk({ now = '2026-10-26T12:55:00', files = {}, coreScript } = {}) {
     return runKiosk({
         now,
+        coreScript,
         files: { ...buildKioskFiles(), ...files }
     });
 }
 
 describe('index.html smoke tests', () => {
+    it('applies daily changes from liss_info.json: cancelled classes hidden, room changes shown', async () => {
+        const liss = JSON.parse(buildKioskFiles()['liss_info.json']);
+        liss.daily_changes = [
+            { Date: '2026-10-26', Type: 'Cancellation', Period: 'P5', Year: '7' },
+            { Date: '2026-10-26', Type: 'Class', Period: 'P5', ClassCode: '8P5D1', TeacherCode: 'UNKN', RoomCode: 'ROOMX' }
+        ];
+        const { header, timetable } = await runFixtureKiosk({ files: { 'liss_info.json': JSON.stringify(liss) } });
+        assert.match(header, /Period 5/);
+        assert.doesNotMatch(timetable, /7P5D1/);
+        assert.match(timetable, /ROOMX/);
+        assert.match(timetable, />Unknown</);
+        assert.doesNotMatch(timetable, /UNKN</);
+        assert.match(timetable, /9P5D1/);
+    });
+    it('shows when the timetable was last updated under the clock', async () => {
+        const { elements } = await runFixtureKiosk();
+        assert.match(elements['current-time'].textContent, /^Current time: 12:55\nTimetable updated: \d{2}\/10\/26 \d{2}:\d{2}$/);
+    });
+
+    it('still renders with a cached timetable-core.js that predates formatUpdatedAt', async () => {
+        const oldCore = CORE_SCRIPT.replace(/\n\s*formatUpdatedAt,/, '');
+        assert.notEqual(oldCore, CORE_SCRIPT);
+        const { header, elements } = await runFixtureKiosk({ coreScript: oldCore });
+        assert.match(header, /Period 5/);
+        assert.equal(elements['current-time'].textContent, 'Current time: 12:55');
+    });
+
     it('loads the supplied JSON data through the real page parsers', async () => {
         const calendar = JSON.parse(fs.readFileSync(path.join(ROOT, 'calendar.json'), 'utf8'));
         const bells = JSON.parse(fs.readFileSync(path.join(ROOT, 'bell_times.json'), 'utf8'));
@@ -152,7 +180,7 @@ describe('index.html smoke tests', () => {
         assert.ok(schoolDay, 'Supplied calendar should contain a school day');
         const { context, header } = await runKiosk({ now: `${schoolDay.date}T10:00:00` });
         assert.equal(vm.runInContext('bellTimes.length', context), bells.bell_times.length);
-        assert.equal(vm.runInContext('lessons.length', context), liss.timetable_data.length);
+        assert.equal(vm.runInContext('lessons.length', context), liss.timetable_data.length + (liss.daily_changes || []).length);
         assert.equal(vm.runInContext('calendarData.length', context), calendar.calendar.length);
         assert.equal(vm.runInContext('Object.values(dataStatus).every(status => !status.failed)', context), true);
         assert.ok(header);

@@ -173,9 +173,36 @@ The generated `liss_info.json` follows LISS standard format:
       "TeacherId": "12345",
       "RoomCode": "P5"
     }
+  ],
+  "daily_changes": [
+    {
+      "Date": "2025-08-22",
+      "Type": "Class",
+      "Period": "P1",
+      "ClassCode": "9MU1",
+      "TeacherCode": "JONES",
+      "RoomCode": "C6"
+    },
+    { "Date": "2025-08-22", "Type": "Cancellation", "Period": "P2", "Year": "12" },
+    { "Date": "2025-08-22", "Type": "Cancellation", "Period": "P3", "Year": "11", "Subject": "EMAT" }
   ]
 }
 ```
+
+### Daily changes
+
+`timetable_data` is the normal Day 1–10 cycle. `daily_changes` comes from Sentral's
+`timetable-daily-lesson` endpoint (today to +7 days, Sydney time) and overrides the cycle for a
+specific date and period:
+
+- **`Class`** (Sentral `Class` or `Cover`): replaces that class's cycle lesson, e.g. a cover teacher or room change.
+- **`Cancellation`**: hides lessons. It targets one `ClassCode`, or a cohort taken from Sentral's
+  name such as "Year 12 Cancellation" (`Year: "12"`) or "Year 11 EMAT Cancellation"
+  (`Year: "11"`, `Subject: "EMAT"`, matching `11EMAT1` but not `11EMAX1`).
+- Events, duties, staff meetings and other daily lesson types are ignored. Records with no period are skipped.
+
+If the daily changes can't be fetched, the generator fails and the previous `liss_info.json` is kept.
+The XML backup has no daily changes, so it only shows the normal cycle.
 
 ## 🔧 Troubleshooting
 

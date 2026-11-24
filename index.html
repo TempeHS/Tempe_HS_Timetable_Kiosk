@@ -45,7 +45,8 @@ Licensed under the MIT License. See the LICENSE file for details.
     <div id="timetable"></div>
     <div id="current-time"></div>
     <div id="data-notices" role="status" aria-live="polite"></div>
-    <script src="timetable-core.js"></script>
+    <!-- ?v= is set automatically by the "Cache Bust Core Script" workflow to the commit that last changed timetable-core.js. -->
+    <script src="timetable-core.js?v=4a2960f"></script>
     <script>
         const Core = window.TimetableCore;
         let CONFIG = null;
@@ -552,11 +553,13 @@ Licensed under the MIT License. See the LICENSE file for details.
         }
         
         // Lessons from both sources are normalised to {DayNumber, Period, ClassCode, TeacherCode, RoomCode}.
+        // JSON daily changes are appended with a Date: replacements {Date, Type, Period, ClassCode, TeacherCode, RoomCode}
+        // and cancellations {Date, Type: 'Cancellation', Period} with either ClassCode or Year (+ optional Subject).
         function parseLissJSON(jsonData) {
             if (!jsonData || !Array.isArray(jsonData.timetable_data)) {
                 throw new Error('Invalid LISS JSON - missing timetable_data array');
             }
-            return jsonData.timetable_data
+            const cycle = jsonData.timetable_data
                 .filter(entry => entry && entry.Period && entry.ClassCode)
                 .map(entry => ({
                     DayNumber: entry.DayNumber,
@@ -565,6 +568,19 @@ Licensed under the MIT License. See the LICENSE file for details.
                     TeacherCode: entry.TeacherCode,
                     RoomCode: entry.RoomCode
                 }));
+            const daily = (Array.isArray(jsonData.daily_changes) ? jsonData.daily_changes : [])
+                .filter(entry => entry && entry.Date && entry.Period && (entry.ClassCode || (entry.Type === 'Cancellation' && entry.Year)))
+                .map(entry => ({
+                    Date: entry.Date,
+                    Type: entry.Type,
+                    Period: entry.Period,
+                    ClassCode: entry.ClassCode,
+                    Year: entry.Year,
+                    Subject: entry.Subject,
+                    TeacherCode: entry.TeacherCode,
+                    RoomCode: entry.RoomCode
+                }));
+            return cycle.concat(daily);
         }
 
         function parseLissXML(xml) {
@@ -602,7 +618,7 @@ Licensed under the MIT License. See the LICENSE file for details.
             const currentTime = `${pad2(now.getHours())}:${pad2(now.getMinutes())}`;
             const timeElement = document.getElementById('current-time');
             const clockText = USE_MANUAL_OVERRIDE ? `⚠️ MANUAL OVERRIDE: ${currentTime}` : `Current time: ${currentTime}`;
-            const updatedText = Core.formatUpdatedAt(lissUpdatedAt);
+            const updatedText = typeof Core.formatUpdatedAt === 'function' ? Core.formatUpdatedAt(lissUpdatedAt) : null;
             timeElement.textContent = updatedText ? `${clockText}\nTimetable updated: ${updatedText}` : clockText;
             timeElement.className = USE_MANUAL_OVERRIDE ? 'manual-override' : '';
         }
@@ -649,7 +665,7 @@ Licensed under the MIT License. See the LICENSE file for details.
                         html += `<div class="tile">
                             <div class="classcode">${esc(String(lesson.ClassCode || "").substring(0, 7))}</div>
                             <div class="room">${esc(lesson.RoomCode)}</div>
-                            <div class="teacher">${esc(lesson.TeacherCode)}</div>
+                            <div class="teacher">${esc(!lesson.TeacherCode || lesson.TeacherCode === 'UNKN' ? 'Unknown' : lesson.TeacherCode)}</div>
                         </div>`;
                     }
                 } else {

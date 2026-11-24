@@ -341,6 +341,30 @@
         return patternCache.get(pattern);
     }
 
+    // A cancellation targets one class (ClassCode) or a cohort (Year, optionally narrowed by Subject:
+    // Year 11 + EMAT matches 11EMAT1 but not 11EMAX1 or 111...).
+    function isCancelledBy(classCode, cancellation) {
+        const code = String(classCode).toUpperCase();
+        if (cancellation.ClassCode) return code === String(cancellation.ClassCode).toUpperCase();
+        if (!cancellation.Year) return false;
+        const year = String(cancellation.Year);
+        return code.startsWith((year + (cancellation.Subject || '')).toUpperCase()) && !/^\d/.test(code.slice(year.length));
+    }
+
+    // Daily changes (entries with a Date) override the cycle for that period/date: a replacement
+    // takes the place of its class's cycle lesson, and cancelled classes are hidden.
+    function getEffectiveLessons(lessons, period, dayNumber, targetDate) {
+        const dateKey = toDateKey(targetDate);
+        const changes = lessons.filter(l => l && l.Date && l.Date === dateKey && l.Period === period);
+        const cancellations = changes.filter(c => c.Type === 'Cancellation');
+        const replacements = changes.filter(c => c.Type !== 'Cancellation' && c.ClassCode);
+        const replacedClasses = new Set(replacements.map(c => c.ClassCode));
+        return lessons
+            .filter(l => l && !l.Date && l.Period === period && Number(l.DayNumber) === dayNumber && !replacedClasses.has(l.ClassCode))
+            .concat(replacements)
+            .filter(l => l.ClassCode && !cancellations.some(c => isCancelledBy(l.ClassCode, c)));
+    }
+
     function groupLessonsByYear(lessons, period, dayNumber, calendarData, targetDate, config) {
         const byYear = {};
         const n = Number(dayNumber);
@@ -348,8 +372,8 @@
         const regex = getClassCodeRegex(config);
         const sportConfig = getSportConfig(calendarData, targetDate, period, config);
 
-        for (const lesson of lessons) {
-            if (!lesson || !lesson.ClassCode || lesson.Period !== period || Number(lesson.DayNumber) !== n) continue;
+        for (const lesson of getEffectiveLessons(lessons, period, n, targetDate)) {
+            if (!lesson.ClassCode) continue;
             const match = String(lesson.ClassCode).match(regex);
             if (!match || !match[1]) continue;
             const year = match[1];

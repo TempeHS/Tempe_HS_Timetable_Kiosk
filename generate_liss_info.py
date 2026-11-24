@@ -11,6 +11,7 @@ import json
 import os
 import re
 from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 from typing import Dict, List, Any, Optional, Tuple
 from sentral_rest_client import SentralAPIClient
 from data_freshness import write_json_atomic
@@ -131,6 +132,110 @@ def get_staff_code_mapping(client: SentralAPIClient) -> Dict[str, str]:
         return {}
 
 
+def teacher_from_lesson(rels: Dict[str, Any], teacher_lookup: Dict[str, Any]) -> Tuple[Optional[str], str]:
+    """Return (teacher_id, teacher_code) for the first teacher on a lesson, using sideloaded teachers."""
+    teacher_rel = rels.get('timetableTeachers', {}).get('data', [])
+    if not isinstance(teacher_rel, list) or not teacher_rel:
+        return None, 'UNKN'
+    teacher_id = teacher_rel[0].get('id')
+    last_name = teacher_lookup.get(teacher_id, {}).get('attributes', {}).get('lastName', '')
+    return teacher_id, (last_name[:10].upper() if last_name else 'UNKN')
+
+
+# Daily lesson types the kiosk uses. Replacement types override the cycle lesson for that
+# class/period/date; Cancellation hides it. Everything else (Event, Duty, StaffMeeting, ...) is ignored.
+DAILY_REPLACEMENT_TYPES = {'Class', 'Cover'}
+DAILY_CANCELLATION_TYPE = 'Cancellation'
+# Sentral cancels whole cohorts without a class link, e.g. "Year 12 Cancellation" or
+# "Year 11 EMAT Cancellation" (only Year 11 classes whose code continues with EMAT).
+CANCELLATION_GROUP_PATTERN = re.compile(r'^\s*Year\s+(\d+)\s*([A-Za-z0-9_]*)\s+Cancell?ation\s*$', re.IGNORECASE)
+
+
+def get_daily_changes(client: SentralAPIClient, date_from: str, date_to: str,
+                      class_lookup: Dict[str, Any], room_lookup: Dict[str, Any],
+                      period_lookup: Dict[str, Any]) -> Optional[List[Dict[str, Any]]]:
+    """
+    Fetch date-specific changes to the weekly timetable (room changes, cover, cancellations).
+
+    Returns a list of replacements {Date, Type: 'Class', Period, ClassCode, TeacherCode, RoomCode}
+    and cancellations {Date, Type: 'Cancellation', Period} plus either ClassCode or Year
+    (and optional Subject), or None if the request failed.
+    """
+    print(f"🔁 Fetching daily timetable changes {date_from} to {date_to}...")
+    changes = []
+    skipped = {}
+    offset = 0
+    limit = 200
+    while True:
+        response = client._make_request('GET', 'timetables/timetable-daily-lesson', {
+            'from': date_from,
+            'to': date_to,
+            'limit': limit,
+            'offset': offset,
+            'include': 'timetableTeachers'
+        })
+        if not response or 'data' not in response:
+            return None
+
+        batch = response['data']
+        teacher_lookup = {item.get('id'): item for item in response.get('included', [])
+                          if item.get('type') == 'timetableTeacher'}
+
+        for record in batch:
+            attrs = record.get('attributes', {}) or {}
+            rels = record.get('relationships', {}) or {}
+            change_type = attrs.get('type')
+            if change_type not in DAILY_REPLACEMENT_TYPES and change_type != DAILY_CANCELLATION_TYPE:
+                skipped[change_type] = skipped.get(change_type, 0) + 1
+                continue
+
+            class_id = (rels.get('class', {}) or {}).get('data', {}) or {}
+            period_id = (rels.get('period', {}) or {}).get('data', {}) or {}
+            class_name = class_lookup.get(class_id.get('id'), {}).get('attributes', {}).get('name')
+            period_name = period_lookup.get(period_id.get('id'), {}).get('attributes', {}).get('name')
+            if not attrs.get('date') or not period_name:
+                skipped['no date/period'] = skipped.get('no date/period', 0) + 1
+                continue
+
+            if change_type == DAILY_CANCELLATION_TYPE:
+                change = {'Date': attrs['date'], 'Type': 'Cancellation', 'Period': period_name}
+                group = None if class_name else CANCELLATION_GROUP_PATTERN.match(attrs.get('name') or '')
+                if class_name:
+                    change['ClassCode'] = class_name
+                elif group:
+                    change['Year'] = group.group(1)
+                    if group.group(2):
+                        change['Subject'] = group.group(2).upper()
+                else:
+                    skipped['unrecognised cancellation'] = skipped.get('unrecognised cancellation', 0) + 1
+                    continue
+                changes.append(change)
+                continue
+
+            if not class_name:
+                skipped['no class'] = skipped.get('no class', 0) + 1
+                continue
+            room_id = ((rels.get('room', {}) or {}).get('data', {}) or {}).get('id')
+            _, teacher_code = teacher_from_lesson(rels, teacher_lookup)
+            changes.append({
+                'Date': attrs['date'],
+                'Type': 'Class',
+                'Period': period_name,
+                'ClassCode': class_name,
+                'TeacherCode': teacher_code,
+                'RoomCode': room_lookup.get(room_id, {}).get('attributes', {}).get('name', '')
+            })
+
+        if len(batch) < limit:
+            break
+        offset += limit
+
+    changes.sort(key=lambda c: tuple(str(c.get(k, '')) for k in ('Date', 'Period', 'Type', 'ClassCode', 'Year', 'Subject', 'TeacherCode', 'RoomCode')))
+    counts = {t: sum(1 for c in changes if c['Type'] == t) for t in ('Class', 'Cancellation')}
+    print(f"✓ {len(changes)} daily changes ({counts['Class']} replacements, {counts['Cancellation']} cancellations); ignored {skipped}")
+    return changes
+
+
 def generate_liss_info_json(days_limit: int = 7, output_file: str = 'liss_info.json', debug: bool = False) -> Tuple[bool, int, str]:
     """
     Generate liss_info.json from Sentral API data for the specified number of days.
@@ -156,7 +261,7 @@ def generate_liss_info_json(days_limit: int = 7, output_file: str = 'liss_info.j
     response_code = 200  # Default success code
     try:
         # Get current date range for calendar context
-        today = datetime.now()
+        today = datetime.now(ZoneInfo("Australia/Sydney"))
         end_date = today + timedelta(days=days_limit)
         date_from = today.strftime('%Y-%m-%d')
         date_to = end_date.strftime('%Y-%m-%d')
@@ -363,22 +468,7 @@ def generate_liss_info_json(days_limit: int = 7, output_file: str = 'liss_info.j
                     room_info = room_lookup.get(room_id, {})
                     room_code = room_info.get('attributes', {}).get('name', '')
 
-                    # Get teacher info from INCLUDED data (OPTIMIZED!)
-                    teacher_id = None
-                    teacher_code = 'UNKN'
-                    teacher_rel = rels.get(
-                        'timetableTeachers', {}).get('data', [])
-
-                    if isinstance(teacher_rel, list) and teacher_rel:
-                        # Take first teacher from included data
-                        teacher_id = teacher_rel[0].get('id')
-                        teacher_info = teacher_lookup.get(teacher_id, {})
-
-                        if teacher_info:
-                            teacher_attrs = teacher_info.get('attributes', {})
-                            last_name = teacher_attrs.get('lastName', '')
-                            if last_name:
-                                teacher_code = last_name[:10].upper()
+                    teacher_id, teacher_code = teacher_from_lesson(rels, teacher_lookup)
 
                     # Create LISS entry
                     liss_entry = {
@@ -406,6 +496,12 @@ def generate_liss_info_json(days_limit: int = 7, output_file: str = 'liss_info.j
             print(f"❌ Not writing {output_file}: {validation_result}")
             return False, 204 if not lessons_data else 422, date_range
 
+        daily_changes = get_daily_changes(client, date_from, date_to, class_lookup, room_lookup, period_lookup)
+        if daily_changes is None:
+            # Keep the last good file rather than silently dropping cancellations and room changes.
+            print(f"❌ Not writing {output_file}: failed to fetch daily timetable changes")
+            return False, 502, date_range
+
         # Create the complete JSON structure
         liss_json = {
             "metadata": {
@@ -415,9 +511,11 @@ def generate_liss_info_json(days_limit: int = 7, output_file: str = 'liss_info.j
                 "total_lessons": len(lessons_data),
                 "date_range": date_range,
                 "days_covered": sorted(set(item['DayNumber'] for item in lessons_data)),
+                "total_daily_changes": len(daily_changes),
                 "note": "Generated from Sentral API timetable endpoints for LISS integration"
             },
-            "timetable_data": lessons_data
+            "timetable_data": lessons_data,
+            "daily_changes": daily_changes
         }
 
         # Write to JSON file
