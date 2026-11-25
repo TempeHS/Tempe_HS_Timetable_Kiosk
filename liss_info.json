@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-11-25T20:31:20.898001+00:00",
+    "generated_at": "2026-11-25T21:36:06.521675+00:00",
     "source": "sentral_api",
     "total_lessons": 2821,
     "date_range": "2026-11-26 to 2026-12-03",
@@ -25625,7 +25625,7 @@
       "Period": "P1",
       "ClassCode": "8PDHG",
       "TeacherCode": "ROBINSON",
-      "RoomCode": "GYM_1"
+      "RoomCode": "COLA_2"
     },
     {
       "Date": "2026-11-26",
@@ -26898,7 +26898,7 @@
       "Period": "P6",
       "ClassCode": "9PDHG",
       "TeacherCode": "MCGUINNESS",
-      "RoomCode": "GYM_1"
+      "RoomCode": "COLA_1"
     },
     {
       "Date": "2026-11-26",
@@ -27050,7 +27050,7 @@
       "Type": "Class",
       "Period": "P1",
       "ClassCode": "11HMS2",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "ROBINSON",
       "RoomCode": "F3"
     },
     {
@@ -27556,7 +27556,7 @@
       "Type": "Class",
       "Period": "P3",
       "ClassCode": "8PDHR",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "ROBINSON",
       "RoomCode": "GYM_2"
     },
     {
@@ -27847,7 +27847,7 @@
       "Period": "P5",
       "ClassCode": "11ENT1",
       "TeacherCode": "TSOUNAKAS",
-      "RoomCode": "GYM_2"
+      "RoomCode": "C7"
     },
     {
       "Date": "2026-11-27",
@@ -27919,7 +27919,7 @@
       "Period": "P5",
       "ClassCode": "7PDHW",
       "TeacherCode": "NEWTON-GRE",
-      "RoomCode": "GYM_1"
+      "RoomCode": "COLA_2"
     },
     {
       "Date": "2026-11-27",
@@ -28047,7 +28047,7 @@
       "Period": "P5",
       "ClassCode": "9PDM1",
       "TeacherCode": "ESPEJEL",
-      "RoomCode": "C10"
+      "RoomCode": "C8"
     },
     {
       "Date": "2026-11-27",
@@ -28100,7 +28100,7 @@
       "Period": "P6",
       "ClassCode": "11ENT1",
       "TeacherCode": "TSOUNAKAS",
-      "RoomCode": "GYM_2"
+      "RoomCode": "C7"
     },
     {
       "Date": "2026-11-27",
@@ -28300,7 +28300,7 @@
       "Period": "P6",
       "ClassCode": "9PASS1",
       "TeacherCode": "IBRAHIM",
-      "RoomCode": "GYM_1"
+      "RoomCode": "COLA_1"
     },
     {
       "Date": "2026-11-27",
@@ -28308,7 +28308,7 @@
       "Period": "P6",
       "ClassCode": "9PDM1",
       "TeacherCode": "ESPEJEL",
-      "RoomCode": "C10"
+      "RoomCode": "C8"
     },
     {
       "Date": "2026-11-27",
