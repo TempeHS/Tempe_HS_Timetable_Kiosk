@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-11-24T23:49:10.960589+00:00",
+    "generated_at": "2026-11-25T00:21:06.788537+00:00",
     "source": "sentral_api",
     "total_lessons": 2821,
     "date_range": "2026-11-25 to 2026-12-02",
@@ -26067,7 +26067,7 @@
       "Period": "P3",
       "ClassCode": "10HISM",
       "TeacherCode": "JONES",
-      "RoomCode": "P2"
+      "RoomCode": "C10"
     },
     {
       "Date": "2026-11-25",
@@ -27322,7 +27322,7 @@
       "Type": "Class",
       "Period": "P1",
       "ClassCode": "11BIO2",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "TSOUNAKAS",
       "RoomCode": "D10"
     },
     {
@@ -27394,7 +27394,7 @@
       "Type": "Class",
       "Period": "P1",
       "ClassCode": "7DT5",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "GREENE",
       "RoomCode": "C2"
     },
     {
@@ -27410,7 +27410,7 @@
       "Type": "Class",
       "Period": "P1",
       "ClassCode": "7ENGY",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "MORRIS",
       "RoomCode": "F2"
     },
     {
@@ -27434,7 +27434,7 @@
       "Type": "Class",
       "Period": "P1",
       "ClassCode": "7MUS4",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "BRAMBILLA ",
       "RoomCode": "P4"
     },
     {
@@ -27466,7 +27466,7 @@
       "Type": "Class",
       "Period": "P1",
       "ClassCode": "8JPNY",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "SALLIS",
       "RoomCode": "GP"
     },
     {
@@ -27474,7 +27474,7 @@
       "Type": "Class",
       "Period": "P1",
       "ClassCode": "8PDHG",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "ROBINSON",
       "RoomCode": "GYM_1"
     },
     {
@@ -27482,7 +27482,7 @@
       "Type": "Class",
       "Period": "P1",
       "ClassCode": "8PDHW",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "GYM_2"
     },
     {
@@ -27530,7 +27530,7 @@
       "Type": "Class",
       "Period": "P1",
       "ClassCode": "9ITM1",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "LEE",
       "RoomCode": "C4"
     },
     {
@@ -27554,7 +27554,7 @@
       "Type": "Class",
       "Period": "P1",
       "ClassCode": "9VA1",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "PALMER",
       "RoomCode": "C8"
     },
     {
@@ -27583,7 +27583,7 @@
       "Type": "Class",
       "Period": "P2",
       "ClassCode": "11BST1",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "SALLIS",
       "RoomCode": "TP21"
     },
     {
@@ -27599,7 +27599,7 @@
       "Type": "Class",
       "Period": "P2",
       "ClassCode": "11ITM1",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "TSERPES",
       "RoomCode": "C4"
     },
     {
@@ -27623,7 +27623,7 @@
       "Type": "Class",
       "Period": "P2",
       "ClassCode": "11SLR1",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "MCGUINNESS",
       "RoomCode": "GYM_1"
     },
     {
@@ -27647,7 +27647,7 @@
       "Type": "Class",
       "Period": "P2",
       "ClassCode": "7GEOG",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "BATTERS",
       "RoomCode": "D7"
     },
     {
@@ -27655,7 +27655,7 @@
       "Type": "Class",
       "Period": "P2",
       "ClassCode": "7GEOY",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "TSOUNAKAS",
       "RoomCode": "D9"
     },
     {
@@ -27663,7 +27663,7 @@
       "Type": "Class",
       "Period": "P2",
       "ClassCode": "7PDHB",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "MORRIS",
       "RoomCode": "GYM_2"
     },
     {
@@ -27695,7 +27695,7 @@
       "Type": "Class",
       "Period": "P2",
       "ClassCode": "8DT7",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "FULTON",
       "RoomCode": "D2"
     },
     {
@@ -27703,7 +27703,7 @@
       "Type": "Class",
       "Period": "P2",
       "ClassCode": "8ENGR",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "SMITH",
       "RoomCode": "D4"
     },
     {
@@ -27727,7 +27727,7 @@
       "Type": "Class",
       "Period": "P2",
       "ClassCode": "8VA8",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "CUGALY",
       "RoomCode": "P6"
     },
     {
@@ -27828,7 +27828,7 @@
       "Type": "Class",
       "Period": "P3",
       "ClassCode": "11CHEM2",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "OWEN",
       "RoomCode": "D12"
     },
     {
@@ -27860,7 +27860,7 @@
       "Type": "Class",
       "Period": "P3",
       "ClassCode": "11MH1",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "NEWTON-GRE",
       "RoomCode": "TP20"
     },
     {
@@ -27884,7 +27884,7 @@
       "Type": "Class",
       "Period": "P3",
       "ClassCode": "7GEOW",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "TSERPES",
       "RoomCode": "D4"
     },
     {
@@ -28013,7 +28013,7 @@
       "Period": "P3",
       "ClassCode": "9MU1",
       "TeacherCode": "BOMBARDIER",
-      "RoomCode": "C6"
+      "RoomCode": "C8"
     },
     {
       "Date": "2026-11-26",
@@ -28065,7 +28065,7 @@
       "Type": "Class",
       "Period": "P4",
       "ClassCode": "11ENA2",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "YE",
       "RoomCode": "TP19"
     },
     {
@@ -28081,7 +28081,7 @@
       "Type": "Class",
       "Period": "P4",
       "ClassCode": "11ENS1",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "KIM",
       "RoomCode": "TP21"
     },
     {
@@ -28097,7 +28097,7 @@
       "Type": "Class",
       "Period": "P4",
       "ClassCode": "11ENS3",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "BANSAL",
       "RoomCode": "E2"
     },
     {
@@ -28105,7 +28105,7 @@
       "Type": "Class",
       "Period": "P4",
       "ClassCode": "11ENST1",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "ZHAO",
       "RoomCode": "TP23"
     },
     {
@@ -28113,7 +28113,7 @@
       "Type": "Class",
       "Period": "P4",
       "ClassCode": "7DT2",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "LIU",
       "RoomCode": "D3"
     },
     {
@@ -28121,7 +28121,7 @@
       "Type": "Class",
       "Period": "P4",
       "ClassCode": "7ENGP",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "MORRIS",
       "RoomCode": "GP"
     },
     {
@@ -28145,7 +28145,7 @@
       "Type": "Class",
       "Period": "P4",
       "ClassCode": "7PDHG",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "O'LOUGHLIN",
       "RoomCode": "D6"
     },
     {
@@ -28161,7 +28161,7 @@
       "Type": "Class",
       "Period": "P4",
       "ClassCode": "7VA3",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "BRAMBILLA ",
       "RoomCode": "TP24"
     },
     {
@@ -28258,7 +28258,7 @@
       "Period": "P4",
       "ClassCode": "9MU1",
       "TeacherCode": "CUGALY",
-      "RoomCode": "C6"
+      "RoomCode": "C8"
     },
     {
       "Date": "2026-11-26",
@@ -28302,7 +28302,7 @@
       "Type": "Class",
       "Period": "P5",
       "ClassCode": "11BIO1",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "FULTON",
       "RoomCode": "D12"
     },
     {
@@ -28310,7 +28310,7 @@
       "Type": "Class",
       "Period": "P5",
       "ClassCode": "11BST2",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "ROYAL",
       "RoomCode": "D4"
     },
     {
@@ -28478,7 +28478,7 @@
       "Type": "Class",
       "Period": "P5",
       "ClassCode": "9GEOW",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "SALLIS",
       "RoomCode": "D7"
     },
     {
@@ -28510,7 +28510,7 @@
       "Type": "Class",
       "Period": "P5",
       "ClassCode": "9SCIR",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "TSOUNAKAS",
       "RoomCode": "E1"
     },
     {
@@ -28579,7 +28579,7 @@
       "Type": "Class",
       "Period": "P6",
       "ClassCode": "11LS1",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "TSOUNAKAS",
       "RoomCode": "D9"
     },
     {
@@ -28595,7 +28595,7 @@
       "Type": "Class",
       "Period": "P6",
       "ClassCode": "11PVDI1",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "ESPEJEL",
       "RoomCode": "C9"
     },
     {
@@ -28619,7 +28619,7 @@
       "Type": "Class",
       "Period": "P6",
       "ClassCode": "7ENGG",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "BARZOVSKI",
       "RoomCode": "D6"
     },
     {
@@ -28659,7 +28659,7 @@
       "Type": "Class",
       "Period": "P6",
       "ClassCode": "8ENGB",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "BRAMBILLA ",
       "RoomCode": "GP"
     },
     {
@@ -28715,7 +28715,7 @@
       "Type": "Class",
       "Period": "P6",
       "ClassCode": "9ENGP",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "PARAS",
       "RoomCode": "TP20"
     },
     {
@@ -28731,7 +28731,7 @@
       "Type": "Class",
       "Period": "P6",
       "ClassCode": "9ENGY",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "LUO",
       "RoomCode": "TP19"
     },
     {
@@ -28739,7 +28739,7 @@
       "Type": "Class",
       "Period": "P6",
       "ClassCode": "9GEOR",
-      "TeacherCode": "UNKN",
+      "TeacherCode": "SALLIS",
       "RoomCode": "D4"
     },
     {
