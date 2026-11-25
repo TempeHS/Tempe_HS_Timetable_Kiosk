@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-11-25T00:21:06.788537+00:00",
+    "generated_at": "2026-11-25T00:48:13.100990+00:00",
     "source": "sentral_api",
     "total_lessons": 2821,
     "date_range": "2026-11-25 to 2026-12-02",
@@ -26789,7 +26789,7 @@
       "Period": "P5",
       "ClassCode": "7MATY",
       "TeacherCode": "YE",
-      "RoomCode": "F3"
+      "RoomCode": "F10"
     },
     {
       "Date": "2026-11-25",
@@ -27178,7 +27178,7 @@
       "Period": "P6",
       "ClassCode": "9MAT1",
       "TeacherCode": "YE",
-      "RoomCode": "F5"
+      "RoomCode": "F10"
     },
     {
       "Date": "2026-11-25",
