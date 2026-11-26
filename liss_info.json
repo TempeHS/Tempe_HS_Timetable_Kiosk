@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-11-26T01:06:55.644241+00:00",
+    "generated_at": "2026-11-26T01:18:58.007969+00:00",
     "source": "sentral_api",
     "total_lessons": 2820,
     "date_range": "2026-11-26 to 2026-12-03",
@@ -26857,7 +26857,7 @@
       "Period": "P6",
       "ClassCode": "9ENGP",
       "TeacherCode": "PARAS",
-      "RoomCode": "CTC"
+      "RoomCode": "D10"
     },
     {
       "Date": "2026-11-26",
