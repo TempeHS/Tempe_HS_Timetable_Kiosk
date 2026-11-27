@@ -1,7 +1,7 @@
 {
   "metadata": {
     "school": "TEMPE",
-    "generated_at": "2026-11-27T00:21:03.413258+00:00",
+    "generated_at": "2026-11-27T03:22:03.511220+00:00",
     "source": "sentral_api",
     "total_lessons": 2820,
     "date_range": "2026-11-27 to 2026-12-04",
@@ -26761,7 +26761,7 @@
       "Period": "P6",
       "ClassCode": "9PDM1",
       "TeacherCode": "ESPEJEL",
-      "RoomCode": "C8"
+      "RoomCode": "C10"
     },
     {
       "Date": "2026-11-27",
